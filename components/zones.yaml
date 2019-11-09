@@ -9,3 +9,21 @@
     longitude: -74.6655528
     radius: 200
     icon: mdi:briefcase
+
+  - name: Mom and Dads
+    latitude: 42.73334
+    longitude: -74.3109447
+    radius: 75
+    icon: mdi:home
+
+  - name: Fred Boys
+    latitude: 42.4702583
+    longitude: -74.7872877
+    radius: 75
+    icon: mdi:home
+
+  - name: Gram and Pas
+    latitude: 42.661058
+    longitude: -74.3155714
+    radius: 75
+    icon: mdi:home
