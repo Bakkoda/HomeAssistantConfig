@@ -10,11 +10,6 @@
             name: House
             room: Living Room
 
-        switch.heat_saver:
-            expose: True
-            name: Heat Saver
-            room: Living Room
-
         switch.coffee_maker:
             expose: true
             name: Coffee Maker
