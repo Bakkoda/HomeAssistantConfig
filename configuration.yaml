@@ -1,0 +1,119 @@
+homeassistant:
+    elevation: 230
+    unit_system: imperial
+    time_zone: America/New_York
+    customize: !include_dir_merge_named customize/
+    auth_providers:
+        - type: homeassistant
+        - type: legacy_api_password
+          api_password: !secret http_password
+        - type: trusted_networks
+          trusted_networks:
+              - 192.168.1.0/24
+              - 192.168.2.0/24
+              - 192.168.3.0/24
+
+frontend:
+    themes: !include_dir_merge_named themes/
+
+lovelace:
+    mode: yaml
+
+# HTTP options
+http:
+    cors_allowed_origins:
+        - https://google.com
+        - https://www.home-assistant.io
+    use_x_forwarded_for: true
+    trusted_proxies:
+        - 127.0.0.1
+        - ::1
+        - 192.168.3.10
+    ip_ban_enabled: True
+    login_attempts_threshold: 5
+
+# Config options
+config:
+
+# HassIO options
+hassio:
+
+#System Health Monitor
+system_health:
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+#discovery: false
+
+# Set up recorder information
+recorder:
+    purge_keep_days: 1
+    db_url: !secret database_url
+    exclude:
+        domains:
+          - weblink
+          - updater
+        entities:
+          - sun.sun
+          - sensor.last_boot
+          - sensor.date
+
+# Enables support for tracking state changes over time.
+history:
+    include:
+        domains:
+          - sensor
+          - switch
+          - climate
+          - automation
+          - binary_sensor
+          - media_player
+          - device_tracker
+    exclude:
+        entities:
+          - sensor.last_boot
+          - sensor.date
+
+# View all events in a logbook
+logbook:
+    include:
+        domains:
+          - sensor
+          - switch
+          - climate
+          - automation
+          - binary_sensor
+          - media_player
+          - device_tracker
+    exclude:
+        entities:
+          - sensor.last_boot
+          - sensor.date
+
+#Enables Sun component
+sun:
+
+# Automations
+automation: !include_dir_merge_list automations/
+# Components
+binary_sensor: !include components/binary_sensor.yaml
+input_boolean: !include components/input_boolean.yaml
+camera: !include components/camera.yaml
+unifi: !include components/unifi.yaml
+pi_hole: !include components/pihole.yaml
+person: !include components/persons.yaml
+google_assistant: !include components/google_assistant.yaml
+device_tracker: !include components/device_tracker.yaml
+media_player: !include components/media_player.yaml
+notify: !include components/notify.yaml
+sensor: !include components/sensor.yaml
+switch: !include components/switch.yaml
+light: !include components/light.yaml
+weather: !include components/weather.yaml
+roku: !include components/roku.yaml
+zone: !include components/zones.yaml
+
+# Groups and Views
+# group: !include groups.yaml
