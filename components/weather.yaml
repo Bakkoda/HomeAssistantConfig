@@ -1,0 +1,5 @@
+  - platform: darksky
+    api_key: !secret darksky_apikey
+    mode: daily
+    latitude: 42.5881126
+    longitude: -74.3309562

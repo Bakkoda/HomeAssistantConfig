@@ -7,6 +7,10 @@
 !*.yaml
 !.gitignore
 !*.md
+!*/
+!*.png
+!*.svg
+!*.js
 
 # Ignore folders.
 .storage

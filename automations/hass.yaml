@@ -1,0 +1,64 @@
+######################################################################
+#       Home Assistant
+######################################################################
+  - alias: 'Set theme at startup'
+    initial_state: 'on'
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: frontend.set_theme
+        data:
+            name: slate
+
+  - alias: Update HA after startup
+    initial_state: True
+    trigger:
+        platform: homeassistant
+        event: start
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***HA*** - Home Assistant was successfuly started - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505
+
+  - alias: Update notifications
+    initial_state: True
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.updater
+        from: 'off'
+        to: 'on'
+    action:
+      - service: notify.discord_bot
+        data_template:
+            message: "***HA*** - Home Assistant {{ trigger.to_state.attributes.newest_version }} is now available - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 322823957658992651
+      - service: persistent_notification.create
+        data:
+            message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."
+            title: "Update Available"
+
+  - alias: Send notification when sun rises
+    initial_state: True
+    trigger:
+      - platform: sun
+        event: sunrise
+        offset: '+00:00:00'
+    action:
+      - service: notify.discord_bot
+        data_template:
+            message: "***HA*** - The sun is up - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505
+
+  - alias: Send notification when sun sets
+    initial_state: True
+    trigger:
+      - platform: sun
+        event: sunset
+        offset: '+00:00:00'
+    action:
+      - service: notify.discord_bot
+        data_template:
+            message: "***HA*** - The sun has set - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505

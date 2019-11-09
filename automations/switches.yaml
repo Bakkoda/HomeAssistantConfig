@@ -1,0 +1,13 @@
+######################################################################
+#       Switches
+######################################################################
+  - alias: Switch notification
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: switch.bedroom_light_switch, switch.coffee_maker, switch.heat_saver, switch.automatic_coffee, switch.friday_coffee
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} has been turned {{ trigger.to_state.state }} - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505

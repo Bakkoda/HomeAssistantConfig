@@ -1,0 +1,18 @@
+#Weather
+    sensor.dark_sky_daily_summary:
+        friendly_name: Daily Summary
+
+    sensor.dark_sky_hourly_summary:
+        friendly_name: Hourly Summary
+
+    sensor.dark_sky_precip:
+        friendly_name: Precip
+
+    sensor.dark_sky_precip_probability:
+        friendly_name: Precip Probability
+
+    sensor.dark_sky_summary:
+        friendly_name: Weekly Summary
+
+    sensor.dark_sky_temperature:
+        friendly_name: Temperature

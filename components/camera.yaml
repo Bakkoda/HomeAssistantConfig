@@ -1,0 +1,9 @@
+#  - platform: uvc
+#    nvr: 192.168.5.12
+#    key: !secret uvc_apikey
+#    password: !secret uvc_campass
+
+  - platform: generic
+    name: Front Porch
+    stream_source: rtsp://192.168.5.12:7447/597fbfb7e4b0057207bd51d3_1
+    still_image_url: http://192.168.5.50/snap.jpeg

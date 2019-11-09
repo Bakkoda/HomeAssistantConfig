@@ -1,0 +1,41 @@
+  - platform: template
+    sensors:
+        perimeter_frontdoor:
+            friendly_name: "Front Door"
+            device_class: door
+            value_template: "{{ is_state('sensor.frontdoor', '0.0' ) }}"
+
+        perimeter_garagedoor:
+            friendly_name: "Garage Door"
+            device_class: garage_door
+            value_template: "{{ is_state('sensor.garagedoor', '0.0' ) }}"
+
+        perimeter_garagereardoor:
+            friendly_name: "Garage Rear Door"
+            device_class: door
+            value_template: "{{ is_state('sensor.garagereardoor', '0.0' ) }}"
+
+        perimeter_slidingdoor:
+            friendly_name: "Sliding Glass Door"
+            device_class: door
+            value_template: "{{ is_state('sensor.hank_hkzw_dws01_door_window_sensor_access_control', '22' ) }}"
+
+        perimeter_kitchenmotion:
+            friendly_name: "Kitchen Motion Sensor"
+            device_class: motion
+            value_template: "{{ is_state('sensor.vision_zp3102_pir_motion_sensor_alarm_level', '255' ) }}"
+
+        perimeter_clothesdryer:
+            friendly_name: "Clothes Dryer"
+            device_class: vibration
+            value_template: "{{ is_state('input_boolean.clothes_dryer', 'on' ) }}"
+
+        perimeter_washingmachine:
+            friendly_name: "Washing Machine"
+            device_class: vibration
+            value_template: "{{ is_state('input_boolean.washing_machine', 'on' ) }}"
+
+  - platform: mqtt
+    name: "Front Porch Motion"
+    state_topic: "homeassistant/camera/motion/FP_Cam1"
+    device_class: motion

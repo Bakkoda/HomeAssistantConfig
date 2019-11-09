@@ -1,0 +1,28 @@
+######################################################################
+#       Presence
+######################################################################
+  - alias: Home Notification
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: person.will, person.melissa, person.jacob, person.kaleb
+        from: 'not_home'
+        to: 'home'
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***UniFi*** - {{ trigger.to_state.attributes.friendly_name }} is now home - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505
+
+  - alias: Away Notification
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: person.will, person.melissa, person.jacob, person.kaleb
+        from: 'home'
+        to: 'not_home'
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***UniFi*** - {{ trigger.to_state.attributes.friendly_name }} is no longer home - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505

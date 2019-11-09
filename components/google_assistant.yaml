@@ -1,0 +1,51 @@
+    project_id: hassga-27755
+    api_key: !secret google_assistant_apikey
+    expose_by_default: false
+    exposed_domains:
+       - climate
+       - switch
+    entity_config:
+        climate.stelpro_stzw402_electronic_thermostat_heating_1:
+            expose: true
+            name: House
+            room: Living Room
+
+        switch.heat_saver:
+            expose: True
+            name: Heat Saver
+            room: Living Room
+
+        switch.coffee_maker:
+            expose: true
+            name: Coffee Maker
+            room: Kitchen
+
+        switch.garagedooropener:
+            expose: true
+            name: Garage Door
+            room: Garage
+
+        switch.consoles:
+            expose: true
+            name: Consoles
+            room: Kids Room
+
+        switch.greyskull:
+            expose: true
+            name: Computer
+            room: Living Room
+
+        switch.kidscorner:
+            expose: true
+            name: Kids Computer
+            room: Kids Room
+
+        light.bedside_lamps:
+            expose: true
+            name: Bedside Lamps
+            room: Bedroom
+
+        light.desk_lamp:
+            expose: true
+            name: Desk Lamp
+            room: Living Room

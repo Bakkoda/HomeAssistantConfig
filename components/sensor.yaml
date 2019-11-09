@@ -1,0 +1,128 @@
+  - platform: mfi
+    host: 192.168.5.11
+    port: 6443
+    verify_ssl: false
+    username: Bakkoda
+    password: !secret unifi_password
+
+  - platform: cert_expiry
+    host: bakkoda.com
+    name: Bakkoda.com
+
+  - platform: cert_expiry
+    host: uvc.bakkoda.com
+    name: UniFi Video
+
+  - platform: cert_expiry
+    host: librenms.bakkoda.com
+    name: LibreNMS
+
+  - platform: cert_expiry
+    host: kanban.bakkoda.com
+    name: Kanboard
+
+  - platform: cert_expiry
+    host: hass.bakkoda.com
+    name: HassIO
+
+  - platform: cert_expiry
+    host: scarylegrunners.com
+    name: Scary Leg Runners
+
+  - platform: sonarr
+    api_key: !secret sonarr_apikey
+    host: 192.168.1.10
+    port: 8989
+    urlbase: /sonarr
+    ssl: false
+    monitored_conditions:
+      - series
+      - upcoming
+      - wanted
+    days: 7
+
+  - platform: radarr
+    api_key: !secret radarr_apikey
+    host: 192.168.1.10
+    port: 7878
+    urlbase: /radarr
+    ssl: false
+    monitored_conditions:
+      - movies
+      - upcoming
+    days: 7
+
+  - platform: openhardwaremonitor
+    host: 192.168.1.10
+
+  - platform: darksky
+    api_key: !secret darksky_apikey
+    forecast:
+      - 0
+    monitored_conditions:
+      - temperature_high
+
+  - platform: template
+    sensors:
+        livingroom_thermo_setpoint:
+            friendly_name: "Living Room Thermostat"
+            unit_of_measurement: '°F'
+            value_template: "{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1.attributes.temperature }}"
+
+        zwave_slidingdoor_battery:
+            friendly_name: "Sliding Glass Door Sensor"
+            unit_of_measurement: '%'
+            value_template: "{{ states.zwave.hank_hkzw_dws01_door_window_sensor.attributes.battery_level }}"
+
+        zwave_kitchenmotion_battery:
+            friendly_name: "Kitchen Motion Sensor"
+            unit_of_measurement: '%'
+            value_template: "{{ states.zwave.vision_zp3102_pir_motion_sensor.attributes.battery_level }}"
+
+        zwave_shocksensor_clothesdryer_battery:
+            friendly_name: "Clothes Dryer Sensor"
+            unit_of_measurement: '%'
+            value_template: "{{ states.zwave.vision_zs5101_shock_and_vibration_sensor_2.attributes.battery_level }}"
+
+        zwave_shocksensor_washingmachine_battery:
+            friendly_name: "Washing Machine Sensor"
+            unit_of_measurement: '%'
+            value_template: "{{ states.zwave.vision_zs5101_shock_and_vibration_sensor_3.attributes.battery_level }}"
+
+        melissas_miles:
+            friendly_name: "Melissa's Miles"
+            value_template: '{{ states.sensor.melissas_miles_json.attributes["values"][0][0] }}'
+            unit_of_measurement: 'miles'
+
+        wills_miles:
+            friendly_name: "Will's Miles"
+            value_template: '{{ states.sensor.wills_miles_json.attributes["values"][0][0] }}'
+            unit_of_measurement: 'miles'
+
+  - platform: rest
+    name: melissas_miles_json
+    resource: !secret melissas_json_url
+    scan_interval:
+        minutes: 10
+    json_attributes:
+      - range
+      - majorDimension
+      - values
+
+  - platform: rest
+    name: wills_miles_json
+    resource: !secret wills_json_url
+    scan_interval:
+        minutes: 10
+    json_attributes:
+      - range
+      - majorDimension
+      - values
+
+  - platform: mqtt
+    name: "Ansible Status"
+    state_topic: "homeassistant/ansible/status"
+
+  - platform: mqtt
+    name: "Pihole Status"
+    state_topic: "homeassistant/pihole/status"

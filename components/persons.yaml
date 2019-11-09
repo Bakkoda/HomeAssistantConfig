@@ -1,0 +1,22 @@
+  - name: Melissa
+    id: mb9run13
+    user_id: 2a0efa572b4441a0963812a438ee0b5d
+    device_trackers:
+      - device_tracker.melissa_s_phone
+
+  - name: Will
+    id: bakkoda
+    user_id: faa10ebb01a345de8cb69cd26f005f1a
+    device_trackers:
+      - device_tracker.will_s_phone
+      - device_tracker.google_maps_doghouseha_gmail_com
+
+  - name: Jacob
+    id: jkwoody
+    device_trackers:
+      - device_tracker.jacob_s_phone
+
+  - name: Kaleb
+    id: kwood
+    device_trackers:
+      - device_tracker.kaleb_s_phone

@@ -1,0 +1,18 @@
+#Misc
+    sensor.pihole_dns_queries_today:
+        icon: mdi:dns
+
+    sensor.pihole_ads_blocked_today:
+        icon: mdi:block-helper
+
+    sensor.wills_miles:
+        icon: mdi:run-fast
+
+    sensor.melissas_miles:
+        icon: mdi:run-fast
+
+    sensor.ansible_status:
+        icon: mdi:update
+
+    sensor.pihole_status:
+        icon: mdi:update

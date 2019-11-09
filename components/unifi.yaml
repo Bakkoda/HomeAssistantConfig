@@ -1,0 +1,5 @@
+  controllers:
+    - host: 192.168.5.10
+      site: The Doghouse
+      ssid_filter:
+        - 'The Doghouse'

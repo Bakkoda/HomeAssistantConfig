@@ -1,0 +1,64 @@
+  - platform: mfi
+    host: 192.168.5.11
+    port: 6443
+    verify_ssl: false
+    username: Bakkoda
+    password: !secret unifi_password
+
+  - platform: wake_on_lan
+    mac_address: "30-5A-3A-06-61-15"
+    name: "Greyskull"
+    broadcast_address: "255.255.255.255"
+    host: "192.168.2.100"
+
+  - platform: wake_on_lan
+    mac_address: "D8-CB-8A-50-1A-4E"
+    name: "KidsCorner"
+    broadcast_address: "255.255.255.255"
+    host: "192.168.2.101"
+
+  - platform: template
+    switches:
+        coffee_maker:
+            value_template: "{{ is_state('switch.zooz_zen15_power_switch_switch', 'on') }}"
+            turn_on:
+                service: switch.turn_on
+                data:
+                    entity_id: switch.zooz_zen15_power_switch_switch
+            turn_off:
+                service: switch.turn_off
+                data:
+                    entity_id: switch.zooz_zen15_power_switch_switch
+
+        automatic_coffee:
+            value_template: "{{ is_state('automation.turn_the_coffee_maker_on_in_the_mornings_for_weekdays', 'on') }}"
+            turn_on:
+                service: automation.turn_on
+                data:
+                    entity_id: automation.turn_the_coffee_maker_on_in_the_mornings_for_weekdays
+            turn_off:
+                service: automation.turn_off
+                data:
+                    entity_id: automation.turn_the_coffee_maker_on_in_the_mornings_for_weekdays
+
+        friday_coffee:
+            value_template: "{{ is_state('automation.friday_coffee', 'on') }}"
+            turn_on:
+                service: automation.turn_on
+                data:
+                    entity_id: automation.friday_coffee
+            turn_off:
+                service: automation.turn_off
+                data:
+                    entity_id: automation.friday_coffee
+
+        heat_saver:
+            value_template: "{{ is_state('automation.turn_down_living_room_thermostat_in_the_morning_on_weekdays_if_no_one_is_home_and_its_not_too_cold', 'on') }}"
+            turn_on:
+                service: automation.turn_on
+                data:
+                    entity_id: automation.turn_down_living_room_thermostat_in_the_morning_on_weekdays_if_no_one_is_home_and_its_not_too_cold
+            turn_off:
+                service: automation.turn_off
+                data:
+                    entity_id: automation.turn_down_living_room_thermostat_in_the_morning_on_weekdays_if_no_one_is_home_and_its_not_too_cold

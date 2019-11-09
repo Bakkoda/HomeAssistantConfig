@@ -1,0 +1,2 @@
+  - platform: google_maps
+    username: !secret wills_location_sharing

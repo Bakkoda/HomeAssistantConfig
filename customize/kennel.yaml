@@ -1,0 +1,51 @@
+#Kennel Stats
+    sensor.kennel_intel_core_i5_4690_temperatures_cpu_package:
+        friendly_name: CPU Temp
+        icon: mdi:temperature-fahrenheit
+
+    sensor.kennel_intel_core_i5_4690_load_cpu_total:
+        friendly_name: CPU Load
+        icon: mdi:server
+
+    sensor.kennel_generic_memory_load_memory:
+        friendly_name: Memory Load
+        icon: mdi:memory
+
+    sensor.kennel_generic_memory_data_used_memory:
+        friendly_name: Used memory
+
+    sensor.kennel_generic_memory_data_available_memory:
+        friendly_name: Available Memory
+
+    sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space:
+        friendly_name: Boot Drive Usage
+        icon: mdi:harddisk
+
+    sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature:
+        friendly_name: Boot Drive Temp
+        icon: mdi:temperature-fahrenheit
+
+#Kennel Array
+    sensor.kennel_generic_hard_disk_load_used_space:
+        friendly_name: Array Usage
+        icon: mdi:harddisk
+
+    sensor.kennel_st3000vn000_1h4167_temperatures_temperature:
+        friendly_name: Array Disk 1 Temp
+        icon: mdi:temperature-fahrenheit
+
+    sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2:
+        friendly_name: Array Disk 2 Temp
+        icon: mdi:temperature-fahrenheit
+
+    sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3:
+        friendly_name: Array Disk 3 Temp
+        icon: mdi:temperature-fahrenheit
+
+    sensor.kennel_st3000vn000_1hj166_temperatures_temperature:
+        friendly_name: Array Disk 4 Temp
+        icon: mdi:temperature-fahrenheit
+
+    sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2:
+        friendly_name: Array Disk 5 Temp
+        icon: mdi:temperature-fahrenheit
