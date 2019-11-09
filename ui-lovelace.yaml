@@ -252,6 +252,9 @@ views:
         entities:
           - zone.home
           - zone.wills_work
+          - zone.mom_and_dads
+          - zone.gram_and_pas
+          - zone.fred_boys
           - person.will
 
 ################################################################################
