@@ -267,8 +267,6 @@ views:
         title: Automations
         show_header_toggle: false
         entities:
-          - entity: switch.heat_saver
-            name: Heat Saver (Turns back on in 1 day)
           - entity: switch.automatic_coffee
             name: Automatic Coffee
           - entity: switch.friday_coffee
