@@ -51,3 +51,9 @@
 
     binary_sensor.front_porch_motion:
         icon: mdi:eye
+
+    sensor.vision_security_zp3111_multisensor_4in1_relative_humidity:
+        icon: mdi:water-percent
+
+    sensor.vision_security_zp3111_multisensor_4in1_relative_humidity_3:
+        icon: mdi:water-percent
