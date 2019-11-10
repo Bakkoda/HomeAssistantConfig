@@ -11,7 +11,6 @@
 !*.png
 !*.svg
 !*.js
-!*.xml
 
 # Ignore folders.
 .storage
