@@ -11,11 +11,14 @@
 !*.png
 !*.svg
 !*.js
+!*.py
+!*.json
 
 # Ignore folders.
 .storage
 .cloud
 .google.token
+.__pycache__
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml

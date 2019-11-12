@@ -1,6 +1,8 @@
 resources:
   - url: /local/custom-lovelace/weather-card/weather-card.js
     type: module
+  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
+    type: js
 
 title: The Doghouse
 views:
@@ -258,6 +260,37 @@ views:
           - person.will
 
 ################################################################################
+# Media tab
+################################################################################
+  - title: Media
+    icon: mdi:movie-roll
+    cards:
+      - type: entities
+        title: TV Stats
+        show_header_toggle: false
+        entities:
+          - sensor.sonarr_series
+          - sensor.sonarr_upcoming
+
+      - type: custom:upcoming-media-card
+        entity: sensor.sonarr_upcoming_media
+        hide_flagged: true
+        image_style: poster
+
+      - type: entities
+        title: Movie Stats
+        show_header_toggle: false
+        entities:
+          - sensor.radarr_movies
+          - sensor.radarr_upcoming
+
+      - type: custom:upcoming-media-card
+        entity: sensor.radarr_upcoming_media
+        hide_flagged: true
+        image_style: poster
+
+
+################################################################################
 # Misc tab
 ################################################################################
   - title: Misc
@@ -304,21 +337,6 @@ views:
             name: Washer Sensor
             unit: '%'
             entity: sensor.zwave_shocksensor_washingmachine_battery
-
-      - type: entities
-        title: Sonarr Stats
-        show_header_toggle: false
-        entities:
-          - sensor.sonarr_series
-          - sensor.sonarr_wanted
-          - sensor.sonarr_upcoming
-
-      - type: entities
-        title: Radarr Stats
-        show_header_toggle: false
-        entities:
-          - sensor.radarr_movies
-          - sensor.radarr_upcoming
 
       - type: glance
         title: SSL Expirations
