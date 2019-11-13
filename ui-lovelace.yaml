@@ -90,6 +90,13 @@ views:
             hold_action:
                 action: more-info
 
+      - type: entities
+        entities:
+          - sensor.deskcomputer
+          - sensor.livingroomtv
+          - sensor.consoles
+          - sensor.kidstv
+
       - type: conditional
         conditions:
           - entity: media_player.roku_ultra
@@ -134,45 +141,23 @@ views:
           - switch.garagedooropener
         camera_image: camera.front_porch
 
-#      - type: horizontal-stack
-#        cards:
-#          - type: picture-entity
-#            name: Washing Machine
-#            entity: binary_sensor.perimeter_washingmachine
-#            show_state: false
-#            state_image:
-#                "on": /local/images/washer_on.png
-#                "off": /local/images/washer_off.png
-#
-#          - type: picture-entity
-#            name: Clothes Dryer
-#            entity: binary_sensor.perimeter_clothesdryer
-#            show_state: false
-#            state_image:
-#                "on": /local/images/dryer_on.png
-#                "off": /local/images/dryer_off.png
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+            name: Washing Machine
+            entity: binary_sensor.perimeter_washingmachine
+            show_state: false
+            state_image:
+                "on": /local/images/washer_on.png
+                "off": /local/images/washer_off.png
 
-################################################################################
-# Power tab
-################################################################################
-  - title: Power
-    icon: mdi:dip-switch
-    cards:
-      - type: history-graph
-        title: Large Appliances
-        hours_to_show: 12
-        entities:
-          - sensor.deskcomputer
-          - sensor.livingroomtv
-          - sensor.kidstv
-          - sensor.consoles
-
-      - type: entities
-        entities:
-          - sensor.deskcomputer
-          - sensor.livingroomtv
-          - sensor.consoles
-          - sensor.kidstv
+          - type: picture-entity
+            name: Clothes Dryer
+            entity: binary_sensor.perimeter_clothesdryer
+            show_state: false
+            state_image:
+                "on": /local/images/dryer_on.png
+                "off": /local/images/dryer_off.png
 
 ################################################################################
 # Server tab
@@ -274,7 +259,6 @@ views:
 
       - type: custom:upcoming-media-card
         entity: sensor.sonarr_upcoming_media
-        hide_flagged: true
         image_style: poster
 
       - type: entities
@@ -286,7 +270,6 @@ views:
 
       - type: custom:upcoming-media-card
         entity: sensor.radarr_upcoming_media
-        hide_flagged: true
         image_style: poster
 
 

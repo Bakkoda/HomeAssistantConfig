@@ -11,14 +11,15 @@
 !*.png
 !*.svg
 !*.js
-!*.py
-!*.json
+
+# Whitelist a few directories
+!/custom_components/**
 
 # Ignore folders.
 .storage
 .cloud
 .google.token
-.__pycache__
+__pycache__/
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
