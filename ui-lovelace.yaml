@@ -90,13 +90,6 @@ views:
             hold_action:
                 action: more-info
 
-      - type: entities
-        entities:
-          - sensor.deskcomputer
-          - sensor.livingroomtv
-          - sensor.consoles
-          - sensor.kidstv
-
       - type: conditional
         conditions:
           - entity: media_player.roku_ultra
@@ -105,18 +98,29 @@ views:
             type: media-control
             entity: media_player.roku_ultra
 
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - sensor.melissas_miles
-          - sensor.wills_miles
-
       - type: custom:weather-card
         entity: weather.dark_sky
         icons: '/local/custom-lovelace/weather-card/icons/'
 
       - type: thermostat
         entity: climate.stelpro_stzw402_electronic_thermostat_heating_1
+
+      - type: picture-glance
+        entities:
+          - binary_sensor.front_porch_motion
+          - binary_sensor.perimeter_kitchenmotion
+          - binary_sensor.perimeter_frontdoor
+          - binary_sensor.perimeter_slidingdoor
+          - binary_sensor.perimeter_garagereardoor
+          - binary_sensor.perimeter_garagedoor
+          - switch.garagedooropener
+        camera_image: camera.front_porch
+
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.melissas_miles
+          - sensor.wills_miles
 
       - type: entities
         title: Temperatures
@@ -130,40 +134,13 @@ views:
           - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature_3
             name: Attic
 
-      - type: picture-glance
-        entities:
-          - binary_sensor.front_porch_motion
-          - binary_sensor.perimeter_kitchenmotion
-          - binary_sensor.perimeter_frontdoor
-          - binary_sensor.perimeter_slidingdoor
-          - binary_sensor.perimeter_garagereardoor
-          - binary_sensor.perimeter_garagedoor
-          - switch.garagedooropener
-        camera_image: camera.front_porch
 
-      - type: horizontal-stack
-        cards:
-          - type: picture-entity
-            name: Washing Machine
-            entity: binary_sensor.perimeter_washingmachine
-            show_state: false
-            state_image:
-                "on": /local/images/washer_on.png
-                "off": /local/images/washer_off.png
-
-          - type: picture-entity
-            name: Clothes Dryer
-            entity: binary_sensor.perimeter_clothesdryer
-            show_state: false
-            state_image:
-                "on": /local/images/dryer_on.png
-                "off": /local/images/dryer_off.png
 
 ################################################################################
-# Server tab
+# Power tab
 ################################################################################
-  - title: Server
-    icon: mdi:server
+  - title: Power & Stats
+    icon: mdi:dip-switch
     cards:
       - type: markdown
         content: >
@@ -227,6 +204,43 @@ views:
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
 
+      - type: markdown
+        content: >
+            ## The Doghouse Stats
+
+      - type: history-graph
+        title: Large Appliances
+        hours_to_show: 12
+        entities:
+          - sensor.deskcomputer
+          - sensor.livingroomtv
+          - sensor.kidstv
+          - sensor.consoles
+
+      - type: entities
+        entities:
+          - sensor.deskcomputer
+          - sensor.livingroomtv
+          - sensor.consoles
+          - sensor.kidstv
+
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+            name: Washing Machine
+            entity: binary_sensor.perimeter_washingmachine
+            show_state: false
+            state_image:
+                "on": /local/images/washer_on.png
+                "off": /local/images/washer_off.png
+
+          - type: picture-entity
+            name: Clothes Dryer
+            entity: binary_sensor.perimeter_clothesdryer
+            show_state: false
+            state_image:
+                "on": /local/images/dryer_on.png
+                "off": /local/images/dryer_off.png
 ################################################################################
 # Map tab
 ################################################################################
