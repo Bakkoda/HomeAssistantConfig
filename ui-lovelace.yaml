@@ -94,6 +94,21 @@ views:
 
       - type: custom:mini-media-player
         entity: media_player.roku_ultra
+        hide:
+            power: true
+            source: true
+        shortcuts:
+            columns: 3
+            buttons:
+              - icon: mdi:plex
+                type: source
+                id: Plex
+              - icon: mdi:netflix
+                type: source
+                id: Netflix
+              - icon: mdi:home
+                type: source
+                id: Home
 
       - type: custom:weather-card
         entity: weather.dark_sky
