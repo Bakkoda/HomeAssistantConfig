@@ -3,6 +3,8 @@ resources:
     type: module
   - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
     type: module
+  - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?v=1
+    type: module
   - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
     type: js
   - url: /local/custom-lovelace/text-element/text-element.js?v=0
@@ -15,6 +17,7 @@ views:
 ################################################################################
   - title: Home
     icon: mdi:home
+    path: home
     cards:
       - type: horizontal-stack
         cards:
@@ -99,6 +102,7 @@ views:
         hide:
             power: true
             source: true
+            volume: true
         shortcuts:
             columns: 3
             buttons:
@@ -116,8 +120,19 @@ views:
         entity: weather.dark_sky
         icons: '/local/custom-lovelace/weather-card/icons/'
 
-      - type: thermostat
+      - type: custom:simple-thermostat
         entity: climate.stelpro_stzw402_electronic_thermostat_heating_1
+        step_size: 1
+        control:
+            preset: false
+            Heat Econ: false
+        sensors:
+          - entity: sensor.livingroomtemp
+            name: Front Door
+          - entity: sensor.stelpro_stzw402_electronic_thermostat_temperature_2
+            name: Living Room
+          - entity: sensor.vision_zp3102_pir_motion_sensor_temperature
+            name: Kitchen
 
       - type: picture-glance
         entities:
@@ -136,25 +151,26 @@ views:
           - sensor.melissas_miles
           - sensor.wills_miles
 
-      - type: entities
-        title: Temperatures
-        show_header_toggle: false
+      - type: history-graph
+        hours_to_show: 12
         entities:
-          - sensor.livingroomtemp
-          - sensor.stelpro_stzw402_electronic_thermostat_temperature_2
-          - sensor.vision_zp3102_pir_motion_sensor_temperature
+          - entity: sensor.livingroomtemp
+            name: FD
+          - entity: sensor.stelpro_stzw402_electronic_thermostat_temperature_2
+            name: LR
+          - entity: sensor.vision_zp3102_pir_motion_sensor_temperature
+            name: Kitchen
           - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature
             name: Basement
           - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature_3
             name: Attic
-
-
 
 ################################################################################
 # Power tab
 ################################################################################
   - title: Power & Stats
     icon: mdi:dip-switch
+    path: power
     cards:
       - type: markdown
         content: >
@@ -261,6 +277,7 @@ views:
 
   - title: Map
     icon: mdi:google-maps
+    path: map
     panel: true
     cards:
       - type: map
@@ -277,6 +294,7 @@ views:
 ################################################################################
   - title: Media
     icon: mdi:movie-roll
+    path: media
     cards:
 
       - type: picture-elements
@@ -353,6 +371,7 @@ views:
 ################################################################################
   - title: Misc
     icon: mdi:clipboard-pulse
+    path: misc
     cards:
       - type: entities
         title: Automations
@@ -382,7 +401,7 @@ views:
           - type: gauge
             name: Sliding Door Sensor
             unit: '%'
-            entity: sensor.zwave_slidingdoor_battery
+            entity: sensor.zwave_heavydoor_battery
 
       - type: horizontal-stack
         cards:
