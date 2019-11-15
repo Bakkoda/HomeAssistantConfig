@@ -23,7 +23,7 @@
     initial_state: True
     trigger:
         platform: state
-        entity_id: binary_sensor.perimeter_slidingdoor
+        entity_id: binary_sensor.perimeter_heavydoor
         from: 'off'
         to: 'on'
     action:
@@ -36,7 +36,7 @@
     initial_state: True
     trigger:
         platform: state
-        entity_id: binary_sensor.perimeter_slidingdoor
+        entity_id: binary_sensor.perimeter_heavydoor
         from: 'on'
         to: 'off'
     action:

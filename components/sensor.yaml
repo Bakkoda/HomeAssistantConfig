@@ -91,8 +91,8 @@
             unit_of_measurement: '°F'
             value_template: "{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1.attributes.temperature }}"
 
-        zwave_slidingdoor_battery:
-            friendly_name: "Sliding Glass Door Sensor"
+        zwave_heavydoor_battery:
+            friendly_name: "Inside Garage Door Sensor"
             unit_of_measurement: '%'
             value_template: "{{ states.zwave.hank_hkzw_dws01_door_window_sensor.attributes.battery_level }}"
 

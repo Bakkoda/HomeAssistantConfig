@@ -37,7 +37,7 @@
         friendly_name: Washing Machine
         icon: mdi:washing-machine
 
-    sensor.zwave_slidingdoor_battery:
+    sensor.zwave_heavydoor_battery:
         icon: mdi:battery-charging
 
     sensor.zwave_kitchenmotion_battery:
