@@ -1,6 +1,8 @@
 resources:
   - url: /local/custom-lovelace/weather-card/weather-card.js
     type: module
+  - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
+    type: module
   - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
     type: js
 
@@ -90,13 +92,8 @@ views:
             hold_action:
                 action: more-info
 
-      - type: conditional
-        conditions:
-          - entity: media_player.roku_ultra
-            state_not: "idle"
-        card:
-            type: media-control
-            entity: media_player.roku_ultra
+      - type: custom:mini-media-player
+        entity: media_player.roku_ultra
 
       - type: custom:weather-card
         entity: weather.dark_sky
