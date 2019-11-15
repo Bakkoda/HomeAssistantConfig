@@ -17,3 +17,12 @@
     sensor.radarr_upcoming:
         friendly_name: Upcoming Movies
         icon: mdi:calendar-clock
+
+    sensor.tautulli:
+        friendly_name: Plex Streams
+
+    sensor.tautulli_wan_bandwidth:
+        icon: mdi:speedometer
+
+    sensor.tautulli_lan_bandwidth:
+        icon: mdi:speedometer
