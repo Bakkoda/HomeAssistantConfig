@@ -198,8 +198,15 @@ views:
         content: >
             ## The Kennel Stats
 
-      - type: history-graph
-        hours_to_show: 12
+      - type: custom:mini-graph-card
+        line_width: 5
+        hours_to_show: 24
+        points_per_hour: 1
+        animate: false
+        show:
+            graph: bar
+            fill: false
+            labels: hover
         entities:
           - sensor.serverrack
 
@@ -260,9 +267,14 @@ views:
         content: >
             ## The Doghouse Stats
 
-      - type: history-graph
-        title: Large Appliances
-        hours_to_show: 12
+      - type: custom:mini-graph-card
+        line_width: 5
+        hours_to_show: 24
+        animate: false
+        show:
+            fill: false
+            labels: hover
+            name_adaptive_color: true
         entities:
           - sensor.deskcomputer
           - sensor.livingroomtv
