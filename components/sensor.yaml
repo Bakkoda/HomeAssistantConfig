@@ -82,7 +82,9 @@
     forecast:
       - 0
     monitored_conditions:
-      - temperature_high
+      - apparent_temperature
+      - precip_probability
+
 
   - platform: template
     sensors:
