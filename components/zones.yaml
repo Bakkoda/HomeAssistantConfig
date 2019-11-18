@@ -11,9 +11,9 @@
     icon: mdi:briefcase
 
   - name: Mom and Dads
-    latitude: 42.73334
-    longitude: -74.3109447
-    radius: 75
+    latitude: 42.7316996
+    longitude: -74.3085663
+    radius: 125
     icon: mdi:home
 
   - name: Fred Boys
