@@ -30,6 +30,7 @@ views:
                 "home": /local/images/avatars/will_home.png
                 "not_home": /local/images/avatars/will_not_home.png
                 "Wills Work": /local/images/avatars/will_work.png
+                "Mom and Dads": /local/images/avatars/will_mnd.png
                 "unknown": /local/images/avatars/will_not_home.png
 
           - type: picture-entity
