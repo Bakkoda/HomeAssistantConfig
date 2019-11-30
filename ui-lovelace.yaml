@@ -142,7 +142,7 @@ views:
           - binary_sensor.front_porch_motion
           - binary_sensor.perimeter_kitchenmotion
           - binary_sensor.perimeter_frontdoor
-          - binary_sensor.perimeter_heavydoor
+#          - binary_sensor.perimeter_heavydoor
           - binary_sensor.perimeter_garagereardoor
           - binary_sensor.perimeter_garagedoor
           - switch.garagedooropener
