@@ -433,6 +433,18 @@ views:
       - type: horizontal-stack
         cards:
           - type: gauge
+            name: Attic 4in1 Sensor
+            unit: '%'
+            entity: sensor.zwave_attic4in1_battery
+
+          - type: gauge
+            name: Basement 4in1 Sensor
+            unit: '%'
+            entity: sensor.zwave_basement4in1_battery
+
+      - type: horizontal-stack
+        cards:
+          - type: gauge
             name: Dryer Sensor
             unit: '%'
             entity: sensor.zwave_shocksensor_clothesdryer_battery
