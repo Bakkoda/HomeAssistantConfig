@@ -6,13 +6,13 @@
     password: !secret unifi_password
 
   - platform: wake_on_lan
-    mac_address: "30-5A-3A-06-61-15"
+    mac: "30-5A-3A-06-61-15"
     name: "Greyskull"
     broadcast_address: "255.255.255.255"
     host: "192.168.2.100"
 
   - platform: wake_on_lan
-    mac_address: "D8-CB-8A-50-1A-4E"
+    mac: "D8-CB-8A-50-1A-4E"
     name: "KidsCorner"
     broadcast_address: "255.255.255.255"
     host: "192.168.2.101"

@@ -91,7 +91,7 @@
         livingroom_thermo_setpoint:
             friendly_name: "Living Room Thermostat"
             unit_of_measurement: '°F'
-            value_template: "{{ states.climate.stelpro_stzw402_electronic_thermostat_heating_1.attributes.temperature }}"
+            value_template: "{{ states.climate.stelpro_stzw402_electronic_thermostat_mode.attributes.temperature }}"
 
         zwave_heavydoor_battery:
             friendly_name: "Inside Garage Door Sensor"

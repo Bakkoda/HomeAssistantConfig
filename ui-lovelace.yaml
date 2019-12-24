@@ -124,7 +124,7 @@ views:
         icons: '/local/custom-lovelace/weather-card/icons/'
 
       - type: custom:simple-thermostat
-        entity: climate.stelpro_stzw402_electronic_thermostat_heating_1
+        entity: climate.stelpro_stzw402_electronic_thermostat_mode
         step_size: 1
         control:
             preset: false
