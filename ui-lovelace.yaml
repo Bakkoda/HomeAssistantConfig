@@ -1,4 +1,11 @@
+custom_header:
+    compact_mode: true
+    hide_config: true
+    hide_raw: true
+    hide_help: true
 resources:
+  - url: /local/custom-lovelace/custom-header/custom-header.js?v=0.0.1
+    type: module
   - url: /local/custom-lovelace/weather-card/weather-card.js
     type: module
   - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
@@ -12,7 +19,6 @@ resources:
   - url: /local/custom-lovelace/text-element/text-element.js?v=0
     type: js
 
-title: The Doghouse
 views:
 ################################################################################
 # Home tab
