@@ -5,8 +5,8 @@
     icon: mdi:home
 
   - name: Wills Work
-    latitude: 42.3709763
-    longitude: -74.6655528
+    latitude: 42.3727203
+    longitude: -74.6654975
     radius: 200
     icon: mdi:briefcase
 
