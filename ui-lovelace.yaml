@@ -1,5 +1,6 @@
 custom_header:
     compact_mode: true
+    menu_hide: true
     hide_config: true
     hide_raw: true
     hide_help: true
