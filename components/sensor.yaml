@@ -194,9 +194,9 @@
     state_topic: "homeassistant/pihole/status"
 
   - platform: mqtt
-    name: "Personal"
+    name: "Personal backups"
     state_topic: "homeassistant/backups/personal"
 
   - platform: mqtt
-    name: "Servers"
+    name: "Servers backups"
     state_topic: "homeassistant/backups/servers"

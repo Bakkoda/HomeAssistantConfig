@@ -18,7 +18,9 @@
         icon: mdi:update
 
     sensor.personal_backups:
+        friendly_name: Personal
         icon: mdi:server-security
 
     sensor.servers_backups:
+        friendly_name: Servers
         icon: mdi:server-security
