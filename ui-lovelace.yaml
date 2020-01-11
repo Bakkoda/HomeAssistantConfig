@@ -480,6 +480,8 @@ views:
           - sensor.pihole_status
           - sensor.personal_backups
           - sensor.servers_backups
+          - sensor.critical_backups
+          - sensor.weekly_backups
 
       - type: entities
         title: Pi-Hole Stats

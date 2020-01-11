@@ -19,8 +19,16 @@
 
     sensor.personal_backups:
         friendly_name: Personal
-        icon: mdi:server-security
+        icon: mdi:cloud-upload
 
     sensor.servers_backups:
         friendly_name: Servers
+        icon: mdi:cloud-upload
+
+    sensor.critical_backups:
+        friendly_name: Critical
+        icon: mdi:server-security
+
+    sensor.weekly_backups:
+        friendly_name: Weekly
         icon: mdi:server-security

@@ -200,3 +200,11 @@
   - platform: mqtt
     name: "Servers backups"
     state_topic: "homeassistant/backups/servers"
+
+  - platform: mqtt
+    name: "Critical backups"
+    state_topic: "homeassistant/backups/critical"
+
+  - platform: mqtt
+    name: "Weekly backups"
+    state_topic: "homeassistant/backups/weekly"

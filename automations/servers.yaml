@@ -41,6 +41,17 @@
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
+  - alias: 'Veeam updates'
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: sensor.critical_backups, sensor.weekly_backups
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} VM backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505
+
   - alias: 'Monitor SSL expirations'
     initial_state: on
     trigger:
