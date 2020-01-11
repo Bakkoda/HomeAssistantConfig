@@ -38,7 +38,7 @@
     action:
         service: notify.discord_bot
         data_template:
-            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
   - alias: 'Monitor SSL expirations'
