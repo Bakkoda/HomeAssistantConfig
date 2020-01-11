@@ -478,6 +478,8 @@ views:
         entities:
           - sensor.ansible_status
           - sensor.pihole_status
+          - sensor.personal_backups
+          - sensor.servers_backups
 
       - type: entities
         title: Pi-Hole Stats

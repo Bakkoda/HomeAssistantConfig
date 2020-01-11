@@ -23,7 +23,7 @@
     initial_state: True
     trigger:
         platform: state
-        entity_id: sensor.ansible_status, sensor.pihole_status
+        entity_id: sensor.ansible_status, sensor.pihole_status, sensor.servers_backups, sensor.personal_backups
     action:
         service: notify.discord_bot
         data_template:

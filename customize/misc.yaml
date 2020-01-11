@@ -16,3 +16,9 @@
 
     sensor.pihole_status:
         icon: mdi:update
+
+    sensor.personal_backups:
+        icon: mdi:server-security
+
+    sensor.servers_backups:
+        icon: mdi:server-security
