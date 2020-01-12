@@ -16,7 +16,7 @@
     action:
         service: notify.discord_bot
         data_template:
-            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} is currently above 105° F with a temp of {{ trigger.to_state.state }}° F - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} is currently above 105° F with a temp of {{ trigger.to_state.state }}° F @here - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
   - alias: 'Ansible updates'
@@ -38,7 +38,7 @@
     action:
         service: notify.discord_bot
         data_template:
-            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            message: "***HA*** - **{{ trigger.to_state.attributes.friendly_name }} backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
   - alias: 'Veeam updates'
@@ -49,7 +49,7 @@
     action:
         service: notify.discord_bot
         data_template:
-            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} VM backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            message: "***HA*** - **{{ trigger.to_state.attributes.friendly_name }} VM backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
   - alias: 'Monitor SSL expirations'
