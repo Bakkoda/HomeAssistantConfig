@@ -4,19 +4,19 @@
 
     sensor.pihole_ads_blocked_today:
         icon: mdi:block-helper
-
+#Miles tracker
     sensor.wills_miles:
         icon: mdi:run-fast
 
     sensor.melissas_miles:
         icon: mdi:run-fast
-
+#Ansible updates
     sensor.ansible_status:
         icon: mdi:update
 
     sensor.pihole_status:
         icon: mdi:update
-
+#Arq backups
     sensor.personal_backups:
         friendly_name: Personal
         icon: mdi:cloud-upload
@@ -24,7 +24,7 @@
     sensor.servers_backups:
         friendly_name: Servers
         icon: mdi:cloud-upload
-
+#Veeam backups
     sensor.critical_backups:
         friendly_name: Critical
         icon: mdi:server-security

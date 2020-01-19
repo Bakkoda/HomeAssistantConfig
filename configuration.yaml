@@ -59,7 +59,14 @@ recorder:
           - sensor
           - binary_sensor
           - switch
+          - climate
+          - automation
           - media_player
+          - device_tracker
+    exclude:
+        entities:
+          - sensor.last_boot
+          - sensor.date
 
 # Enables support for tracking state changes over time.
 history:
