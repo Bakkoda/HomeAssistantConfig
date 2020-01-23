@@ -32,3 +32,8 @@
     sensor.weekly_backups:
         friendly_name: Weekly
         icon: mdi:server-security
+
+#Database backups
+    sensor.database_backups:
+        friendly_name: databases
+        icon: mdi:database-check

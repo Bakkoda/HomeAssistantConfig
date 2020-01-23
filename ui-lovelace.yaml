@@ -478,6 +478,7 @@ views:
         entities:
           - sensor.ansible_status
           - sensor.pihole_status
+          - sensor.database_backups
           - sensor.personal_backups
           - sensor.servers_backups
           - sensor.critical_backups
