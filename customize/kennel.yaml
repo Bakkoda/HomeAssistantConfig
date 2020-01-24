@@ -22,8 +22,8 @@
         icon: mdi:harddisk
 
     sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature:
-        friendly_name: Boot Drive Temp
-        icon: mdi:temperature-fahrenheit
+        friendly_name: Boot
+        icon: mdi:harddisk
 
 #Kennel Array
     sensor.kennel_generic_hard_disk_load_used_space:
@@ -31,21 +31,21 @@
         icon: mdi:harddisk
 
     sensor.kennel_st3000vn000_1h4167_temperatures_temperature:
-        friendly_name: Array Disk 1 Temp
-        icon: mdi:temperature-fahrenheit
+        friendly_name: Disk 1
+        icon: mdi:harddisk
 
     sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2:
-        friendly_name: Array Disk 2 Temp
-        icon: mdi:temperature-fahrenheit
+        friendly_name: Disk 2
+        icon: mdi:harddisk
 
     sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3:
-        friendly_name: Array Disk 3 Temp
-        icon: mdi:temperature-fahrenheit
+        friendly_name: Disk 3
+        icon: mdi:harddisk
 
     sensor.kennel_st3000vn000_1hj166_temperatures_temperature:
-        friendly_name: Array Disk 4 Temp
-        icon: mdi:temperature-fahrenheit
+        friendly_name: Disk 4
+        icon: mdi:harddisk
 
     sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2:
-        friendly_name: Array Disk 5 Temp
-        icon: mdi:temperature-fahrenheit
+        friendly_name: Disk 5
+        icon: mdi:harddisk

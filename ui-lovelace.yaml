@@ -4,6 +4,7 @@ custom_header:
     hide_config: true
     hide_raw: true
     hide_help: true
+    options_hide: true
 resources:
   - url: /local/custom-lovelace/custom-header/custom-header.js?v=0.0.1
     type: module
@@ -183,7 +184,7 @@ views:
             name: Attic
 
 ################################################################################
-# Power tab
+# Server tab
 ################################################################################
   - title: Power & Stats
     icon: mdi:dip-switch
@@ -247,15 +248,21 @@ views:
           - sensor.kennel_intel_core_i5_4690_temperatures_cpu_package
           - sensor.kennel_generic_memory_data_available_memory
           - sensor.kennel_generic_memory_data_used_memory
-          - sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature
-          - sensor.kennel_st3000vn000_1h4167_temperatures_temperature
-          - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2
-          - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3
-          - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
-          - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
+
+      - type: horizontal-stack
+        cards:
+          - type: glance
+            title: HDD Temps
+            entities:
+              - sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature
+              - sensor.kennel_st3000vn000_1h4167_temperatures_temperature
+              - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2
+              - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3
+              - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
+              - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
 
 ################################################################################
-# Poer tab
+# Power tab
 ################################################################################
   - title: Power
     icon: mdi:power-socket-us
