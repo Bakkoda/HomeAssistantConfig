@@ -35,5 +35,5 @@
 
 #Database backups
     sensor.database_backups:
-        friendly_name: databases
+        friendly_name: Databases
         icon: mdi:database-check

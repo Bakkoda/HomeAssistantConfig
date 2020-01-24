@@ -187,12 +187,8 @@ views:
 ################################################################################
   - title: Power & Stats
     icon: mdi:dip-switch
-    path: power
+    path: server
     cards:
-      - type: markdown
-        content: >
-            ## The Kennel Stats
-
       - type: custom:mini-graph-card
         line_width: 5
         hours_to_show: 24
@@ -258,10 +254,13 @@ views:
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
 
-      - type: markdown
-        content: >
-            ## The Doghouse Stats
-
+################################################################################
+# Poer tab
+################################################################################
+  - title: Power
+    icon: mdi:power-socket-us
+    path: power
+    cards:
       - type: custom:mini-graph-card
         line_width: 5
         hours_to_show: 24
@@ -300,6 +299,44 @@ views:
             state_image:
                 "on": /local/images/dryer_on.png
                 "off": /local/images/dryer_off.png
+
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            name: Kitchen Sensor
+            unit: '%'
+            entity: sensor.zwave_kitchenmotion_battery
+
+          - type: gauge
+            name: Sliding Door Sensor
+            unit: '%'
+            entity: sensor.zwave_heavydoor_battery
+
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            name: Attic 4in1 Sensor
+            unit: '%'
+            entity: sensor.zwave_attic4in1_battery
+
+          - type: gauge
+            name: Basement 4in1 Sensor
+            unit: '%'
+            entity: sensor.zwave_basement4in1_battery
+
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            name: Dryer Sensor
+            unit: '%'
+            entity: sensor.zwave_shocksensor_clothesdryer_battery
+
+          - type: gauge
+            name: Washer Sensor
+            unit: '%'
+            entity: sensor.zwave_shocksensor_washingmachine_battery
+
+
 ################################################################################
 # Map tab
 ################################################################################
@@ -424,42 +461,6 @@ views:
             name: Basement
           - entity: sensor.vision_security_zp3111_multisensor_4in1_relative_humidity_3
             name: Attic
-
-      - type: horizontal-stack
-        cards:
-          - type: gauge
-            name: Kitchen Sensor
-            unit: '%'
-            entity: sensor.zwave_kitchenmotion_battery
-
-          - type: gauge
-            name: Sliding Door Sensor
-            unit: '%'
-            entity: sensor.zwave_heavydoor_battery
-
-      - type: horizontal-stack
-        cards:
-          - type: gauge
-            name: Attic 4in1 Sensor
-            unit: '%'
-            entity: sensor.zwave_attic4in1_battery
-
-          - type: gauge
-            name: Basement 4in1 Sensor
-            unit: '%'
-            entity: sensor.zwave_basement4in1_battery
-
-      - type: horizontal-stack
-        cards:
-          - type: gauge
-            name: Dryer Sensor
-            unit: '%'
-            entity: sensor.zwave_shocksensor_clothesdryer_battery
-
-          - type: gauge
-            name: Washer Sensor
-            unit: '%'
-            entity: sensor.zwave_shocksensor_washingmachine_battery
 
       - type: glance
         title: SSL Expirations
