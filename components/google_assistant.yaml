@@ -1,5 +1,6 @@
     project_id: hassga-27755
-    api_key: !secret google_assistant_apikey
+    service_account: !include service.json
+    report_state: true
     expose_by_default: false
     exposed_domains:
        - climate

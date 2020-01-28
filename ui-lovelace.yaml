@@ -361,6 +361,7 @@ views:
           - zone.gram_and_pas
           - zone.fred_boys
           - person.will
+          - person.melissa
 
 ################################################################################
 # Media tab
