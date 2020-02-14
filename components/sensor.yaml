@@ -125,12 +125,14 @@
 
         melissas_miles:
             friendly_name: "Melissa's Miles"
-            value_template: '{{ states.sensor.melissas_miles_json.attributes["values"][0][0] }}'
+            value_template: >
+                {{ states.sensor.melissas_miles_json.attributes["values"][0][0] }} / {{ states.sensor.melissas_miles_json.attributes["values"][0][1] }}
             unit_of_measurement: 'miles'
 
         wills_miles:
             friendly_name: "Will's Miles"
-            value_template: '{{ states.sensor.wills_miles_json.attributes["values"][0][0] }}'
+            value_template: >
+                {{ states.sensor.wills_miles_json.attributes["values"][0][0] }} / {{ states.sensor.wills_miles_json.attributes["values"][0][1] }}
             unit_of_measurement: 'miles'
 
         tautulli_count_total:

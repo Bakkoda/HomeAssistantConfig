@@ -31,6 +31,11 @@
             name: Computer
             room: Living Room
 
+        switch.brotherprinter:
+            expose: true
+            name: Printer
+            room: Living Room
+
         switch.kidscorner:
             expose: true
             name: Kids Computer

@@ -148,9 +148,7 @@ views:
       - type: picture-glance
         entities:
           - binary_sensor.front_porch_motion
-#          - binary_sensor.perimeter_kitchenmotion
           - binary_sensor.perimeter_frontdoor
-#          - binary_sensor.perimeter_heavydoor
           - binary_sensor.perimeter_garagereardoor
           - binary_sensor.perimeter_garagedoor
           - switch.garagedooropener
@@ -253,6 +251,7 @@ views:
         cards:
           - type: glance
             title: HDD Temps
+            columns: 3
             entities:
               - sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature
               - sensor.kennel_st3000vn000_1h4167_temperatures_temperature
