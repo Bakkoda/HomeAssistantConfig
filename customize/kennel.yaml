@@ -30,15 +30,15 @@
         friendly_name: Array Usage
         icon: mdi:harddisk
 
-    sensor.kennel_st3000vn000_1h4167_temperatures_temperature:
+    sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature:
         friendly_name: Disk 1
         icon: mdi:harddisk
 
-    sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2:
+    sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_2:
         friendly_name: Disk 2
         icon: mdi:harddisk
 
-    sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3:
+    sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_3:
         friendly_name: Disk 3
         icon: mdi:harddisk
 

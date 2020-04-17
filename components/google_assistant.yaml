@@ -6,7 +6,7 @@
        - climate
        - switch
     entity_config:
-        climate.stelpro_stzw402_electronic_thermostat_heating_1:
+        climate.stelpro_stzw402_electronic_thermostat_mode:
             expose: true
             name: House
             room: Living Room

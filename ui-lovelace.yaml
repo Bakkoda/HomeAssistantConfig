@@ -104,7 +104,7 @@ views:
                 action: more-info
           - entity: switch.consoles
             tap_action:
-                action: toggle
+                action: more-info
             hold_action:
                 action: more-info
 
@@ -229,26 +229,6 @@ views:
                 yellow: 45
                 red: 85
 
-      - type: horizontal-stack
-        cards:
-          - type: gauge
-            name: Boot Drive Usage
-            unit: '%'
-            entity: sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space
-            severity:
-                green: 0
-                yellow: 45
-                red: 85
-
-          - type: gauge
-            name: Storage Array Usage
-            unit: '%'
-            entity: sensor.kennel_generic_hard_disk_load_used_space
-            severity:
-                green: 0
-                yellow: 45
-                red: 85
-
       - type: entities
         entities:
           - sensor.serverrack
@@ -263,9 +243,9 @@ views:
             columns: 3
             entities:
               - sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature
-              - sensor.kennel_st3000vn000_1h4167_temperatures_temperature
-              - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2
-              - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3
+              - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature
+              - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_2
+              - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_3
               - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
               - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
 
