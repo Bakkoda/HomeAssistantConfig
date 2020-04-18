@@ -5,21 +5,6 @@ custom_header:
     hide_raw: true
     hide_help: true
     options_hide: true
-resources:
-  - url: /local/custom-lovelace/custom-header/custom-header.js?v=0.0.1
-    type: module
-  - url: /local/custom-lovelace/weather-card/weather-card.js
-    type: module
-  - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
-    type: module
-  - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?v=1
-    type: module
-  - url: /local/custom-lovelace/mini-graph-card/mini-graph-card-bundle.js?v=0.8.2
-    type: module
-  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
-    type: js
-  - url: /local/custom-lovelace/text-element/text-element.js?v=0
-    type: js
 
 views:
 ################################################################################
@@ -235,6 +220,9 @@ views:
           - sensor.kennel_intel_core_i5_4690_temperatures_cpu_package
           - sensor.kennel_generic_memory_data_available_memory
           - sensor.kennel_generic_memory_data_used_memory
+          - sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space
+          - sensor.kennel_generic_hard_disk_load_used_space_2
+          - sensor.kennel_generic_hard_disk_load_used_space
 
       - type: horizontal-stack
         cards:

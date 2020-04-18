@@ -21,13 +21,16 @@
         friendly_name: Boot Drive Usage
         icon: mdi:harddisk
 
-    sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature:
-        friendly_name: Boot
+    sensor.kennel_generic_hard_disk_load_used_space_2:
+        friendly_name: Storage Drive Usage
         icon: mdi:harddisk
 
-#Kennel Array
     sensor.kennel_generic_hard_disk_load_used_space:
-        friendly_name: Array Usage
+        friendly_name: Speed Drive Usage
+        icon: mdi:harddisk
+
+    sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature:
+        friendly_name: Boot
         icon: mdi:harddisk
 
     sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature:

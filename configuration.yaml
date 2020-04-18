@@ -22,6 +22,22 @@ frontend:
 lovelace:
     mode: yaml
 
+    resources:
+      - url: /local/custom-lovelace/custom-header/custom-header.js?v=0.0.1
+        type: module
+      - url: /local/custom-lovelace/weather-card/weather-card.js
+        type: module
+      - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
+        type: module
+      - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?v=1
+        type: module
+      - url: /local/custom-lovelace/mini-graph-card/mini-graph-card-bundle.js?v=0.8.2
+        type: module
+      - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
+        type: js
+      - url: /local/custom-lovelace/text-element/text-element.js?v=0
+        type: js
+
 # HTTP options
 http:
     cors_allowed_origins:
@@ -109,7 +125,6 @@ automation: !include_dir_merge_list automations/
 binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
 camera: !include components/camera.yaml
-unifi: !include components/unifi.yaml
 pi_hole: !include components/pihole.yaml
 person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml

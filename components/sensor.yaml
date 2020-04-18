@@ -7,27 +7,21 @@
 
   - platform: cert_expiry
     host: bakkoda.com
-    name: Bakkoda.com
 
   - platform: cert_expiry
     host: uvc.bakkoda.com
-    name: UniFi Video
 
   - platform: cert_expiry
     host: librenms.bakkoda.com
-    name: LibreNMS
 
   - platform: cert_expiry
     host: kanban.bakkoda.com
-    name: Kanboard
 
   - platform: cert_expiry
     host: hass.bakkoda.com
-    name: HassIO
 
   - platform: cert_expiry
     host: scarylegrunners.com
-    name: Scary Leg Runners
 
   - platform: sonarr
     api_key: !secret sonarr_apikey
