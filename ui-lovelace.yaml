@@ -104,7 +104,7 @@ views:
             buttons:
               - icon: mdi:plex
                 type: source
-                id: Plex - Stream Free TV & Movies
+                id: Plex - Stream Free Movies & TV
               - icon: mdi:netflix
                 type: source
                 id: Netflix
@@ -170,8 +170,8 @@ views:
             name: Front Door
           - entity: sensor.vision_zp3102_pir_motion_sensor_temperature
             name: Kitchen
-          - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature
-            name: Basement
+#          - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature
+#            name: Basement
           - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature_3
             name: Attic
 
@@ -441,19 +441,18 @@ views:
             fill: false
             labels: hover
         entities:
-          - entity: sensor.vision_security_zp3111_multisensor_4in1_relative_humidity
-            name: Basement
+#          - entity: sensor.vision_security_zp3111_multisensor_4in1_relative_humidity
+#            name: Basement
           - entity: sensor.vision_security_zp3111_multisensor_4in1_relative_humidity_3
             name: Attic
 
-      - type: glance
+      - type: entities
         title: SSL Expirations
-        columns: 3
+        show_header_toggle: false
         entities:
           - sensor.bakkoda_com
           - sensor.unifi_video
           - sensor.librenms
-          - sensor.kanboard
           - sensor.hassio
           - sensor.scary_leg_runners
 
