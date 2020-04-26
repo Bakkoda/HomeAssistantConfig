@@ -9,7 +9,7 @@
     action:
       - service: frontend.set_theme
         data:
-            name: slate
+            name: 'Google Dark Theme'
 
   - alias: Update HA after startup
     initial_state: True
