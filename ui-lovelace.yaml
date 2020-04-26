@@ -5,6 +5,10 @@ custom_header:
     hide_raw: true
     hide_help: true
     options_hide: true
+    background: var(--app-header-background-color)
+    elements_color: var(--app-header-text-color)
+    active_tab_color: var(--state-icon-active-color)
+    tab_indicator_color: var(--state-icon-active-color)
 
 views:
 ################################################################################
@@ -168,8 +172,8 @@ views:
             name: Living Room
           - entity: sensor.livingroomtemp
             name: Front Door
-          - entity: sensor.vision_zp3102_pir_motion_sensor_temperature
-            name: Kitchen
+#          - entity: sensor.vision_zp3102_pir_motion_sensor_temperature
+#            name: Kitchen
 #          - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature
 #            name: Basement
           - entity: sensor.vision_security_zp3111_multisensor_4in1_temperature_3
@@ -264,24 +268,6 @@ views:
           - sensor.livingroomtv
           - sensor.consoles
           - sensor.kidstv
-
-      - type: horizontal-stack
-        cards:
-          - type: picture-entity
-            name: Washing Machine
-            entity: binary_sensor.perimeter_washingmachine
-            show_state: false
-            state_image:
-                "on": /local/images/washer_on.png
-                "off": /local/images/washer_off.png
-
-          - type: picture-entity
-            name: Clothes Dryer
-            entity: binary_sensor.perimeter_clothesdryer
-            show_state: false
-            state_image:
-                "on": /local/images/dryer_on.png
-                "off": /local/images/dryer_off.png
 
       - type: horizontal-stack
         cards:

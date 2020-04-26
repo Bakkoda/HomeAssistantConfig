@@ -23,7 +23,7 @@ lovelace:
     mode: yaml
 
     resources:
-      - url: /local/custom-lovelace/custom-header/custom-header.js?v=0.0.1
+      - url: /local/custom-lovelace/custom-header/custom-header.js
         type: module
       - url: /local/custom-lovelace/weather-card/weather-card.js
         type: module
