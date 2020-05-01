@@ -1,3 +1,2 @@
     host: '192.168.1.12'
-    ssl: false
     verify_ssl: false

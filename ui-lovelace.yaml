@@ -148,6 +148,7 @@ views:
           - binary_sensor.front_porch_motion
           - binary_sensor.perimeter_frontdoor
           - binary_sensor.perimeter_garagereardoor
+          - binary_sensor.perimeter_heavydoor
           - binary_sensor.perimeter_garagedoor
           - switch.garagedooropener
         camera_image: camera.front_porch
@@ -219,6 +220,7 @@ views:
                 red: 85
 
       - type: entities
+        title: System Stats
         entities:
           - sensor.serverrack
           - sensor.kennel_intel_core_i5_4690_temperatures_cpu_package
@@ -277,7 +279,7 @@ views:
             entity: sensor.zwave_kitchenmotion_battery
 
           - type: gauge
-            name: Sliding Door Sensor
+            name: Inside Garage Door
             unit: '%'
             entity: sensor.zwave_heavydoor_battery
 
