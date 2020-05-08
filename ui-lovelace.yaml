@@ -387,6 +387,7 @@ views:
         entities:
           - sensor.sonarr_series
           - sensor.sonarr_upcoming
+          - sensor.ombi_tv_show_requests
 
       - type: custom:upcoming-media-card
         entity: sensor.sonarr_upcoming_media
@@ -398,6 +399,7 @@ views:
         entities:
           - sensor.radarr_movies
           - sensor.radarr_upcoming
+          - sensor.ombi_movie_requests
 
       - type: custom:upcoming-media-card
         entity: sensor.radarr_upcoming_media

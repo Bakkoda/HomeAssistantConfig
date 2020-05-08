@@ -26,3 +26,9 @@
 
     sensor.tautulli_lan_bandwidth:
         icon: mdi:speedometer
+
+    sensor.ombi_tv_show_requests:
+        friendly_name: TV Requests
+
+    sensor.ombi_movie_requests:
+        friendly_name: Movie Requests
