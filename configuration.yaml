@@ -68,7 +68,6 @@ updater:
 
 # Set up recorder information
 recorder:
-    purge_keep_days: 1
     db_url: !secret database_url
     include:
         domains:
