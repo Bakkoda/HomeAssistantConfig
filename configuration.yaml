@@ -116,6 +116,7 @@ person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml
 device_tracker: !include components/device_tracker.yaml
 media_player: !include components/media_player.yaml
+ombi: !include components/ombi.yaml
 notify: !include components/notify.yaml
 sensor: !include components/sensor.yaml
 switch: !include components/switch.yaml
