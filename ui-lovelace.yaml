@@ -161,7 +161,7 @@ views:
           - input_select.who_miles
           - input_number.miles
           - type: call-service
-            icon: mdi:run-fast
+            icon: mdi:send-circle
             name: Submit Miles
             action_name: Submit
             service: script.turn_on
