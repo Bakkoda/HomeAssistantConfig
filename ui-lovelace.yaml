@@ -158,6 +158,16 @@ views:
         entities:
           - sensor.melissas_miles
           - sensor.wills_miles
+          - input_select.who_miles
+          - input_number.miles
+          - type: call-service
+            icon: mdi:run-fast
+            name: Submit Miles
+            action_name: Submit
+            service: script.turn_on
+            service_data:
+                entity_id: script.mile_submission
+
 
       - type: custom:mini-graph-card
         line_width: 5

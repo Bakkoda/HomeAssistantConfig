@@ -1,0 +1,6 @@
+    who_miles:
+        name: Pick a person
+        options:
+          - Melissa
+          - Will
+        icon: mdi:account-plus

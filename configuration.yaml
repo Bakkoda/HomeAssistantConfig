@@ -107,6 +107,9 @@ sun:
 
 # Automations
 automation: !include_dir_merge_list automations/
+#Scripts
+script: !include_dir_merge_named scripts/
+rest_command: !include components/rest_command.yaml
 # Components
 binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
@@ -122,6 +125,8 @@ sensor: !include components/sensor.yaml
 switch: !include components/switch.yaml
 light: !include components/light.yaml
 weather: !include components/weather.yaml
+input_number: !include components/input_number.yaml
+input_select: !include components/input_select.yaml
 roku: !include components/roku.yaml
 zone: !include components/zones.yaml
 

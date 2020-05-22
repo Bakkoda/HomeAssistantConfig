@@ -1,0 +1,7 @@
+    mile_submission:
+        alias: Submit Miles
+        sequence:
+            service: rest_command.post_miles
+            data_template:
+                name: "{{ states.input_select.who_miles.state }}"
+                miles: "{{ states.input_number.miles.state }}"
