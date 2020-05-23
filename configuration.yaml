@@ -23,8 +23,8 @@ lovelace:
     mode: yaml
 
     resources:
-      - url: /local/custom-lovelace/custom-header/custom-header.js
-        type: module
+#      - url: /local/custom-lovelace/custom-header/custom-header.js
+#        type: module
       - url: /local/custom-lovelace/weather-card/weather-card.js
         type: module
       - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
@@ -114,7 +114,7 @@ rest_command: !include components/rest_command.yaml
 binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
 camera: !include components/camera.yaml
-pi_hole: !include components/pihole.yaml
+#pi_hole: !include components/pihole.yaml
 person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml
 device_tracker: !include components/device_tracker.yaml
