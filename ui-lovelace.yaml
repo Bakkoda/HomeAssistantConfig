@@ -376,9 +376,14 @@ views:
           - sensor.sonarr_upcoming
           - sensor.ombi_tv_show_requests
 
-      - type: custom:upcoming-media-card
-        entity: sensor.sonarr_upcoming_media
-        image_style: poster
+      - type: conditional
+        conditions:
+          - entity: sensor.sonarr_upcoming
+            state_not: '0'
+        card:
+            type: custom:upcoming-media-card
+            entity: sensor.sonarr_upcoming_media
+            image_style: poster
 
       - type: entities
         title: Movie Stats
@@ -388,9 +393,14 @@ views:
           - sensor.radarr_upcoming
           - sensor.ombi_movie_requests
 
-      - type: custom:upcoming-media-card
-        entity: sensor.radarr_upcoming_media
-        image_style: poster
+      - type: conditional
+        conditions:
+          - entity: sensor.radarr_upcoming
+            state_not: '0'
+        card:
+            type: custom:upcoming-media-card
+            entity: sensor.radarr_upcoming_media
+            image_style: poster
 
 ################################################################################
 # Misc tab
