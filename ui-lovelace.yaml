@@ -212,6 +212,9 @@ views:
             entities:
               - entity: sensor.internet_in_mbps
                 show_points: false
+            height: 200
+            lower_bound: 0
+            upper_bound: 500
             aggregate_func: max
             line_width: 10
             line_color: blue
@@ -224,6 +227,9 @@ views:
             entities:
               - entity: sensor.internet_out_mbps
                 show_points: false
+            height: 200
+            lower_bound: 0
+            upper_bound: 250
             aggregate_func: max
             line_width: 10
             line_color: red
