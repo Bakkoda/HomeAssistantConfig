@@ -206,6 +206,32 @@ views:
                 yellow: 45
                 red: 85
 
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.internet_in_mbps
+                show_points: false
+            aggregate_func: max
+            line_width: 10
+            line_color: blue
+            show:
+                extrema: true
+                labels: true
+                points: true
+
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.internet_out_mbps
+                show_points: false
+            aggregate_func: max
+            line_width: 10
+            line_color: red
+            show:
+                extrema: true
+                labels: true
+                points: true
+
       - type: entities
         title: System Stats
         entities:

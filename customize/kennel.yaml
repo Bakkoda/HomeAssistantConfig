@@ -52,3 +52,9 @@
     sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2:
         friendly_name: Disk 5
         icon: mdi:harddisk
+
+    sensor.internet_in_mbps:
+        icon: mdi:download-network
+
+    sensor.internet_out_mbps:
+        icon: mdi:upload-network
