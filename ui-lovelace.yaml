@@ -214,14 +214,13 @@ views:
                 show_points: false
             height: 200
             lower_bound: 0
-            upper_bound: 500
             aggregate_func: max
             line_width: 10
             line_color: blue
+            hours_to_show: 12
             show:
                 extrema: true
                 labels: true
-                points: true
 
           - type: custom:mini-graph-card
             entities:
@@ -229,14 +228,13 @@ views:
                 show_points: false
             height: 200
             lower_bound: 0
-            upper_bound: 250
             aggregate_func: max
             line_width: 10
             line_color: red
+            hours_to_show: 12
             show:
                 extrema: true
                 labels: true
-                points: true
 
       - type: entities
         title: System Stats

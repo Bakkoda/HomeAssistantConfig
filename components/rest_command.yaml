@@ -1,3 +1,3 @@
     post_miles:
-        url: 'https://docs.google.com/forms/d/e/1FAIpQLSfRWaqWoSLGx5TIwdgOVthzkHcTRmbgF_lydFI5hh5Cl9yc3g/formResponse?usp=pp_url&entry.1159610533={{ name }}&entry.413410969={{ miles }}&entry.1399299668=Submitted+by+Home+Assistant&submit=Submit'
+        url: !secret slr_miles_url
         method: POST
