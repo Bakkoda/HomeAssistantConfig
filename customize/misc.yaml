@@ -16,14 +16,24 @@
 
     sensor.pihole_status:
         icon: mdi:update
+
 #Arq backups
     sensor.personal_backups:
         friendly_name: Personal
         icon: mdi:cloud-upload
 
+    sensor.personal_backups_ext:
+        friendly_name: Personal (Ext)
+        icon: mdi:usb
+
     sensor.servers_backups:
         friendly_name: Servers
         icon: mdi:cloud-upload
+
+    sensor.servers_backups_ext:
+        friendly_name: Servers (Ext)
+        icon: mdi:usb
+
 #Veeam backups
     sensor.critical_backups:
         friendly_name: Critical

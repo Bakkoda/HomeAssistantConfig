@@ -148,8 +148,16 @@
     state_topic: "homeassistant/backups/personal"
 
   - platform: mqtt
+    name: "Personal backups (Ext)"
+    state_topic: "homeassistant/backups/personal_ext"
+
+  - platform: mqtt
     name: "Servers backups"
     state_topic: "homeassistant/backups/servers"
+
+  - platform: mqtt
+    name: "Servers backups (Ext)"
+    state_topic: "homeassistant/backups/servers_ext"
 
   - platform: mqtt
     name: "Critical backups"

@@ -324,11 +324,9 @@ views:
             unit: '%'
             entity: sensor.zwave_shocksensor_washingmachine_battery
 
-
 ################################################################################
 # Map tab
 ################################################################################
-
   - title: Map
     icon: mdi:google-maps
     path: map
@@ -502,7 +500,9 @@ views:
           - sensor.pihole_status
           - sensor.database_backups
           - sensor.personal_backups
+          - sensor.personal_backups_ext
           - sensor.servers_backups
+          - sensor.servers_backups_ext
           - sensor.critical_backups
           - sensor.weekly_backups
 

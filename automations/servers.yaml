@@ -34,7 +34,7 @@
     initial_state: True
     trigger:
         platform: state
-        entity_id: sensor.servers_backups, sensor.personal_backups
+        entity_id: sensor.servers_backups, sensor.personal_backups, sensor.servers_backups_ext, sensor.personal_backups_ext
     action:
         service: notify.discord_bot
         data_template:
