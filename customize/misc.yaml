@@ -12,9 +12,11 @@
         icon: mdi:run-fast
 #Ansible updates
     sensor.ansible_status:
+        friendly_name: Ansible
         icon: mdi:update
 
     sensor.pihole_status:
+        friendly_name: Pihole
         icon: mdi:update
 
 #Arq backups

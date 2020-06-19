@@ -136,11 +136,11 @@
 
 #MQTT
   - platform: mqtt
-    name: "Ansible Status"
+    name: "Ansible status"
     state_topic: "homeassistant/ansible/status"
 
   - platform: mqtt
-    name: "Pihole Status"
+    name: "Pihole status"
     state_topic: "homeassistant/pihole/status"
 
   - platform: mqtt

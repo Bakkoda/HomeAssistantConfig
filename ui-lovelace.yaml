@@ -493,18 +493,28 @@ views:
           - sensor.scary_leg_runners
 
       - type: entities
-        title: Server Update Stats
+        title: Update Stats
         show_header_toggle: false
         entities:
           - sensor.ansible_status
           - sensor.pihole_status
-          - sensor.database_backups
-          - sensor.personal_backups
-          - sensor.personal_backups_ext
-          - sensor.servers_backups
-          - sensor.servers_backups_ext
+
+      - type: entities
+        title: Veeam Stats
+        show_header_toggle: false
+        entities:
           - sensor.critical_backups
           - sensor.weekly_backups
+
+      - type: entities
+        title: Backup Stats
+        show_header_toggle: false
+        entities:
+          - sensor.database_backups
+          - sensor.personal_backups
+          - sensor.servers_backups
+          - sensor.personal_backups_ext
+          - sensor.servers_backups_ext
 
       - type: entities
         title: Pi-Hole Stats
