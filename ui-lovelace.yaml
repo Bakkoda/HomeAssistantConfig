@@ -122,9 +122,18 @@ views:
           - entity: sensor.now_playing
             state_not: "off"
         card:
+            type: picture-glance
+            entities: []
+            camera_image: camera.plex_now_playing
+
+      - type: conditional
+        conditions:
+          - entity: sensor.now_playing
+            state_not: "off"
+        card:
             type: markdown
-            content: >-
-                Now Playing: "{{ states("sensor.now_playing") }}"
+            content: |
+                {{states.sensor.now_playing.state}}
 
       - type: custom:weather-card
         entity: weather.dark_sky
@@ -400,7 +409,6 @@ views:
         title: TV Stats
         show_header_toggle: false
         entities:
-          - sensor.sonarr_series
           - sensor.sonarr_upcoming
           - sensor.ombi_tv_show_requests
 
@@ -417,7 +425,6 @@ views:
         title: Movie Stats
         show_header_toggle: false
         entities:
-          - sensor.radarr_movies
           - sensor.radarr_upcoming
           - sensor.ombi_movie_requests
 
