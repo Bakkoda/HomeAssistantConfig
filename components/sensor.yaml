@@ -159,11 +159,6 @@
     name: "Database backups"
     state_topic: "homeassistant/backups/databases"
 
-  - platform: mqtt
-    name: "Now Playing"
-    state_topic: "homeassistant/plex/nowplaying"
-    value_template: "{{ value_json.body }}"
-
 #Templates
   - platform: template
     sensors:

@@ -119,8 +119,8 @@ views:
 
       - type: conditional
         conditions:
-          - entity: sensor.now_playing
-            state_not: "off"
+          - entity: media_player.plex_plex_for_roku_roku_ultra
+            state_not: "idle"
         card:
             type: picture-glance
             entities: []
@@ -128,12 +128,12 @@ views:
 
       - type: conditional
         conditions:
-          - entity: sensor.now_playing
-            state_not: "off"
+          - entity: media_player.plex_plex_for_roku_roku_ultra
+            state_not: "idle"
         card:
             type: markdown
             content: |
-                {{states.sensor.now_playing.state}}
+                {{states.media_player.plex_plex_for_roku_roku_ultra.attributes.media_title}}
 
       - type: custom:weather-card
         entity: weather.dark_sky
