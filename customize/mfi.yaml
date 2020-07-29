@@ -73,11 +73,11 @@
 
     sensor.consoles:
         friendly_name: Consoles
-        icon: mdi:xbox-controller
+        icon: mdi:microsoft-xbox-controller
 
     switch.consoles:
         friendly_name: Consoles
-        icon: mdi:xbox-controller
+        icon: mdi:microsoft-xbox-controller
 
     sensor.raspberrypi:
         friendly_name: Hassbian
