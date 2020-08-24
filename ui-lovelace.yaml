@@ -1,14 +1,10 @@
 custom_header:
     compact_mode: true
-    menu_hide: true
+    menu_hide: false
     hide_config: true
     hide_raw: true
     hide_help: true
     options_hide: true
-#    background: var(--app-header-background-color)
-#    elements_color: var(--app-header-text-color)
-#    active_tab_color: var(--state-icon-active-color)
-#    tab_indicator_color: var(--state-icon-active-color)
 
 views:
 ################################################################################
@@ -117,24 +113,6 @@ views:
                 type: source
                 id: Home
 
-      - type: conditional
-        conditions:
-          - entity: media_player.plex_plex_for_roku_roku_ultra
-            state_not: "idle"
-        card:
-            type: picture-glance
-            entities: []
-            camera_image: camera.plex_now_playing
-
-      - type: conditional
-        conditions:
-          - entity: media_player.plex_plex_for_roku_roku_ultra
-            state_not: "idle"
-        card:
-            type: markdown
-            content: |
-                {{states.media_player.plex_plex_for_roku_roku_ultra.attributes.media_title}}
-
       - type: custom:weather-card
         entity: weather.dark_sky
         icons: '/local/custom-lovelace/weather-card/icons/'
@@ -156,7 +134,7 @@ views:
           - binary_sensor.front_porch_motion
           - binary_sensor.perimeter_frontdoor
           - binary_sensor.perimeter_garagereardoor
-          - binary_sensor.perimeter_heavydoor
+#          - binary_sensor.perimeter_heavydoor
           - binary_sensor.perimeter_garagedoor
           - switch.garagedooropener
         camera_image: camera.front_porch
@@ -520,8 +498,8 @@ views:
           - sensor.database_backups
           - sensor.personal_backups
           - sensor.servers_backups
-          - sensor.personal_backups_ext
-          - sensor.servers_backups_ext
+#          - sensor.personal_backups_ext
+#          - sensor.servers_backups_ext
 
       - type: entities
         title: Pi-Hole Stats
