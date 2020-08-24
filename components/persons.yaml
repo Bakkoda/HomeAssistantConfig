@@ -9,6 +9,7 @@
     user_id: faa10ebb01a345de8cb69cd26f005f1a
     device_trackers:
       - device_tracker.will_s_phone
+      - device_tracker.unifi_ee_5a_f8_7a_19_d5_default
       - device_tracker.google_maps_doghouseha_gmail_com
 
   - name: Jacob
