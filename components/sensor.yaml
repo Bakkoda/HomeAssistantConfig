@@ -59,9 +59,6 @@
     host: librenms.bakkoda.com
 
   - platform: cert_expiry
-    host: kanban.bakkoda.com
-
-  - platform: cert_expiry
     host: hass.bakkoda.com
 
   - platform: cert_expiry
