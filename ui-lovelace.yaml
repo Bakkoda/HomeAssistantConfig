@@ -1,11 +1,3 @@
-custom_header:
-    compact_mode: true
-    menu_hide: false
-    hide_config: true
-    hide_raw: true
-    hide_help: true
-    options_hide: true
-
 views:
 ################################################################################
 # Home tab
