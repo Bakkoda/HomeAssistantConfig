@@ -97,7 +97,7 @@ views:
             buttons:
               - icon: mdi:plex
                 type: source
-                id: Plex - Stream Free Movies & TV
+                id: Plex - Stream for Free
               - icon: mdi:netflix
                 type: source
                 id: Netflix
