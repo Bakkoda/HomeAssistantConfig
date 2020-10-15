@@ -17,7 +17,6 @@ homeassistant:
 
 frontend:
     themes: !include_dir_merge_named themes/
-    javascript_version: latest
 
 lovelace:
     mode: yaml
@@ -119,7 +118,6 @@ camera: !include components/camera.yaml
 person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml
 device_tracker: !include components/device_tracker.yaml
-media_player: !include components/media_player.yaml
 ombi: !include components/ombi.yaml
 notify: !include components/notify.yaml
 sensor: !include components/sensor.yaml
@@ -128,7 +126,6 @@ light: !include components/light.yaml
 weather: !include components/weather.yaml
 input_number: !include components/input_number.yaml
 input_select: !include components/input_select.yaml
-roku: !include components/roku.yaml
 zone: !include components/zones.yaml
 
 # Groups and Views
