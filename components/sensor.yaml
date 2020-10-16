@@ -241,10 +241,8 @@
             friendly_name: 'ERL Down'
             value_template: "{{ (state_attr('sensor.erl_wan_in_stats','change_rate')|float*8*(state_attr('sensor.erl_wan_in_stats', 'sampling_size')-1)/1000000)|round(2) }}"
             unit_of_measurement: 'MBps'
-            entity_id: sensor.erl_wan_in_stats
 
         internet_out_mbps:
             friendly_name: 'ERL Up'
             value_template: "{{ (state_attr('sensor.erl_wan_out_stats','change_rate')|float*8*(state_attr('sensor.erl_wan_out_stats', 'sampling_size')-1)/1000000)|round(2) }}"
             unit_of_measurement: 'MBps'
-            entity_id: sensor.erl_wan_out_stats
