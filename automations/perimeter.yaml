@@ -19,6 +19,19 @@
       - service: automation.turn_on
         entity_id: automation.motion_detection_on_the_porch
 
+  - alias: Motion detection in the Garage
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: binary_sensor.garage_camera_motion_active
+        from: 'off'
+        to: 'on'
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***HA*** - Motion detected in the Garage - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 450273546716053505
+
   - alias: Perimeter notification (Open)
     initial_state: True
     trigger:
