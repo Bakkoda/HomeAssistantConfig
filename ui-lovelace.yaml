@@ -87,11 +87,12 @@ views:
                 action: more-info
 
       - type: custom:mini-media-player
-        entity: media_player.roku_ultra
+        entity: media_player.roku_tv
         hide:
             power: true
             source: true
             volume: true
+            runtime: true
         shortcuts:
             columns: 3
             buttons:
