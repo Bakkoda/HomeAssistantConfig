@@ -41,6 +41,17 @@
                 data:
                     entity_id: automation.turn_the_coffee_maker_on_in_the_mornings_for_weekdays
 
+        thursday_coffee:
+            value_template: "{{ is_state('automation.turn_the_coffee_maker_on_in_the_mornings_for_thursday', 'on') }}"
+            turn_on:
+                service: automation.turn_on
+                data:
+                    entity_id: automation.turn_the_coffee_maker_on_in_the_mornings_for_thursday
+            turn_off:
+                service: automation.turn_off
+                data:
+                    entity_id: automation.turn_the_coffee_maker_on_in_the_mornings_for_thursday
+
         friday_coffee:
             value_template: "{{ is_state('automation.friday_coffee', 'on') }}"
             turn_on:

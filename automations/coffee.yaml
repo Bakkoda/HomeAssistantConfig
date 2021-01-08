@@ -19,6 +19,25 @@
         service: switch.turn_on
         entity_id: switch.coffee_maker
 
+  - alias: Turn the coffee maker on in the mornings for thursday
+    initial_state: False
+    trigger:
+        platform: time
+        at: '04:48:00'
+    condition:
+      - condition: time
+        weekday:
+          #- mon
+          #- tue
+          #- wed
+          - thu
+          #- fri
+          #- sat
+          #- sun
+    action:
+        service: switch.turn_on
+        entity_id: switch.coffee_maker
+
   - alias: Friday coffee
     initial_state: False
     trigger:
@@ -51,3 +70,23 @@
     action:
         service: switch.turn_off
         entity_id: switch.coffee_maker
+
+  - alias: Turn on thursday coffee
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: switch.automatic_coffee
+        to: 'off'
+    action:
+        service: switch.turn_on
+        entity_id: switch.thursday_coffee
+
+  - alias: Turn off thursday coffee
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: switch.automatic_coffee
+        to: 'on'
+    action:
+        service: switch.turn_off
+        entity_id: switch.thursday_coffee

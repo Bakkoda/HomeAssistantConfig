@@ -428,6 +428,8 @@ views:
         entities:
           - entity: switch.automatic_coffee
             name: Automatic Coffee
+          - entity: switch.thursday_coffee
+            name: Thursday Coffee
           - entity: switch.friday_coffee
             name: Overtime Coffee
 
