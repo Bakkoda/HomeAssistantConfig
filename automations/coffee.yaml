@@ -1,7 +1,7 @@
 ######################################################################
 #       Coffee Maker
 ######################################################################
-  - alias: Turn the coffee maker on in the mornings for weekdays
+  - alias: Coffee in the AM for Will
     trigger:
         platform: time
         at: '02:48:00'
@@ -19,7 +19,53 @@
         service: switch.turn_on
         entity_id: switch.coffee_maker
 
-  - alias: Friday coffee
+  - alias: Coffee in the AM for Melissa
+    initial_state: True
+    trigger:
+        platform: time
+        at: '04:48:00'
+    condition:
+      - condition: time
+        weekday:
+          #- mon
+          #- tue
+          #- wed
+          - thu
+          #- fri
+          #- sat
+          #- sun
+      - condition: state
+        entity_id: switch.will_coffee
+        state: 'off'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.coffee_maker
+      - service: switch.turn_on
+        entity_id: switch.will_coffee
+
+  - alias: Coffee on Friday for Melissa
+    initial_state: True
+    trigger:
+        platform: time
+        at: '04:48:00'
+    condition:
+      - condition: time
+        weekday:
+          #- mon
+          #- tue
+          #- wed
+          #- thu
+          - fri
+          #- sat
+          #- sun
+      - condition: state
+        entity_id: switch.overtime_coffee
+        state: 'off'
+    action:
+        service: switch.turn_on
+        entity_id: switch.coffee_maker
+
+  - alias: Overtime coffee
     initial_state: False
     trigger:
         platform: time
@@ -38,7 +84,7 @@
       - service: switch.turn_on
         entity_id: switch.coffee_maker
       - service: automation.turn_off
-        entity_id: automation.friday_coffee
+        entity_id: automation.overtime_coffee
 
   - alias: Turn the coffee maker off after 45 mins
     initial_state: True

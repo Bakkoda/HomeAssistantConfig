@@ -10,8 +10,12 @@
         friendly_name: Heat Saver
         icon: mdi:radiator-off
 
-    switch.automatic_coffee:
-        friendly_name: Automatic Coffee
+    switch.will_coffee:
+        friendly_name: Coffee for Will
+        icon: mdi:coffee
+
+    switch.overtime_coffee:
+        friendly_name: Overtime Coffee
         icon: mdi:coffee
 
     light.bedside_lamps:
@@ -21,11 +25,6 @@
     switch.coffee_maker:
         friendly_name: Coffee Maker
         icon: mdi:coffee
-
-    switch.friday_coffee:
-        friendly_name: Overtime Coffee
-        icon: mdi:coffee
-
     binary_sensor.perimeter_kitchenmotion:
         icon: mdi:cat
 

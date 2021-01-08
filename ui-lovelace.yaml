@@ -426,9 +426,9 @@ views:
         title: Automations
         show_header_toggle: false
         entities:
-          - entity: switch.automatic_coffee
-            name: Automatic Coffee
-          - entity: switch.friday_coffee
+          - entity: switch.will_coffee
+            name: Coffee for Will
+          - entity: switch.overtime_coffee
             name: Overtime Coffee
 
       - type: custom:mini-graph-card
