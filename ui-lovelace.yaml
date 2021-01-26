@@ -471,11 +471,11 @@ views:
         title: SSL Expirations
         show_header_toggle: false
         entities:
-          - sensor.bakkoda_com
-          - sensor.unifi_video
-          - sensor.librenms
-          - sensor.hassio
-          - sensor.scary_leg_runners
+          - sensor.cert_expiry_timestamp_bakkoda_com
+          - sensor.cert_expiry_timestamp_uvc_bakkoda_com
+          - sensor.cert_expiry_timestamp_librenms_bakkoda_com
+          - sensor.cert_expiry_timestamp_hass_bakkoda_com
+          - sensor.cert_expiry_timestamp_scarylegrunners_com
 
       - type: entities
         title: Update Stats
