@@ -13,9 +13,11 @@
 
     sensor.kennel_generic_memory_data_used_memory:
         friendly_name: Used memory
+        icon: mdi:memory
 
     sensor.kennel_generic_memory_data_available_memory:
         friendly_name: Available Memory
+        icon: mdi:memory
 
     sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space:
         friendly_name: Boot Drive Usage

@@ -86,7 +86,7 @@ views:
             hold_action:
                 action: more-info
 
-        type: conditional
+      - type: conditional
         conditions:
           - entity: media_player.roku_tv
             state_not: "unavailable"
