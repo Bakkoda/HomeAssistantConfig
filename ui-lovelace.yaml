@@ -137,13 +137,6 @@ views:
           - switch.garagedooropener
         camera_image: camera.front_porch
 
-      - type: picture-glance
-        entities:
-          - binary_sensor.garage_camera_motion_active
-          - sensor.garage_camera_battery_level
-          - switch.garage_camera_torch
-        camera_image: camera.garage_camera
-
       - type: entities
         show_header_toggle: false
         entities:
