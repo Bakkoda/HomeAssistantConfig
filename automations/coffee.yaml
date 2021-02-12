@@ -19,6 +19,27 @@
         service: switch.turn_on
         entity_id: switch.coffee_maker
 
+  - alias: Overtime coffee
+    initial_state: False
+    trigger:
+        platform: time
+        at: '02:48:00'
+    condition:
+      - condition: time
+        weekday:
+          #- mon
+          #- tue
+          #- wed
+          #- thu
+          - fri
+          #- sat
+          #- sun
+    action:
+      - service: switch.turn_on
+        entity_id: switch.coffee_maker
+      - service: switch.turn_off
+        entity_id: switch.overtime_coffee
+
   - alias: Coffee in the AM for Melissa
     initial_state: True
     trigger:
@@ -27,9 +48,9 @@
     condition:
       - condition: time
         weekday:
-          #- mon
-          #- tue
-          #- wed
+          - mon
+          - tue
+          - wed
           - thu
           #- fri
           #- sat
@@ -40,8 +61,6 @@
     action:
       - service: switch.turn_on
         entity_id: switch.coffee_maker
-      - service: switch.turn_on
-        entity_id: switch.will_coffee
 
   - alias: Coffee on Friday for Melissa
     initial_state: True
@@ -62,29 +81,14 @@
         entity_id: switch.overtime_coffee
         state: 'off'
     action:
-        service: switch.turn_on
-        entity_id: switch.coffee_maker
-
-  - alias: Overtime coffee
-    initial_state: False
-    trigger:
-        platform: time
-        at: '02:48:00'
-    condition:
-      - condition: time
-        weekday:
-          #- mon
-          #- tue
-          #- wed
-          #- thu
-          - fri
-          #- sat
-          #- sun
-    action:
       - service: switch.turn_on
         entity_id: switch.coffee_maker
-      - service: automation.turn_off
-        entity_id: automation.overtime_coffee
+      - service: switch.turn_on
+        entity_id: switch.will_coffee
+
+######################################################################
+#       Utility
+######################################################################
 
   - alias: Turn the coffee maker off after 45 mins
     initial_state: True
