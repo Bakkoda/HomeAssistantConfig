@@ -132,10 +132,16 @@ views:
           - binary_sensor.front_porch_motion
           - binary_sensor.perimeter_frontdoor
           - binary_sensor.perimeter_garagereardoor
-#          - binary_sensor.perimeter_heavydoor
           - binary_sensor.perimeter_garagedoor
           - switch.garagedooropener
         camera_image: camera.front_porch
+
+      - type: picture-glance
+        entities:
+          - binary_sensor.garage_camera_motion_active
+          - sensor.garage_camera_battery_level
+          - switch.garage_camera_torch
+        camera_image: camera.garage_camera
 
       - type: entities
         show_header_toggle: false

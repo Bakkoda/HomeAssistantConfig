@@ -114,11 +114,10 @@ rest_command: !include components/rest_command.yaml
 binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
 camera: !include components/camera.yaml
-#pi_hole: !include components/pihole.yaml
 person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml
 device_tracker: !include components/device_tracker.yaml
-#android_ip_webcam: !include components/android_ip_webcam.yaml
+android_ip_webcam: !include components/android_ip_webcam.yaml
 ombi: !include components/ombi.yaml
 notify: !include components/notify.yaml
 sensor: !include components/sensor.yaml
