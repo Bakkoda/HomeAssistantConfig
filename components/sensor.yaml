@@ -82,15 +82,14 @@
     monitored_conditions:
       - movies
       - upcoming
-    days: 28
+    days: 60
 
   - platform: radarr_upcoming_media
     api_key: !secret radarr_apikey
     host: 192.168.1.10
     port: 7878
-    days: 120
+    days: 60
     ssl: false
-    theaters: false
     max: 10
 
   - platform: tautulli
