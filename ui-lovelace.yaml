@@ -251,6 +251,17 @@ views:
               - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
               - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
 
+      - type: entities
+        title: UPS Stats
+        entities:
+          - sensor.ups_model
+          - sensor.ups_status
+          - sensor.ups_input_voltage
+          - sensor.ups_output_voltage
+          - sensor.ups_battery
+          - sensor.ups_load
+          - sensor.ups_time_left
+
 ################################################################################
 # Power tab
 ################################################################################

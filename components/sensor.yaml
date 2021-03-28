@@ -6,6 +6,30 @@
     username: Bakkoda
     password: !secret unifi_password
 
+  - platform: apcupsd
+    resources:
+      - apc
+      - date
+      - hostname
+      - version
+      - upsname
+      - cable
+      - driver
+      - upsmode
+      - starttime
+      - model
+      - status
+      - linev
+      - loadpct
+      - bcharge
+      - timeleft
+      - mbattchg
+      - mintimel
+      - maxtime
+      - maxlinev
+      - minlinev
+      - outputv
+
   - platform: openhardwaremonitor
     host: 192.168.1.10
 
