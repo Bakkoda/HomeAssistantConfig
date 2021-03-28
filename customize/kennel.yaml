@@ -1,3 +1,10 @@
+#APCUPSD Stats
+    sensor.ups_model:
+        icon: mdi:car-battery
+
+    sensor.ups_status:
+        icon: mdi:power-socket-us
+
 #Kennel Stats
     sensor.kennel_intel_core_i5_4690_temperatures_cpu_package:
         friendly_name: CPU Temp
