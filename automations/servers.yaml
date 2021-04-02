@@ -2,7 +2,7 @@
 #       Server Monitoring
 ######################################################################
   - alias: 'Monitor hard drive temps'
-    initial_state: on
+    initial_state: True
     trigger:
         platform: numeric_state
         entity_id:
@@ -20,7 +20,7 @@
             target: 613741597594615828
 
   - alias: 'Monitor UPS condition'
-    initial_state: on
+    initial_state: True
     trigger:
         platform: state
         entity_id: sensor.ups_status
@@ -64,7 +64,7 @@
             target: 613741597594615828
 
   - alias: 'Monitor SSL expirations'
-    initial_state: on
+    initial_state: True
     trigger:
         platform: numeric_state
         entity_id:
@@ -80,3 +80,15 @@
         data_template:
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} is set to expire in {{ trigger.to_state.state }} days @here - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
+
+  - alias: 'Turn Pihole back on'
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: switch.pihole
+        to: 'off'
+        for:
+            minutes: 10
+    action:
+      - service: switch.turn_on
+        entity_id: switch.pihole
