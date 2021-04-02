@@ -22,6 +22,7 @@
       - linev
       - loadpct
       - bcharge
+      - itemp
       - timeleft
       - mbattchg
       - mintimel
