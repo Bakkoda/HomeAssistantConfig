@@ -258,6 +258,7 @@ views:
           - sensor.ups_status
           - sensor.ups_input_voltage
           - sensor.ups_output_voltage
+          - sensor.ups_internal_temperature
           - sensor.ups_battery
           - sensor.ups_load
           - sensor.ups_time_left
@@ -265,31 +266,31 @@ views:
 ################################################################################
 # Power tab
 ################################################################################
-  - title: Power
-    icon: mdi:power-socket-us
-    path: power
-    cards:
-      - type: custom:mini-graph-card
-        line_width: 5
-        hours_to_show: 24
-        animate: false
-        show:
-            fill: false
-            labels: hover
-            name_adaptive_color: true
-        entities:
-          - sensor.deskcomputer
-          - sensor.livingroomtv
-          - sensor.kidstv
-          - sensor.consoles
-
-      - type: entities
-        entities:
-          - sensor.deskcomputer
-          - sensor.livingroomtv
-          - sensor.consoles
-          - sensor.kidstv
-
+#  - title: Power
+#    icon: mdi:power-socket-us
+#    path: power
+#    cards:
+#      - type: custom:mini-graph-card
+#        line_width: 5
+#        hours_to_show: 24
+#        animate: false
+#        show:
+#            fill: false
+#            labels: hover
+#            name_adaptive_color: true
+#        entities:
+#          - sensor.deskcomputer
+#          - sensor.livingroomtv
+#          - sensor.kidstv
+#          - sensor.consoles
+#
+#      - type: entities
+#        entities:
+#          - sensor.deskcomputer
+#          - sensor.livingroomtv
+#          - sensor.consoles
+#          - sensor.kidstv
+#
 ################################################################################
 # Map tab
 ################################################################################
@@ -463,7 +464,8 @@ views:
         title: Pi-Hole Stats
         show_header_toggle: false
         entities:
-          - sensor.pi_hole_domains_blocked
-          - sensor.pi_hole_dns_queries_today
-          - sensor.pi_hole_ads_blocked_today
-          - sensor.pi_hole_ads_percentage_blocked_today
+          - switch.pihole
+          - sensor.pihole_domains_blocked
+          - sensor.pihole_dns_queries_today
+          - sensor.pihole_ads_blocked_today
+          - sensor.pihole_ads_percentage_blocked_today

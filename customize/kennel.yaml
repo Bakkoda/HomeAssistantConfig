@@ -5,6 +5,9 @@
     sensor.ups_status:
         icon: mdi:power-socket-us
 
+    sensor.ups_internal_temperature:
+        friendly_name: UPS Temp
+
 #Kennel Stats
     sensor.kennel_intel_core_i5_4690_temperatures_cpu_package:
         friendly_name: CPU Temp
