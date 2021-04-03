@@ -52,35 +52,41 @@ views:
 
       - type: glance
         show_state: false
-        columns: 6
-        show_name: false
+        columns: 3
+        show_name: true
         entities:
           - entity: light.desk_lamp
+            name: Desk
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
           - entity: light.bedside_lamps
+            name: Bed
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
           - entity: switch.coffee_maker
+            name: Coffee
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
           - entity: switch.greyskull
+            name: Computer
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
           - entity: switch.brotherprinter
+            name: Printer
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: switch.consoles
+          - entity: switch.pihole
+            name: Pi-Hole
             tap_action:
                 action: more-info
             hold_action:
