@@ -1,0 +1,3 @@
+    light.garage_lights:
+        friendly_name: Shelve Lights
+        icon: mdi:string-lights
