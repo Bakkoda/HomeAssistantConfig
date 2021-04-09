@@ -67,6 +67,12 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
+          - entity: light.garage_lights
+            name: Garage Lights
+            tap_action:
+                action: toggle
+            hold_action:
+                action: more-info
           - entity: switch.coffee_maker
             name: Coffee
             tap_action:
@@ -83,12 +89,6 @@ views:
             name: Printer
             tap_action:
                 action: toggle
-            hold_action:
-                action: more-info
-          - entity: switch.pihole
-            name: Pi-Hole
-            tap_action:
-                action: more-info
             hold_action:
                 action: more-info
 
