@@ -69,6 +69,8 @@ recorder:
     include:
         domains:
           - sensor
+          - switch
+          - light
           - binary_sensor
           - person
     exclude:
