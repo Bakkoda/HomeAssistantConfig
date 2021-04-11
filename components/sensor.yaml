@@ -27,8 +27,6 @@
       - mbattchg
       - mintimel
       - maxtime
-      - maxlinev
-      - minlinev
       - outputv
 
   - platform: openhardwaremonitor
@@ -187,36 +185,6 @@
             friendly_name: "Living Room Thermostat"
             unit_of_measurement: '°F'
             value_template: "{{ states.climate.stelpro_stzw402_electronic_thermostat_mode.attributes.temperature }}"
-
-        zwave_heavydoor_battery:
-            friendly_name: "Inside Garage Door Sensor"
-            unit_of_measurement: '%'
-            value_template: "{{ states.zwave.hank_hkzw_dws01_door_window_sensor.attributes.battery_level }}"
-
-        zwave_kitchenmotion_battery:
-            friendly_name: "Kitchen Motion Sensor"
-            unit_of_measurement: '%'
-            value_template: "{{ states.zwave.vision_zp3102_pir_motion_sensor.attributes.battery_level }}"
-
-        zwave_basement4in1_battery:
-            friendly_name: "Basement 4in1 Sensor"
-            unit_of_measurement: '%'
-            value_template: "{{ states.zwave.vision_security_zp3111_multisensor_4in1.attributes.battery_level }}"
-
-        zwave_attic4in1_battery:
-            friendly_name: "Attic 4in1 Sensor"
-            unit_of_measurement: '%'
-            value_template: "{{ states.zwave.vision_security_zp3111_multisensor_4in1_3.attributes.battery_level }}"
-
-        zwave_shocksensor_clothesdryer_battery:
-            friendly_name: "Clothes Dryer Sensor"
-            unit_of_measurement: '%'
-            value_template: "{{ states.zwave.vision_zs5101_shock_and_vibration_sensor_2.attributes.battery_level }}"
-
-        zwave_shocksensor_washingmachine_battery:
-            friendly_name: "Washing Machine Sensor"
-            unit_of_measurement: '%'
-            value_template: "{{ states.zwave.vision_zs5101_shock_and_vibration_sensor_3.attributes.battery_level }}"
 
         melissas_miles:
             friendly_name: "Melissa's Miles"

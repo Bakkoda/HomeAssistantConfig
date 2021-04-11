@@ -7,9 +7,9 @@
         platform: numeric_state
         entity_id:
           - sensor.kennel_wdc_wd1003fbyz_010fb0_temperatures_temperature
-          - sensor.kennel_st3000vn000_1h4167_temperatures_temperature
-          - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_2
-          - sensor.kennel_st3000vn000_1h4167_temperatures_temperature_3
+          - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature
+          - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_2
+          - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_3
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
         above: 105
@@ -61,24 +61,6 @@
         service: notify.discord_bot
         data_template:
             message: "***Veeam*** - **{{ trigger.to_state.attributes.friendly_name }} VM backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 613741597594615828
-
-  - alias: 'Monitor SSL expirations'
-    initial_state: True
-    trigger:
-        platform: numeric_state
-        entity_id:
-          - sensor.bakkoda_com
-          - sensor.unifi_video
-          - sensor.librenms
-          - sensor.kanboard
-          - sensor.hassio
-          - sensor.scary_leg_runners
-        below: 7
-    action:
-        service: notify.discord_bot
-        data_template:
-            message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} is set to expire in {{ trigger.to_state.state }} days @here - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
   - alias: 'Turn Pihole back on'
