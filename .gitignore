@@ -21,8 +21,10 @@
 .cloud
 .google.token
 __pycache__/
+www/images/camera/**
 
-# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+
+# Ensure these files are ignored, otherwise your secret data/credentials will leak.
 service.json
 ip_bans.yaml
 secrets.yaml

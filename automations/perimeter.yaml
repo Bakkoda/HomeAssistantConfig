@@ -9,10 +9,16 @@
         from: 'off'
         to: 'on'
     action:
+      - service: shell_command.fp1_snapshot
+        data:
+            filename: /config/www/images/camera/fp1_snapshot.jpg
       - service: notify.discord_bot
         data_template:
             message: "***HA*** - Motion detected on the front porch - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
+            data:
+                images:
+                  - /config/www/images/camera/fp1_snapshot.jpg
       - delay:
             minutes: 5
 
@@ -24,10 +30,16 @@
         from: 'off'
         to: 'on'
     action:
+      - service: shell_command.gc1_snapshot
+        data:
+            filename: /config/www/images/camera/gc1_snapshot.jpg
       - service: notify.discord_bot
         data_template:
             message: "***HA*** - Motion detected in the Garage - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
+            data:
+                images:
+                  - /config/www/images/camera/gc1_snapshot.jpg
       - delay:
             minutes: 5
 
