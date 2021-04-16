@@ -9,6 +9,8 @@
         from: 'off'
         to: 'on'
     action:
+      - delay:
+            seconds: 2
       - service: shell_command.fp1_snapshot
         data:
             filename: /config/www/images/camera/fp1_snapshot.jpg
