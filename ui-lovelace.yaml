@@ -241,7 +241,7 @@ views:
           - sensor.kennel_generic_memory_data_available_memory
           - sensor.kennel_generic_memory_data_used_memory
           - sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space
-          - sensor.kennel_generic_hard_disk_load_used_space_2
+          - sensor.kennel_generic_hard_disk_load_used_space_3
           - sensor.kennel_generic_hard_disk_load_used_space
 
       - type: horizontal-stack
