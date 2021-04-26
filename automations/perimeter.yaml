@@ -23,7 +23,6 @@
             minutes: 5
 
   - alias: Motion detection in the Garage
-    initial_state: True
     trigger:
         platform: state
         entity_id: binary_sensor.garage_camera_motion_active
