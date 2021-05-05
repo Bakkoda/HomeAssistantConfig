@@ -268,24 +268,6 @@ views:
 #          - sensor.kidstv
 #
 ################################################################################
-# Map tab
-################################################################################
-  - title: Map
-    icon: mdi:google-maps
-    path: map
-    panel: true
-    cards:
-      - type: map
-        entities:
-          - zone.home
-          - zone.wills_work
-          - zone.mom_and_dads
-          - zone.gram_and_pas
-          - zone.fred_boys
-          - person.will
-          - person.melissa
-
-################################################################################
 # Media tab
 ################################################################################
   - title: Media

@@ -119,7 +119,6 @@ input_boolean: !include components/input_boolean.yaml
 camera: !include components/camera.yaml
 person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml
-device_tracker: !include components/device_tracker.yaml
 android_ip_webcam: !include components/android_ip_webcam.yaml
 ombi: !include components/ombi.yaml
 apcupsd: !include components/apcupsd.yaml
