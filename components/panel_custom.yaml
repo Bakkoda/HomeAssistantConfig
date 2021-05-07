@@ -1,0 +1,27 @@
+  - name: ha_server_con
+    sidebar_title: ServerControl
+    sidebar_icon: mdi:server
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: 'config/server_control'
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: core_configurator
+  - name: ha_integ
+    sidebar_title: Integrations
+    sidebar_icon: mdi:puzzle
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: 'config/integrations'
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: core_configurator
+  - name: ha_autom
+    sidebar_title: Automations
+    sidebar_icon: mdi:robot
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: 'config/automation/dashboard'
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: core_configurator

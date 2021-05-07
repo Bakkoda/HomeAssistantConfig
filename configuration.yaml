@@ -107,6 +107,8 @@ logbook:
 #Enables Sun component
 sun:
 
+#Custom sidebar
+panel_custom: !include components/panel_custom.yaml
 # Automations
 automation: !include_dir_merge_list automations/
 #Scripts
