@@ -242,31 +242,43 @@ views:
 ################################################################################
 # Power tab
 ################################################################################
-#  - title: Power
-#    icon: mdi:power-socket-us
-#    path: power
-#    cards:
-#      - type: custom:mini-graph-card
-#        line_width: 5
-#        hours_to_show: 24
-#        animate: false
-#        show:
-#            fill: false
-#            labels: hover
-#            name_adaptive_color: true
-#        entities:
-#          - sensor.deskcomputer
-#          - sensor.livingroomtv
-#          - sensor.kidstv
-#          - sensor.consoles
-#
-#      - type: entities
-#        entities:
-#          - sensor.deskcomputer
-#          - sensor.livingroomtv
-#          - sensor.consoles
-#          - sensor.kidstv
-#
+  - title: Power
+    icon: mdi:power-socket-us
+    path: power
+    cards:
+      - type: custom:mini-graph-card
+        line_width: 5
+        hours_to_show: 24
+        animate: false
+        show:
+            fill: false
+            labels: hover
+            name_adaptive_color: true
+        entities:
+          - sensor.deskcomputer
+          - sensor.livingroomtv
+          - sensor.kidstv
+          - sensor.consoles
+
+      - type: entities
+        entities:
+          - sensor.deskcomputer
+          - sensor.deskmonitor
+          - sensor.deskspeakers
+          - sensor.brotherprinter
+          - sensor.homeassistant
+          - sensor.desklamp
+          - sensor.google_home_mini
+
+      - type: entities
+        entities:
+          - sensor.livingroomtv
+          - sensor.chromecast
+
+      - type: entities
+        entities:
+          - sensor.consoles
+          - sensor.kidstv
 ################################################################################
 # Media tab
 ################################################################################
