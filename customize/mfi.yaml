@@ -60,9 +60,9 @@
         friendly_name: Kids TV
         icon: mdi:television
 
-    sensor.laptopcharger:
-        friendly_name: Laptop Charger
-        icon: mdi:power-socket-us
+    sensor.chromecast:
+        friendly_name: Chromecast
+        icon: mdi:google-classroom
 
     sensor.livingroomtv:
         friendly_name: Living Room TV
@@ -79,14 +79,14 @@
         friendly_name: Consoles
         icon: mdi:microsoft-xbox-controller
 
-    sensor.raspberrypi:
-        friendly_name: Hassbian
-        icon: mdi:server-network
+    sensor.homeassistant:
+        friendly_name: HassIO
+        icon: mdi:raspberry-pi
 
     sensor.serverrack:
         friendly_name: The Doghouse
         icon: mdi:server
 
-    sensor.tablet_charger:
-        friendly_name: Tablet Charger
-        icon: mdi:power-socket-us
+    sensor.google_home_mini:
+        friendly_name: Desk Home Mini
+        icon: mdi:google-home
