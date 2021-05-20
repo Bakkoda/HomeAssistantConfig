@@ -109,7 +109,7 @@ views:
                 buttons:
                   - icon: mdi:plex
                     type: source
-                    id: Plex - Stream for Free
+                    id: Plex - Free Movies & TV
                   - icon: mdi:netflix
                     type: source
                     id: Netflix
@@ -171,18 +171,6 @@ views:
     icon: mdi:dip-switch
     path: server
     cards:
-      - type: custom:mini-graph-card
-        line_width: 5
-        hours_to_show: 24
-        points_per_hour: 1
-        animate: false
-        show:
-            graph: bar
-            fill: false
-            labels: hover
-        entities:
-          - sensor.serverrack
-
       - type: horizontal-stack
         cards:
           - type: gauge
@@ -206,7 +194,6 @@ views:
       - type: entities
         title: System Stats
         entities:
-          - sensor.serverrack
           - sensor.kennel_intel_core_i5_4690_temperatures_cpu_package
           - sensor.kennel_generic_memory_data_available_memory
           - sensor.kennel_generic_memory_data_used_memory
