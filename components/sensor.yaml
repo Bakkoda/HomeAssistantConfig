@@ -6,6 +6,11 @@
     username: Bakkoda
     password: !secret unifi_password
 
+  - platform: qbittorrent
+    url: "http://192.168.1.10:8112"
+    username: !secret qbit_user
+    password: !secret qbit_pass
+
   - platform: apcupsd
     resources:
       - apc

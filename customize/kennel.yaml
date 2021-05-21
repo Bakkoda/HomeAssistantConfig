@@ -70,3 +70,11 @@
 
     sensor.internet_out_mbps:
         icon: mdi:upload-network
+
+    sensor.qbittorrent_down_speed:
+        friendly_name: qBit Down
+        icon: mdi:download-network
+
+    sensor.qbittorrent_up_speed:
+        friendly_name: qBit Up
+        icon: mdi:upload-network

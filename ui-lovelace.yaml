@@ -167,7 +167,7 @@ views:
 ################################################################################
 # Server tab
 ################################################################################
-  - title: Power & Stats
+  - title: Server Stats
     icon: mdi:dip-switch
     path: server
     cards:
@@ -213,6 +213,36 @@ views:
               - sensor.kennel_wdc_wd120emfz_11a6ja0_temperatures_temperature_3
               - sensor.kennel_st3000vn000_1hj166_temperatures_temperature
               - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
+
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.qbittorrent_down_speed
+                show_points: false
+            height: 200
+            lower_bound: 0
+            aggregate_func: max
+            line_width: 10
+            line_color: blue
+            hours_to_show: 12
+            show:
+                extrema: true
+                labels: true
+
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.qbittorrent_up_speed
+                show_points: false
+            height: 200
+            lower_bound: 0
+            aggregate_func: max
+            line_width: 10
+            line_color: red
+            hours_to_show: 12
+            show:
+                extrema: true
+                labels: true
 
       - type: entities
         title: UPS Stats
