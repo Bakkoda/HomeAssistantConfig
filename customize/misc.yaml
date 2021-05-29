@@ -4,6 +4,20 @@
 
     sensor.pihole_ads_blocked_today:
         icon: mdi:block-helper
+
+#Printer
+    sensor.mfc_j825dw_black_ink_remaining:
+        friendly_name: Black Ink
+
+    sensor.mfc_j825dw_cyan_ink_remaining:
+        friendly_name: Cyan Ink
+
+    sensor.mfc_j825dw_magenta_ink_remaining:
+        friendly_name: Magenta Ink
+
+    sensor.mfc_j825dw_yellow_ink_remaining:
+        friendly_name: Yellow Ink
+
 #Miles tracker
     sensor.wills_miles:
         icon: mdi:run-fast

@@ -428,6 +428,15 @@ views:
             name: Front Door
 
       - type: entities
+        title: Printer Levels
+        show_header_toggle: false
+        entities:
+          - sensor.mfc_j825dw_black_ink_remaining
+          - sensor.mfc_j825dw_cyan_ink_remaining
+          - sensor.mfc_j825dw_magenta_ink_remaining
+          - sensor.mfc_j825dw_yellow_ink_remaining
+
+      - type: entities
         title: SSL Expirations
         show_header_toggle: false
         entities:
