@@ -1,3 +1,6 @@
 #Cameras
     camera.fp_cam1:
         friendly_name: Front Porch
+
+    camera.weather_map:
+        friendly_name: Weather Map

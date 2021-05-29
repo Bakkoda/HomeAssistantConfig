@@ -123,6 +123,20 @@ views:
         details: false
         hourly_forecast: false
 
+      - type: history-graph
+        entities:
+          - weather.dark_sky
+        hours_to_show: 24
+        refresh_interval: 360
+
+      - type: picture-entity
+        name: Weather Map
+        entity: camera.weather_map
+        aspect_ratio: 0%
+        camera_view: live
+        show_name: false
+        show_state: false
+
       - type: custom:simple-thermostat
         entity: climate.stelpro_stzw402_electronic_thermostat_mode
         step_size: 1

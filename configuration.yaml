@@ -73,6 +73,7 @@ recorder:
           - light
           - binary_sensor
           - person
+          - weather
     exclude:
         entities:
           - sensor.last_boot
@@ -85,6 +86,7 @@ history:
           - sensor
           - binary_sensor
           - person
+          - weather
     exclude:
         entities:
           - sensor.last_boot
@@ -99,6 +101,7 @@ logbook:
           - binary_sensor
           - device_tracker
           - person
+          - weather
     exclude:
         entities:
           - sensor.last_boot
