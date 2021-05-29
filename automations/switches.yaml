@@ -5,7 +5,7 @@
     initial_state: True
     trigger:
         platform: state
-        entity_id: switch.bedroom_light_switch, switch.coffee_maker, switch.heat_saver, switch.automatic_coffee, switch.friday_coffee, switch.pihole, switch.desklamp
+        entity_id: switch.bedroom_light_switch, switch.coffee_maker, switch.heat_saver, switch.automatic_coffee, switch.friday_coffee, switch.pihole
     action:
         service: notify.discord_bot
         data_template:
