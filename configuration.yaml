@@ -24,11 +24,11 @@ lovelace:
     resources:
       - url: /local/custom-lovelace/weather-card/weather-card.js
         type: module
-      - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.4.2
+      - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.12.1
         type: module
-      - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js?v=1
+      - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js
         type: module
-      - url: /local/custom-lovelace/mini-graph-card/mini-graph-card-bundle.js?v=0.8.2
+      - url: /local/custom-lovelace/mini-graph-card/mini-graph-card-bundle.js?v=0.10.0
         type: module
       - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
         type: js
