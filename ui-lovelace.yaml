@@ -123,12 +123,6 @@ views:
         details: false
         hourly_forecast: false
 
-      - type: history-graph
-        entities:
-          - weather.dark_sky
-        hours_to_show: 24
-        refresh_interval: 360
-
       - type: picture-entity
         name: Weather Map
         entity: camera.weather_map
