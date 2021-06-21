@@ -3,6 +3,6 @@
     stream_source: rtsp://192.168.5.12:7447/597fbfb7e4b0057207bd51d3_0
     still_image_url: http://192.168.5.50/snap.jpeg
 
-  - platform: generic
-    still_image_url: https://cdn.star.nesdis.noaa.gov//GOES16/ABI/SECTOR/EUS/13/GOES16-EUS-13-1000x1000.gif
+  - platform: local_file
     name: weather_map
+    file_path: /config/www/images/weather/weather_map.gif
