@@ -421,14 +421,19 @@ views:
           - entity: sensor.livingroomtemp
             name: Front Door
 
-      - type: entities
-        title: Printer Levels
-        show_header_toggle: false
-        entities:
-          - sensor.mfc_j825dw_black_ink_remaining
-          - sensor.mfc_j825dw_cyan_ink_remaining
-          - sensor.mfc_j825dw_magenta_ink_remaining
-          - sensor.mfc_j825dw_yellow_ink_remaining
+      - type: conditional
+        conditions:
+          - entity: switch.brotherprinter
+            state: "on"
+        card:
+            type: entities
+            title: Printer Levels
+            show_header_toggle: false
+            entities:
+              - sensor.brother_printer_black_ink_remaining
+              - sensor.brother_printer_cyan_ink_remaining
+              - sensor.brother_printer_magenta_ink_remaining
+              - sensor.brother_printer_yellow_ink_remaining
 
       - type: entities
         title: SSL Expirations
@@ -473,3 +478,9 @@ views:
           - sensor.pihole_dns_queries_today
           - sensor.pihole_ads_blocked_today
           - sensor.pihole_ads_percentage_blocked_today
+
+      - type: entities
+        title: Misc Stats
+        show_header_toggle: false
+        entities:
+          - sensor.subaru_wrx_odometer
