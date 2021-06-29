@@ -34,6 +34,36 @@
         friendly_name: Pihole
         icon: mdi:update
 
+#Server backups - Personal
+    sensor.personal_backups:
+        friendly_name: Personal
+        icon: mdi:server-security
+
+    sensor.personal_data_ext:
+        friendly_name: Data (Ext)
+        icon: mdi:server-security
+
+    sensor.personal_pictures_ext:
+        friendly_name: Pictures (Ext)
+        icon: mdi:server-security
+
+    sensor.personal_users_ext:
+        friendly_name: Users (Ext)
+        icon: mdi:server-security
+
+#Server backups - Server
+    sensor.server_backups:
+        friendly_name: Server
+        icon: mdi:server-security
+
+    sensor.servers_data_ext:
+        friendly_name: Data (Ext)
+        icon: mdi:server-security
+
+    sensor.servers_speed_ext:
+        friendly_name: Speed (Ext)
+        icon: mdi:server-security
+
 #Veeam backups
     sensor.critical_backups:
         friendly_name: Critical

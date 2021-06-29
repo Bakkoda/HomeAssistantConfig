@@ -460,14 +460,22 @@ views:
           - sensor.weekly_backups
 
       - type: entities
-        title: Backup Stats
+        title: Personal Backups
+        show_header_toggle: false
+        entities:
+          - sensor.personal_backups
+          - sensor.personal_data_ext
+          - sensor.personal_pictures_ext
+          - sensor.personal_users_ext
+
+      - type: entities
+        title: Server Backups
         show_header_toggle: false
         entities:
           - sensor.database_backups
-          - sensor.personal_backups
-          - sensor.servers_backups
-#          - sensor.personal_backups_ext
-#          - sensor.servers_backups_ext
+          - sensor.server_backups
+          - sensor.servers_data_ext
+          - sensor.servers_speed_ext
 
       - type: entities
         title: Pi-Hole Stats
