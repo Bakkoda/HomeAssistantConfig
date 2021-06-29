@@ -125,31 +125,43 @@
     state_topic: "homeassistant/pihole/status"
 
   - platform: mqtt
-    name: "Personal backups"
+    name: "Personal"
     state_topic: "homeassistant/backups/personal"
 
   - platform: mqtt
-    name: "Personal backups (Ext)"
-    state_topic: "homeassistant/backups/personal_ext"
+    name: "Personal Data (Ext)"
+    state_topic: "homeassistant/backups/ext_personal_data"
 
   - platform: mqtt
-    name: "Servers backups"
+    name: "Personal Pictures (Ext)"
+    state_topic: "homeassistant/backups/ext_personal_pictures"
+
+  - platform: mqtt
+    name: "Personal Users (Ext)"
+    state_topic: "homeassistant/backups/ext_personal_users"
+
+  - platform: mqtt
+    name: "Servers"
     state_topic: "homeassistant/backups/servers"
 
   - platform: mqtt
-    name: "Servers backups (Ext)"
-    state_topic: "homeassistant/backups/servers_ext"
+    name: "Servers Speed (Ext)"
+    state_topic: "homeassistant/backups/ext_server_speed"
 
   - platform: mqtt
-    name: "Critical backups"
+    name: "Servers Data (Ext)"
+    state_topic: "homeassistant/backups/ext_server_data"
+
+  - platform: mqtt
+    name: "Critical"
     state_topic: "homeassistant/backups/critical"
 
   - platform: mqtt
-    name: "Weekly backups"
+    name: "Weekly"
     state_topic: "homeassistant/backups/weekly"
 
   - platform: mqtt
-    name: "Database backups"
+    name: "Databases"
     state_topic: "homeassistant/backups/databases"
 
 #Templates

@@ -24,6 +24,7 @@
 
     sensor.melissas_miles:
         icon: mdi:run-fast
+
 #Ansible updates
     sensor.ansible_status:
         friendly_name: Ansible
@@ -32,23 +33,6 @@
     sensor.pihole_status:
         friendly_name: Pihole
         icon: mdi:update
-
-#Arq backups
-    sensor.personal_backups:
-        friendly_name: Personal
-        icon: mdi:cloud-upload
-
-    sensor.personal_backups_ext:
-        friendly_name: Personal (Ext)
-        icon: mdi:usb
-
-    sensor.servers_backups:
-        friendly_name: Servers
-        icon: mdi:cloud-upload
-
-    sensor.servers_backups_ext:
-        friendly_name: Servers (Ext)
-        icon: mdi:usb
 
 #Veeam backups
     sensor.critical_backups:
