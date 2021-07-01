@@ -63,6 +63,17 @@
             message: "***Veeam*** - **{{ trigger.to_state.attributes.friendly_name }} VM backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  - alias: 'Syncovery updates'
+    initial_state: True
+    trigger:
+        platform: state
+        entity_id: sensor.personal_data_ext, sensor.personal_pictures_ext, sensor.personal_users_ext, sensor.servers_data_ext, sensor.servers_speed_ext
+    action:
+        service: notify.discord_bot
+        data_template:
+            message: "***Syncovery*** - {{ trigger.to_state.attributes.friendly_name }} VM backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            target: 613741597594615828
+
   - alias: 'Turn Pihole back on'
     initial_state: True
     trigger:
