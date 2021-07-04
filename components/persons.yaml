@@ -3,6 +3,7 @@
     user_id: 2a0efa572b4441a0963812a438ee0b5d
     device_trackers:
       - device_tracker.melissa_s_phone
+      - device_tracker.pixel_5
 
   - name: Will
     id: bakkoda
