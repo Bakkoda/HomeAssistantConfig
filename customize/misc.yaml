@@ -5,19 +5,6 @@
     sensor.pihole_ads_blocked_today:
         icon: mdi:block-helper
 
-#Printer
-    sensor.brother_printer_black_ink_remaining:
-        friendly_name: Black Ink
-
-    sensor.brother_printer_cyan_ink_remaining:
-        friendly_name: Cyan Ink
-
-    sensor.brother_printer_magenta_ink_remaining:
-        friendly_name: Magenta Ink
-
-    sensor.brother_printer_yellow_ink_remaining:
-        friendly_name: Yellow Ink
-
 #Miles tracker
     sensor.wills_miles:
         icon: mdi:run-fast
