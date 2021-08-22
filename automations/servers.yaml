@@ -71,7 +71,7 @@
     action:
         service: notify.discord_bot
         data_template:
-            message: "***Syncovery*** - {{ trigger.to_state.attributes.friendly_name }} VM backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
+            message: "***Syncovery*** - {{ trigger.to_state.attributes.friendly_name }} backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
   - alias: 'Turn Pihole back on'
