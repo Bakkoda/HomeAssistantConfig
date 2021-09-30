@@ -50,3 +50,8 @@
             expose: true
             name: Desk Lamp
             room: Living Room
+
+        light.kidsroom_lights:
+            expose: true
+            name: Kids Room Lights
+            room: Kids Room

@@ -5,3 +5,7 @@
   - platform: switch
     name: Desk Lamp
     entity_id: switch.desklamp
+
+  - platform: switch
+    name: Kidsroom Lights
+    entity_id: switch.kidsroom_switch
