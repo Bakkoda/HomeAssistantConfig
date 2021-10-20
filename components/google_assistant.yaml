@@ -55,3 +55,8 @@
             expose: true
             name: Kids Room Lights
             room: Kids Room
+
+        light.front_porch_lights:
+            expose: true
+            name: Front Porch Lights
+            room: Outside

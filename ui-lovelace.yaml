@@ -67,8 +67,20 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
+          - entity: light.kidsroom_lights
+            name: Kids Room
+            tap_action:
+                action: toggle
+            hold_action:
+                action: more-info
+          - entity: light.front_porch_lights
+            name: Porch
+            tap_action:
+                action: toggle
+            hold_action:
+                action: more-info
           - entity: light.garage_lights
-            name: Garage Lights
+            name: Shelve Lights
             tap_action:
                 action: toggle
             hold_action:

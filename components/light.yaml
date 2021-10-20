@@ -9,3 +9,7 @@
   - platform: switch
     name: Kidsroom Lights
     entity_id: switch.kidsroom_switch
+
+  - platform: switch
+    name: Front Porch Lights
+    entity_id: switch.front_porch_switch
