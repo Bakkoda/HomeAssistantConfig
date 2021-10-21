@@ -73,6 +73,12 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
+          - entity: light.outside_garage_lights
+            name: Garage
+            tap_action:
+                action: toggle
+            hold_action:
+                action: more-info
           - entity: light.kidsroom_lights
             name: Kids Room
             tap_action:
@@ -85,11 +91,6 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
-      - type: glance
-        show_state: false
-        columns: 3
-        show_name: true
-        entities:
           - entity: switch.coffee_maker
             name: Coffee
             tap_action:

@@ -60,3 +60,8 @@
             expose: true
             name: Front Porch Lights
             room: Outside
+
+        light.outside_garage_lights:
+            expose: true
+            name: Outside Garage Lights
+            room: Outside

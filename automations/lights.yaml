@@ -1,0 +1,85 @@
+######################################################################
+#       Outside Lights - ON
+######################################################################
+  - alias: Turn on outside morning lights
+    trigger:
+        platform: time
+        at: '05:55:00'
+    condition:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+          - sat
+          - sun
+    action:
+      - service: switch.turn_on
+        entity_id: switch.front_porch_switch
+      - service: switch.turn_on
+        entity_id: switch.outside_garage_switch
+
+  - alias: Turn on outside evening lights
+    trigger:
+        platform: sun
+        event: sunset
+    condition:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+          - sat
+          - sun
+    action:
+      - service: switch.turn_on
+        entity_id: switch.front_porch_switch
+      - service: switch.turn_on
+        entity_id: switch.outside_garage_switch
+
+######################################################################
+#       Outside Lights - OFF
+######################################################################
+  - alias: Turn off outside morning lights
+    trigger:
+        platform: sun
+        event: sunrise
+    condition:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+          - sat
+          - sun
+    action:
+      - service: switch.turn_off
+        entity_id: switch.front_porch_switch
+      - service: switch.turn_off
+        entity_id: switch.outside_garage_switch
+
+  - alias: Turn off outside evening lights
+    trigger:
+        platform: time
+        at: '10:30:00'
+    condition:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+          - sat
+          - sun
+    action:
+      - service: switch.turn_off
+        entity_id: switch.front_porch_switch
+      - service: switch.turn_off
+        entity_id: switch.outside_garage_switch

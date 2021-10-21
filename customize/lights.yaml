@@ -3,7 +3,11 @@
         icon: mdi:string-lights
 
     light.front_porch_lights:
-        friendly_name: Front Porch lights
+        friendly_name: Front Porch Lights
+        icon: mdi:coach-lamp
+
+    light.outside_garage_lights:
+        friendly_name: Outside Garage Lights
         icon: mdi:coach-lamp
 
     light.kidsroom_lights:

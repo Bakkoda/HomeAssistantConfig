@@ -13,3 +13,7 @@
   - platform: switch
     name: Front Porch Lights
     entity_id: switch.front_porch_switch
+
+  - platform: switch
+    name: Outside Garage Lights
+    entity_id: switch.outside_garage_switch
