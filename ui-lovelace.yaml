@@ -80,7 +80,7 @@ views:
             hold_action:
                 action: more-info
           - entity: light.garage_lights
-            name: Shelve Lights
+            name: Shelves
             tap_action:
                 action: toggle
             hold_action:
