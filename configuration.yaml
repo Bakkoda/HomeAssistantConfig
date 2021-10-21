@@ -135,6 +135,3 @@ weather: !include components/weather.yaml
 input_number: !include components/input_number.yaml
 input_select: !include components/input_select.yaml
 zone: !include components/zones.yaml
-
-# Groups and Views
-# group: !include groups.yaml
