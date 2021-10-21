@@ -67,14 +67,14 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.kidsroom_lights
-            name: Kids Room
+          - entity: light.front_porch_lights
+            name: Porch
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.front_porch_lights
-            name: Porch
+          - entity: light.kidsroom_lights
+            name: Kids Room
             tap_action:
                 action: toggle
             hold_action:
@@ -85,6 +85,11 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
+      - type: glance
+        show_state: false
+        columns: 3
+        show_name: true
+        entities:
           - entity: switch.coffee_maker
             name: Coffee
             tap_action:
