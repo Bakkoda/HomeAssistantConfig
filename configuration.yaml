@@ -24,7 +24,7 @@ lovelace:
     resources:
       - url: /local/custom-lovelace/weather-card/weather-card.js
         type: module
-      - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.12.1
+      - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.13.0
         type: module
       - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js
         type: module
