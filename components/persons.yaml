@@ -20,3 +20,4 @@
     id: kwood
     device_trackers:
       - device_tracker.kaleb_s_phone
+      - device_tracker.unifi_8e_d3_e3_32_53_64_default
