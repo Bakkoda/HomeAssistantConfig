@@ -81,3 +81,38 @@
         entity_id: switch.front_porch_switch
       - service: switch.turn_off
         entity_id: switch.outside_garage_switch
+ 
+######################################################################
+#       Xmas Lights
+######################################################################
+#   - alias: Turn on Xmas lights in the morning
+#     trigger:
+#         platform: time
+#         at: '05:00:00'
+#     action:
+#       - service: switch.turn_on
+#         entity_id: switch.xmas_lights
+
+#   - alias: Turn off Xmas lights in the morning
+#     trigger:
+#         platform: sun
+#         event: sunrise
+#     action:
+#       - service: switch.turn_off
+#         entity_id: switch.xmas_lights
+
+#   - alias: Turn on Xmas lights in the evening
+#     trigger:
+#         platform: sun
+#         event: sunset
+#     action:
+#       - service: switch.turn_on
+#         entity_id: switch.xmas_lights
+
+#   - alias: Turn off Xmas lights in the evening
+#     trigger:
+#         platform: time
+#         at: '22:15:00'
+#     action:
+#       - service: switch.turn_off
+#         entity_id: switch.xmas_lights

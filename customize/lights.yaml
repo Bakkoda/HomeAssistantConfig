@@ -13,3 +13,7 @@
     light.kidsroom_lights:
         friendly_name: Kids Room Lights
         icon: mdi:ceiling-light
+
+    light.xmas_lights:
+        friendly_name: Xmas Lights
+        icon: mdi:pine-tree
