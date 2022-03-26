@@ -50,6 +50,19 @@ views:
                 "not_home": /local/images/avatars/kaleb_not_home.png
                 "unknown": /local/images/avatars/kaleb_not_home.png
 
+# Xmas Lights
+      # - type: picture-glance
+      #   title: Christmas Lights
+      #   entities:
+      #     - light.xmas_lights
+      #   state_image:
+      #     "on": /local/images/xmas_lights_on.jpg
+      #     "off": /local/images/xmas_lights_off.jpg
+      #   entity: light.xmas_lights
+      #   tap_action:
+      #           action: toggle
+# End Xmas Lights
+
       - type: glance
         show_state: false
         columns: 3
@@ -61,37 +74,37 @@ views:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.bedside_lamps
+          - entity: light.bedside_lamps_2
             name: Bed
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.front_porch_lights
+          - entity: light.front_porch_lights_2
             name: Porch
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.outside_garage_lights
+          - entity: light.outside_garage_lights_2
             name: Garage
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.kidsroom_lights
+          - entity: light.kidsroom_lights_2
             name: Kids Room
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: light.garage_lights
+          - entity: light.garage_lights_2
             name: Shelves
             tap_action:
                 action: toggle
             hold_action:
                 action: more-info
-          - entity: switch.coffee_maker
+          - entity: switch.coffee_cord
             name: Coffee
             tap_action:
                 action: toggle
@@ -110,70 +123,65 @@ views:
             hold_action:
                 action: more-info
 
-      - type: conditional
-        conditions:
-          - entity: media_player.roku_tv
-            state_not: "unavailable"
-        card:
-            type: custom:mini-media-player
-            entity: media_player.roku_tv
-            hide:
-                power: true
-                source: true
-                volume: true
-                runtime: true
-            shortcuts:
-                columns: 3
-                buttons:
-                  - icon: mdi:plex
-                    type: source
-                    id: Plex - Free Movies & TV
-                  - icon: mdi:netflix
-                    type: source
-                    id: Netflix
-                  - icon: mdi:home
-                    type: source
-                    id: Home
-
       - type: custom:weather-card
         entity: weather.dark_sky
         icons: '/local/custom-lovelace/weather-card/icons/'
         details: false
         hourly_forecast: false
 
-      - type: picture-entity
-        name: Weather Map
-        entity: camera.weather_map
-        aspect_ratio: 0%
-        camera_view: live
-        show_name: false
-        show_state: false
+      - type: conditional
+        conditions:
+          - entity: media_player.roku_tv
+            state_not: "idle"
+        card:
+            type: custom:mini-media-player
+            entity: media_player.roku_tv
+            source: icon
+            shortcuts:
+                columns: 4 # Max buttons per row
+                buttons:
+                    # Start predefined playlist
+                    - icon: mdi:home
+                      type: source
+                      id: Home
+                    - icon: mdi:plex
+                      type: source
+                      id: Plex - Free Movies & TV
+                    - icon: mdi:netflix
+                      type: source
+                      id: Netflix
+                    - icon: mdi:google-chrome
+                      type: source
+                      id: Chromecast
+            hide:
+              volume: true
+              volume_level: true
+              source: true
+              progress: true
 
       - type: custom:simple-thermostat
-        entity: climate.stelpro_stzw402_electronic_thermostat_mode
+        entity: climate.living_room_thermostat
         step_size: 1
         control: false
         sensors:
-          - entity: sensor.stelpro_stzw402_electronic_thermostat_temperature_2
+          - entity: sensor.living_room_thermostat_air_temperature
             name: Living Room
           - entity: sensor.livingroomtemp
             name: Front Door
 
       - type: picture-glance
         entities:
-          - binary_sensor.front_porch_motion
+          - binary_sensor.fpcam1_motion
           - binary_sensor.perimeter_frontdoor
+        camera_image: camera.fpcam1_high
+
+      - type: picture-glance
+        entities:
+          - binary_sensor.gcam1_motion
           - binary_sensor.perimeter_garagereardoor
           - binary_sensor.perimeter_garagedoor
           - switch.garagedooropener
-        camera_image: camera.front_porch
-
-#      - type: picture-glance
-#        entities:
-#          - binary_sensor.garage_camera_motion_active
-#          - sensor.garage_camera_battery_level
-#          - switch.garage_camera_torch
-#        camera_image: camera.garage_camera
+        camera_image: camera.gcam1_high
 
       - type: entities
         show_header_toggle: false
@@ -197,6 +205,16 @@ views:
     icon: mdi:dip-switch
     path: server
     cards:
+      - type: entities
+        title: Kennel Stats
+        entities:
+          - sensor.kennel_intel_core_i5_4690_temperatures_cpu_package
+          - sensor.kennel_generic_memory_data_available_memory
+          - sensor.kennel_generic_memory_data_used_memory
+          - sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space
+          - sensor.kennel_generic_hard_disk_load_used_space_2
+          - sensor.kennel_generic_hard_disk_load_used_space
+
       - type: horizontal-stack
         cards:
           - type: gauge
@@ -216,16 +234,6 @@ views:
                 green: 0
                 yellow: 45
                 red: 85
-
-      - type: entities
-        title: System Stats
-        entities:
-          - sensor.kennel_intel_core_i5_4690_temperatures_cpu_package
-          - sensor.kennel_generic_memory_data_available_memory
-          - sensor.kennel_generic_memory_data_used_memory
-          - sensor.kennel_wdc_wd1003fbyz_010fb0_load_used_space
-          - sensor.kennel_generic_hard_disk_load_used_space_3
-          - sensor.kennel_generic_hard_disk_load_used_space
 
       - type: horizontal-stack
         cards:
@@ -269,6 +277,16 @@ views:
             show:
                 extrema: true
                 labels: true
+
+      - type: entities
+        title: Protect Stats
+        entities:
+          - binary_sensor.doghousepro_disk_0_health
+          - sensor.doghousepro_resolution_free_space
+          - sensor.doghousepro_uptime
+          - sensor.doghousepro_type_continuous_video
+          - sensor.doghousepro_type_detections_video
+          - sensor.doghousepro_type_timelapse_video
 
       - type: entities
         title: UPS Stats
@@ -329,7 +347,6 @@ views:
     icon: mdi:movie-roll
     path: media
     cards:
-
       - type: picture-elements
         image: /local/images/plex_banner.jpg
         elements:
@@ -377,11 +394,31 @@ views:
             style: {color: white, font-size: 16px, left: 55%, top: 86%}
 
       - type: entities
-        title: TV Stats
-        show_header_toggle: false
+        title: Plex Stats
         entities:
-          - sensor.sonarr_upcoming
-          - sensor.ombi_tv_show_requests
+          - sensor.plex_intel_core_i5_8500t_temperatures_cpu_package
+          - sensor.plex_generic_memory_data_available_memory
+          - sensor.plex_generic_memory_data_used_memory
+
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            name: CPU Load
+            unit: '%'
+            entity: sensor.plex_intel_core_i5_8500t_load_cpu_total
+            severity:
+                green: 0
+                yellow: 45
+                red: 85
+
+          - type: gauge
+            name: Memory Load
+            unit: '%'
+            entity: sensor.plex_generic_memory_load_memory
+            severity:
+                green: 0
+                yellow: 45
+                red: 85
 
       - type: conditional
         conditions:
@@ -391,13 +428,7 @@ views:
             type: custom:upcoming-media-card
             entity: sensor.sonarr_upcoming_media
             image_style: poster
-
-      - type: entities
-        title: Movie Stats
-        show_header_toggle: false
-        entities:
-          - sensor.radarr_upcoming
-          - sensor.ombi_movie_requests
+            title: Upcoming TV
 
       - type: conditional
         conditions:
@@ -407,6 +438,7 @@ views:
             type: custom:upcoming-media-card
             entity: sensor.radarr_upcoming_media
             image_style: poster
+            title: Upcoming Movies
 
 ################################################################################
 # Misc tab
@@ -434,18 +466,24 @@ views:
             labels: hover
             name_adaptive_color: true
         entities:
-          - entity: sensor.stelpro_stzw402_electronic_thermostat_temperature_2
+          - entity: sensor.living_room_thermostat_air_temperature
             name: Living Room
           - entity: sensor.livingroomtemp
             name: Front Door
+
+      - type: picture-entity
+        name: Weather Map
+        entity: camera.weather_map
+        aspect_ratio: 0%
+        camera_view: live
+        show_name: false
+        show_state: false
 
       - type: entities
         title: SSL Expirations
         show_header_toggle: false
         entities:
           - sensor.cert_expiry_timestamp_bakkoda_com
-          - sensor.cert_expiry_timestamp_uvc_bakkoda_com
-          - sensor.cert_expiry_timestamp_librenms_bakkoda_com
           - sensor.cert_expiry_timestamp_hass_bakkoda_com
           - sensor.cert_expiry_timestamp_scarylegrunners_com
 
@@ -491,8 +529,3 @@ views:
           - sensor.pihole_ads_blocked_today
           - sensor.pihole_ads_percentage_blocked_today
 
-      - type: entities
-        title: Misc Stats
-        show_header_toggle: false
-        entities:
-          - sensor.subaru_wrx_odometer

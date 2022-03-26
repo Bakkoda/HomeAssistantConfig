@@ -2,7 +2,6 @@
 #       Home Assistant
 ######################################################################
   - alias: 'Set theme at startup'
-    initial_state: True
     trigger:
       - platform: homeassistant
         event: start
@@ -12,7 +11,6 @@
             name: 'Google Dark Theme'
 
   - alias: Update HA after startup
-    initial_state: True
     trigger:
         platform: homeassistant
         event: start
@@ -23,7 +21,6 @@
             target: 450273546716053505
 
   - alias: Update notifications
-    initial_state: True
     trigger:
       - platform: state
         entity_id: binary_sensor.updater
@@ -40,7 +37,6 @@
             title: "Update Available"
 
   - alias: Send notification when sun rises
-    initial_state: True
     trigger:
       - platform: sun
         event: sunrise
@@ -52,7 +48,6 @@
             target: 450273546716053505
 
   - alias: Send notification when sun sets
-    initial_state: True
     trigger:
       - platform: sun
         event: sunset
@@ -64,7 +59,6 @@
             target: 450273546716053505
 
   - alias: Download weather map every hour
-    initial_state: True
     trigger:
       - platform: time_pattern
         hours: /1

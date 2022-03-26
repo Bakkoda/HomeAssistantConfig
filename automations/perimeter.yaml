@@ -2,10 +2,9 @@
 #       Perimeter
 ######################################################################
   - alias: Motion detection on the porch
-    initial_state: True
     trigger:
         platform: state
-        entity_id: binary_sensor.front_porch_motion
+        entity_id: binary_sensor.fpcam1_motion
         from: 'off'
         to: 'on'
     action:
@@ -25,7 +24,7 @@
   - alias: Motion detection in the Garage
     trigger:
         platform: state
-        entity_id: binary_sensor.garage_camera_motion_active
+        entity_id: binary_sensor.gcam1_motion
         from: 'off'
         to: 'on'
     action:

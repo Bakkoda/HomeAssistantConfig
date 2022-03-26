@@ -2,7 +2,6 @@
 #       Presence
 ######################################################################
   - alias: Home Notification
-    initial_state: True
     trigger:
         platform: state
         entity_id: person.will, person.melissa, person.jacob, person.kaleb
@@ -15,7 +14,6 @@
             target: 450273546716053505
 
   - alias: Away Notification
-    initial_state: True
     trigger:
         platform: state
         entity_id: person.will, person.melissa, person.jacob, person.kaleb

@@ -17,10 +17,9 @@
           #- sun
     action:
         service: switch.turn_on
-        entity_id: switch.coffee_maker
+        entity_id: switch.coffee_cord
 
   - alias: Overtime coffee
-    initial_state: False
     trigger:
         platform: time
         at: '02:48:00'
@@ -36,12 +35,11 @@
           #- sun
     action:
       - service: switch.turn_on
-        entity_id: switch.coffee_maker
+        entity_id: switch.coffee_cord
       - service: switch.turn_off
         entity_id: switch.overtime_coffee
 
   - alias: Coffee in the AM for Melissa
-    initial_state: True
     trigger:
         platform: time
         at: '04:48:00'
@@ -60,13 +58,12 @@
         state: 'off'
     action:
       - service: switch.turn_on
-        entity_id: switch.coffee_maker
+        entity_id: switch.coffee_cord
 
   - alias: Coffee on Friday for Melissa
-    initial_state: True
     trigger:
         platform: time
-        at: '05:48:00'
+        at: '07:30:00'
     condition:
       - condition: time
         weekday:
@@ -82,7 +79,7 @@
         state: 'off'
     action:
       - service: switch.turn_on
-        entity_id: switch.coffee_maker
+        entity_id: switch.coffee_cord
       - service: switch.turn_on
         entity_id: switch.will_coffee
 
@@ -91,13 +88,12 @@
 ######################################################################
 
   - alias: Turn the coffee maker off after 45 mins
-    initial_state: True
     trigger:
         platform: state
-        entity_id: switch.coffee_maker
+        entity_id: switch.coffee_cord
         to: 'on'
         for:
             minutes: 45
     action:
         service: switch.turn_off
-        entity_id: switch.coffee_maker
+        entity_id: switch.coffee_cord
