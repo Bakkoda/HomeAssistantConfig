@@ -6,12 +6,12 @@
        - climate
        - switch
     entity_config:
-        climate.stelpro_stzw402_electronic_thermostat_mode:
+        climate.living_room_thermostat_mode:
             expose: true
             name: House
             room: Living Room
 
-        switch.coffee_maker:
+        switch.coffee_cord:
             expose: true
             name: Coffee Maker
             room: Kitchen
@@ -41,7 +41,7 @@
             name: Kids Computer
             room: Kids Room
 
-        light.bedside_lamps:
+        light.bedside_lamps_2:
             expose: true
             name: Bedside Lamps
             room: Bedroom
@@ -51,17 +51,22 @@
             name: Desk Lamp
             room: Living Room
 
-        light.kidsroom_lights:
+        light.kidsroom_lights_2:
             expose: true
             name: Kids Room Lights
             room: Kids Room
 
-        light.front_porch_lights:
+        light.front_porch_lights_2:
             expose: true
             name: Front Porch Lights
             room: Outside
 
-        light.outside_garage_lights:
+        light.outside_garage_lights_2:
             expose: true
             name: Outside Garage Lights
             room: Outside
+
+        # light.xmas_lights:
+        #     expose: true
+        #     name: Xmas Lights
+        #     room: Living Room

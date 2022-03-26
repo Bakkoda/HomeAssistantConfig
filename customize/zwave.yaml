@@ -1,5 +1,5 @@
 #Zwave
-    sensor.zooz_zen15_power_switch_power:
+    sensor.coffee_cord_electric_consumption_w:
         friendly_name: Coffee Maker
         icon: mdi:power-socket-us
 
@@ -18,13 +18,10 @@
         friendly_name: Overtime Coffee
         icon: mdi:coffee
 
-    light.bedside_lamps:
-        friendly_name: Bedside Lamps
-        icon: mdi:lamp
-
-    switch.coffee_maker:
+    switch.coffee_cord:
         friendly_name: Coffee Maker
         icon: mdi:coffee
+
     binary_sensor.perimeter_kitchenmotion:
         icon: mdi:cat
 

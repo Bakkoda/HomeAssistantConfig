@@ -132,7 +132,7 @@ views:
       - type: conditional
         conditions:
           - entity: media_player.roku_tv
-            state_not: "idle"
+            state_not: "unavailable"
         card:
             type: custom:mini-media-player
             entity: media_player.roku_tv

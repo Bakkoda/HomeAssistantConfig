@@ -33,7 +33,7 @@
         friendly_name: Boot Drive Usage
         icon: mdi:harddisk
 
-    sensor.kennel_generic_hard_disk_load_used_space_3:
+    sensor.kennel_generic_hard_disk_load_used_space_2:
         friendly_name: Storage Drive Usage
         icon: mdi:harddisk
 

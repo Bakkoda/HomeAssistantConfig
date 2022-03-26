@@ -1,19 +1,23 @@
-    light.garage_lights:
+    light.garage_lights_2:
         friendly_name: Shelve Lights
         icon: mdi:string-lights
 
-    light.front_porch_lights:
+    light.front_porch_lights_2:
         friendly_name: Front Porch Lights
         icon: mdi:coach-lamp
 
-    light.outside_garage_lights:
+    light.outside_garage_lights_2:
         friendly_name: Outside Garage Lights
         icon: mdi:coach-lamp
 
-    light.kidsroom_lights:
+    light.kidsroom_lights_2:
         friendly_name: Kids Room Lights
         icon: mdi:ceiling-light
 
     light.xmas_lights:
         friendly_name: Xmas Lights
         icon: mdi:pine-tree
+
+    light.bedside_lamps_2:
+        friendly_name: Bedside Lamps
+        icon: mdi:lamp

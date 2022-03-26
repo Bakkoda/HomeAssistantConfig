@@ -2,7 +2,6 @@
 #       Thermostat
 ######################################################################
   - alias: Thermostat adjustment notification
-    initial_state: True
     trigger:
         platform: state
         entity_id: sensor.livingroom_thermo_setpoint

@@ -1,0 +1,20 @@
+#Plex Stats
+    sensor.plex_intel_core_i5_8500t_load_cpu_total:
+        friendly_name: CPU Load
+        icon: mdi:server
+
+    sensor.plex_generic_memory_load_memory:
+        friendly_name: Memory Load
+        icon: mdi:memory
+
+    sensor.plex_generic_memory_data_used_memory:
+        friendly_name: Used memory
+        icon: mdi:memory
+
+    sensor.plex_generic_memory_data_available_memory:
+        friendly_name: Available Memory
+        icon: mdi:memory
+
+    sensor.plex_intel_core_i5_8500t_temperatures_cpu_package:
+        friendly_name: CPU Temp
+        icon: mdi:temperature-fahrenheit
