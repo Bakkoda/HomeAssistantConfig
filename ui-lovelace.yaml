@@ -138,9 +138,8 @@ views:
             entity: media_player.roku_tv
             source: icon
             shortcuts:
-                columns: 4 # Max buttons per row
+                columns: 4
                 buttons:
-                    # Start predefined playlist
                     - icon: mdi:home
                       type: source
                       id: Home
