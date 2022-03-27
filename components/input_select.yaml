@@ -3,4 +3,5 @@
         options:
           - Melissa
           - Will
+        initial: Melissa
         icon: mdi:account-plus
