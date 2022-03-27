@@ -360,7 +360,6 @@ views:
             text: "<b style='color: orange; font-size: 16px'>Direct play </b>"
             style: {left: 55%, top: 14%}
           - type: state-label
-            # prefix: 'Direct play: '
             entity: sensor.tautulli_direct_plays
             style: {color: white, font-size: 16px, left: 55%, top: 26%}
 
