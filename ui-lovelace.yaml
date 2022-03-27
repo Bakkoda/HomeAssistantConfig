@@ -218,13 +218,16 @@ views:
         header:
             show: true
             title: Resources
-            show_states: false
+            show_states: true
+            colorize_states: true
         chart_type: radialBar
         series:
           - entity: sensor.kennel_intel_core_i5_4690_load_cpu_total
             name: CPU Total
+            color: red
           - entity: sensor.kennel_generic_memory_load_memory
             name: Memory Load
+            color: yellow
 
       - type: horizontal-stack
         cards:
