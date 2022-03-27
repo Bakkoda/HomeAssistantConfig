@@ -1,6 +1,7 @@
 ######################################################################
 #       Server Monitoring
 ######################################################################
+  # Notify on HDD temps over 105F
   - alias: 'Monitor hard drive temps'
     trigger:
         platform: numeric_state
@@ -18,6 +19,7 @@
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} is currently above 105° F with a temp of {{ trigger.to_state.state }}° F @here - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Notify when UPS state changes AKA power interruption
   - alias: 'Monitor UPS condition'
     trigger:
         platform: state
@@ -28,6 +30,7 @@
             message: "***HA*** - Battery Backup {{ trigger.to_state.attributes.friendly_name }} is currently in an abnormal state ({{ trigger.to_state.state }}) @everyone - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Notify when Ansible has done a VM update
   - alias: 'Ansible updates'
     trigger:
         platform: state
@@ -38,6 +41,7 @@
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} has been updated - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Notify when Arq updates complete
   - alias: 'Arq updates'
     trigger:
         platform: state
@@ -48,6 +52,7 @@
             message: "***Arq*** - **{{ trigger.to_state.attributes.friendly_name }} backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Notify when Veeam updates complete
   - alias: 'Veeam updates'
     trigger:
         platform: state
@@ -58,6 +63,7 @@
             message: "***Veeam*** - **{{ trigger.to_state.attributes.friendly_name }} VM backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Notify when Syncovery completes external backups
   - alias: 'Syncovery updates'
     trigger:
         platform: state
@@ -68,6 +74,7 @@
             message: "***Syncovery*** - {{ trigger.to_state.attributes.friendly_name }} backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Automatically turn Pihole back on after 20 mins and notify
   - alias: 'Turn Pihole back on'
     trigger:
         platform: state

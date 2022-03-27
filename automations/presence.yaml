@@ -1,6 +1,7 @@
 ######################################################################
 #       Presence
 ######################################################################
+  # Notify when persons are detected as home
   - alias: Home Notification
     trigger:
         platform: state
@@ -13,6 +14,7 @@
             message: "***UniFi*** - {{ trigger.to_state.attributes.friendly_name }} is now home - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
+  # Notify when persons are detected as away
   - alias: Away Notification
     trigger:
         platform: state

@@ -1,6 +1,7 @@
 ######################################################################
 #       Thermostat
 ######################################################################
+  # Notify when thermostat temp has been adjusted
   - alias: Thermostat adjustment notification
     trigger:
         platform: state

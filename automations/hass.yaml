@@ -1,6 +1,7 @@
 ######################################################################
 #       Home Assistant
 ######################################################################
+  # Set HA theme at startup
   - alias: 'Set theme at startup'
     trigger:
       - platform: homeassistant
@@ -10,6 +11,7 @@
         data:
             name: 'Google Dark Theme'
 
+  # Notify on startup
   - alias: Update HA after startup
     trigger:
         platform: homeassistant
@@ -20,6 +22,7 @@
             message: "***HA*** - Home Assistant was successfuly started - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
+  # Notify if theres an update
   - alias: Update notifications
     trigger:
       - platform: state
@@ -36,6 +39,7 @@
             message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."
             title: "Update Available"
 
+  # Notify on sunruse
   - alias: Send notification when sun rises
     trigger:
       - platform: sun
@@ -47,6 +51,7 @@
             message: "***HA*** - The sun is up - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
+  # Notify on sunset
   - alias: Send notification when sun sets
     trigger:
       - platform: sun
@@ -58,6 +63,7 @@
             message: "***HA*** - The sun has set - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
 
+  # Snag weather map every hour
   - alias: Download weather map every hour
     trigger:
       - platform: time_pattern

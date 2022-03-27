@@ -1,6 +1,7 @@
 ######################################################################
 #       Perimeter
 ######################################################################
+  # Detect motion on front porch, wget a snapshot and post to Discord
   - alias: Motion detection on the porch
     trigger:
         platform: state
@@ -21,6 +22,7 @@
       - delay:
             minutes: 5
 
+  # Detect motion in garage, wget a snapshot and post to Discord
   - alias: Motion detection in the Garage
     trigger:
         platform: state
