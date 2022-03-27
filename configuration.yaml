@@ -111,21 +111,21 @@ logbook:
 #Enables Sun component
 sun:
 
-#Custom sidebar
+# Custom sidebar
 panel_custom: !include components/panel_custom.yaml
 # Automations
 automation: !include_dir_merge_list automations/
-#Scripts
+# Scripts
 script: !include_dir_merge_named scripts/
 shell_command: !include components/shell_command.yaml
 rest_command: !include components/rest_command.yaml
+# Persons
+person: !include components/persons.yaml
 # Components
 binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
 camera: !include components/camera.yaml
-person: !include components/persons.yaml
 google_assistant: !include components/google_assistant.yaml
-#android_ip_webcam: !include components/android_ip_webcam.yaml
 ombi: !include components/ombi.yaml
 apcupsd: !include components/apcupsd.yaml
 notify: !include components/notify.yaml
