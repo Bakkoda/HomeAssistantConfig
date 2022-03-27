@@ -234,6 +234,16 @@ views:
                 yellow: 45
                 red: 85
 
+      - type: custom:apexcharts-card
+        chart_type: radialBar
+        all_series_config:
+        stroke_width: 2
+        series:
+          - entity: sensor.kennel_intel_core_i5_4690_load_cpu_total
+            yaxis_id: first
+          - entity: sensor.kennel_generic_memory_load_memory
+            yaxis_id: second
+
       - type: horizontal-stack
         cards:
           - type: glance
