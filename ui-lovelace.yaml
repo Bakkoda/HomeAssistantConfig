@@ -240,12 +240,9 @@ views:
           - id: first # identification name of the first y-axis
             decimals: 0
             apex_config:
-            tickAmount: 4
           - id: second # identification name of the second y-axis
-            opposite: true # make it show on the right side
             decimals: 0
             apex_config:
-            tickAmount: 4
         all_series_config:
             stroke_width: 2
         series:
