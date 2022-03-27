@@ -15,9 +15,11 @@ homeassistant:
               - 192.168.2.0/24
               - 192.168.3.0/24
 
+# Themes only atm
 frontend:
     themes: !include_dir_merge_named themes/
 
+# UI Resources
 lovelace:
     mode: yaml
     resources:
