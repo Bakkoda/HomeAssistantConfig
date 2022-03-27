@@ -393,25 +393,20 @@ views:
           - sensor.plex_generic_memory_data_available_memory
           - sensor.plex_generic_memory_data_used_memory
 
-      - type: horizontal-stack
-        cards:
-          - type: gauge
-            name: CPU Load
-            unit: '%'
-            entity: sensor.plex_intel_core_i5_8500t_load_cpu_total
-            severity:
-                green: 0
-                yellow: 45
-                red: 85
-
-          - type: gauge
+      - type: custom:apexcharts-card
+        header:
+            show: true
+            title: Resources
+            show_states: true
+            colorize_states: true
+        chart_type: radialBar
+        series:
+          - entity: sensor.plex_intel_core_i5_8500t_load_cpu_total
+            name: CPU Total
+            color: red
+          - entity: sensor.plex_generic_memory_load_memory
             name: Memory Load
-            unit: '%'
-            entity: sensor.plex_generic_memory_load_memory
-            severity:
-                green: 0
-                yellow: 45
-                red: 85
+            color: yellow
 
       - type: conditional
         conditions:
