@@ -214,32 +214,11 @@ views:
           - sensor.kennel_generic_hard_disk_load_used_space_2
           - sensor.kennel_generic_hard_disk_load_used_space
 
-      - type: horizontal-stack
-        cards:
-          - type: gauge
-            name: CPU Load
-            unit: '%'
-            entity: sensor.kennel_intel_core_i5_4690_load_cpu_total
-            severity:
-                green: 0
-                yellow: 45
-                red: 85
-
-          - type: gauge
-            name: Memory Load
-            unit: '%'
-            entity: sensor.kennel_generic_memory_load_memory
-            severity:
-                green: 0
-                yellow: 45
-                red: 85
-
       - type: custom:apexcharts-card
         header:
             show: true
             title: Resources
-            show_states: true
-            colorize_states: true
+            show_states: false
         chart_type: radialBar
         series:
           - entity: sensor.kennel_intel_core_i5_4690_load_cpu_total
