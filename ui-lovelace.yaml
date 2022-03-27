@@ -235,21 +235,17 @@ views:
                 red: 85
 
       - type: custom:apexcharts-card
+        header:
+            show: true
+            title: Resources
+            show_states: true
+            colorize_states: true
         chart_type: radialBar
-        yaxis:
-          - id: first # identification name of the first y-axis
-            decimals: 0
-            apex_config:
-          - id: second # identification name of the second y-axis
-            decimals: 0
-            apex_config:
-        all_series_config:
-            stroke_width: 2
         series:
           - entity: sensor.kennel_intel_core_i5_4690_load_cpu_total
-            yaxis_id: first
+            name: CPU Total
           - entity: sensor.kennel_generic_memory_load_memory
-            yaxis_id: second
+            name: Memory Load
 
       - type: horizontal-stack
         cards:
