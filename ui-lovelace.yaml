@@ -161,6 +161,9 @@ views:
               volume_level: true
               source: true
               progress: true
+              power: true
+              prev: true
+              next: true
 
       # Thermostat
       - type: custom:simple-thermostat
