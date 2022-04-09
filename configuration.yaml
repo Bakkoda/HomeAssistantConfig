@@ -34,6 +34,8 @@ lovelace:
         type: module
       - url: /local/custom-lovelace/apexcharts-card/apexcharts-card.js?v=1.10.0
         type: module
+      - url: /local/community/lovelace-mushroom/mushroom.js
+        type: module
       - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
         type: js
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
