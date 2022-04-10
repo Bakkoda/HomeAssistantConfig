@@ -5,6 +5,9 @@
         device_class: garage
         friendly_name: "Garage Door"
         value_template: "{{ states('sensor.garagedoor')|float > 0 }}"
+        open_cover:
+          service: switch.turn_on
+          entity_id: switch.garagedooropener
       garage_rear_door:
         device_class: door
         friendly_name: "Garage Rear Door"
