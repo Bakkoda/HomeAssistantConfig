@@ -40,6 +40,8 @@ lovelace:
         type: js
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
         type: js
+      - url: /local/community/love-lock-card/love-lock-card.js
+        type: js
 
 # HTTP options
 http:
