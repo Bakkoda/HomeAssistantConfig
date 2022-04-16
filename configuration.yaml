@@ -41,7 +41,7 @@ lovelace:
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
         type: js
       - url: /local/community/restriction-card/restriction-card.js
-        type: js
+        type: module
 
 # HTTP options
 http:
