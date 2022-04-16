@@ -36,12 +36,12 @@ lovelace:
         type: module
       - url: /local/community/lovelace-mushroom/mushroom.js
         type: module
+      - url: /local/community/restriction-card/restriction-card.js
+        type: module
       - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
         type: js
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
         type: js
-      - url: /local/community/restriction-card/restriction-card.js
-        type: module
 
 # HTTP options
 http:
