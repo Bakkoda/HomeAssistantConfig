@@ -14,7 +14,7 @@
           - sensor.kennel_st3000vn000_1hj166_temperatures_temperature_2
         above: 105
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} is currently above 105° F with a temp of {{ trigger.to_state.state }}° F @here - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
@@ -25,7 +25,7 @@
         platform: state
         entity_id: sensor.ups_status
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***HA*** - Battery Backup {{ trigger.to_state.attributes.friendly_name }} is currently in an abnormal state ({{ trigger.to_state.state }}) @everyone - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
@@ -36,7 +36,7 @@
         platform: state
         entity_id: sensor.ansible_status, sensor.pihole_status
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} has been updated - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
@@ -47,7 +47,7 @@
         platform: state
         entity_id: sensor.servers_backups, sensor.personal_backups, sensor.servers_backups_ext, sensor.personal_backups_ext
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***Arq*** - **{{ trigger.to_state.attributes.friendly_name }} backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
@@ -58,7 +58,7 @@
         platform: state
         entity_id: sensor.critical_backups, sensor.weekly_backups
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***Veeam*** - **{{ trigger.to_state.attributes.friendly_name }} VM backups completed** - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
@@ -69,7 +69,7 @@
         platform: state
         entity_id: sensor.personal_data_ext, sensor.personal_pictures_ext, sensor.personal_users_ext, sensor.servers_data_ext, sensor.servers_speed_ext
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***Syncovery*** - {{ trigger.to_state.attributes.friendly_name }} backups completed - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828

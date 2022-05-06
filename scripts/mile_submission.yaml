@@ -5,7 +5,7 @@
             data_template:
                 name: "{{ states.input_select.who_miles.state }}"
                 miles: "{{ states.input_number.miles.state }}"
-          - service: notify.discord_bot
+          - service: notify.homeassistant
             data_template:
                 message: "***HA*** - {{ states.input_select.who_miles.state }} has added {{ states.input_number.miles.state }} mile(s) to their total - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
                 target: 617498208586694656

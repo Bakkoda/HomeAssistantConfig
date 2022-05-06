@@ -17,7 +17,7 @@
         platform: homeassistant
         event: start
     action:
-        service: notify.discord_bot
+        service: notify.homeassistant
         data_template:
             message: "***HA*** - Home Assistant was successfuly started - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
@@ -30,7 +30,7 @@
         from: 'off'
         to: 'on'
     action:
-      - service: notify.discord_bot
+      - service: notify.homeassistant
         data_template:
             message: "***HA*** - Home Assistant {{ trigger.to_state.attributes.newest_version }} is now available - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 322823957658992651
@@ -46,7 +46,7 @@
         event: sunrise
         offset: '+00:00:00'
     action:
-      - service: notify.discord_bot
+      - service: notify.homeassistant
         data_template:
             message: "***HA*** - The sun is up - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
@@ -58,7 +58,7 @@
         event: sunset
         offset: '+00:00:00'
     action:
-      - service: notify.discord_bot
+      - service: notify.homeassistant
         data_template:
             message: "***HA*** - The sun has set - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
