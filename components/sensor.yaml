@@ -1,4 +1,18 @@
 #Random
+  - platform: unifigateway
+    host: 192.168.1.1
+    port: 443
+    version: UDMP-unifiOS
+    username: !secret unifi_username
+    password: !secret unifi_password
+    monitored_conditions:
+      - www
+      - wan
+      - wlan
+      - lan
+      - alerts
+      - firmware
+
   - platform: mfi
     host: 192.168.5.11
     port: 6443
