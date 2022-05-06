@@ -10,7 +10,6 @@
       - wan
       - wlan
       - lan
-      - alerts
       - firmware
 
   - platform: mfi
