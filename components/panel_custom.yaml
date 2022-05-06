@@ -1,8 +1,8 @@
   - name: ha_server_con
-    sidebar_title: ServerControl
+    sidebar_title: System
     sidebar_icon: mdi:server
     js_url: /api/hassio/app/entrypoint.js
-    url_path: 'config/server_control'
+    url_path: 'config/system'
     embed_iframe: true
     require_admin: true
     config:
