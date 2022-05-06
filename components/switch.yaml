@@ -3,7 +3,7 @@
     port: 6443
     verify_ssl: false
     username: Bakkoda
-    password: !secret unifi_password
+    password: !secret mfi_password
 
   - platform: wake_on_lan
     mac: "30-5A-3A-06-61-15"
