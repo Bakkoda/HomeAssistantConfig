@@ -130,7 +130,6 @@ binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
 camera: !include components/camera.yaml
 google_assistant: !include components/google_assistant.yaml
-ombi: !include components/ombi.yaml
 apcupsd: !include components/apcupsd.yaml
 notify: !include components/notify.yaml
 sensor: !include components/sensor.yaml
