@@ -48,16 +48,6 @@
       - apparent_temperature
       - precip_probability
 
-#Certificate Expirations
-  - platform: cert_expiry
-    host: bakkoda.com
-
-  - platform: cert_expiry
-    host: hass.bakkoda.com
-
-  - platform: cert_expiry
-    host: scarylegrunners.com
-
 #SLR Tracking
   - platform: rest
     name: melissas_miles_json
