@@ -38,6 +38,8 @@ lovelace:
         type: module
       - url: /local/community/restriction-card/restriction-card.js
         type: module
+      - url: /local/community/kb-steam-card/kb-steam-card.js
+        type: module
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
         type: js
 
