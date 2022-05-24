@@ -19,5 +19,5 @@
   - name: Kaleb
     id: kwood
     device_trackers:
-      - device_tracker.kaleb_s_phone_2
+      - device_tracker.kaleb_s_phone
       - device_tracker.unifi_22_81_bc_68_1a_27_default
