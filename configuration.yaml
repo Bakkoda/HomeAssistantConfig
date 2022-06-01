@@ -132,6 +132,7 @@ camera: !include components/camera.yaml
 google_assistant: !include components/google_assistant.yaml
 apcupsd: !include components/apcupsd.yaml
 sensor: !include components/sensor.yaml
+mqtt: !include components/mqtt.yaml
 switch: !include components/switch.yaml
 light: !include components/light.yaml
 weather: !include components/weather.yaml
