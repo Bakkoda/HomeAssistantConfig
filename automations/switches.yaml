@@ -5,7 +5,7 @@
   - alias: Switch notification
     trigger:
         platform: state
-        entity_id: switch.desklamp, light.garage_lights, switch.bedroom_light_switch, switch.coffee_cord, switch.friday_coffee, switch.pihole, switch.kidsroom_switch, switch.front_porch_switch, switch.xmas_lights, switch.outside_garage_switch
+        entity_id: switch.desklamp, light.garage_lights, switch.bedroom_light_switch, switch.coffee_cord, switch.friday_coffee, switch.pihole, switch.kidsroom_switch, switch.greyskull, switch.front_porch_switch, switch.xmas_lights, switch.outside_garage_switch
         to: ~
     action:
         service: notify.homeassistant
