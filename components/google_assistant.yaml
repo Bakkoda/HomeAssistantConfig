@@ -46,6 +46,11 @@
             name: Bedside Lamps
             room: Bedroom
 
+        switch.bathroom_fan:
+            expose: true
+            name: Bathroom Fan
+            room: Bathroom
+
         light.desk_lamp:
             expose: true
             name: Desk Lamp
