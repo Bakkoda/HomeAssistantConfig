@@ -12,3 +12,18 @@
         data_template:
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} has been turned {{ trigger.to_state.state }} - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 450273546716053505
+
+######################################################################
+#       Utility
+######################################################################
+  # Turn coffee switch off after 45 mins no matter when its turned on
+  - alias: Turn the bathroom fan off after 30 mins
+    trigger:
+        platform: state
+        entity_id: switch.bathroom_fan
+        to: 'on'
+        for:
+            minutes: 30
+    action:
+        service: switch.turn_off
+        entity_id: switch.bathroom_fan
