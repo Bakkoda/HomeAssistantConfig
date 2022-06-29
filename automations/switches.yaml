@@ -16,8 +16,8 @@
 ######################################################################
 #       Utility
 ######################################################################
-  # Turn coffee switch off after 45 mins no matter when its turned on
-  - alias: Turn the bathroom fan off after 30 mins
+  # Turn bathroom fan off after 45 mins no matter when its turned on
+  - alias: Turn the bathroom fan off after 45 mins
     trigger:
         platform: state
         entity_id: switch.bathroom_fan
