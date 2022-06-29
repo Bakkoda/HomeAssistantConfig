@@ -4,7 +4,7 @@
     port: 6443
     verify_ssl: false
     username: Bakkoda
-    password: !secret unifi_password
+    password: !secret mfi_password
 
   - platform: qbittorrent
     url: "http://192.168.1.10:8112"
