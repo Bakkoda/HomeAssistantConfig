@@ -11,7 +11,7 @@
         service: notify.homeassistant
         data_template:
             message: "***HA*** - {{ trigger.to_state.attributes.friendly_name }} has been turned {{ trigger.to_state.state }} - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 450273546716053505
+            target: 992455702163493019
 
 ######################################################################
 #       Utility

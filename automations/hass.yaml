@@ -20,7 +20,7 @@
         service: notify.homeassistant
         data_template:
             message: "***HA*** - Home Assistant was successfuly started - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 450273546716053505
+            target: 992455702163493019
 
   # Notify if theres an update
   - alias: Update notifications
@@ -49,7 +49,7 @@
       - service: notify.homeassistant
         data_template:
             message: "***HA*** - The sun is up - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 450273546716053505
+            target: 992455702163493019
 
   # Notify on sunset
   - alias: Send notification when sun sets
@@ -61,7 +61,7 @@
       - service: notify.homeassistant
         data_template:
             message: "***HA*** - The sun has set - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 450273546716053505
+            target: 992455702163493019
 
   # Snag weather map every hour
   - alias: Download weather map every hour
