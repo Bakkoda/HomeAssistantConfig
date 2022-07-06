@@ -3,6 +3,7 @@
     host: 192.168.5.11
     port: 6443
     ssl: false
+    verify_ssl: false
     username: Bakkoda
     password: !secret mfi_password
 
