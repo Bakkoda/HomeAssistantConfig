@@ -6,7 +6,7 @@
        - climate
        - switch
     entity_config:
-        climate.living_room_thermostat_mode:
+        climate.living_room_thermostat:
             expose: true
             name: House
             room: Living Room
