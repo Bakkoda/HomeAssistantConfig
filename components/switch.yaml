@@ -18,6 +18,12 @@
     broadcast_address: "255.255.255.255"
     host: "192.168.1.101"
 
+  - platform: wake_on_lan
+    mac: "D0-50-99-06-64-A1"
+    name: "Kennel"
+    broadcast_address: "255.255.255.255"
+    host: "192.168.1.10"
+
   - platform: template
     switches:
         coffee_maker:
