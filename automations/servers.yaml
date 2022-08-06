@@ -30,6 +30,17 @@
             message: "***HA*** - Battery Backup {{ trigger.to_state.attributes.friendly_name }} is currently in an abnormal state ({{ trigger.to_state.state }}) @everyone - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
             target: 613741597594615828
 
+  # Send WOL to Kennel when UPS comes back online
+  - alias: 'Kennel UPS Restart'
+    trigger:
+        platform: state
+        entity_id: sensor.ups_status
+        from: "ONBATT"
+        to: "ONLINE"
+    action:
+      - service: switch.turn_on
+        entity_id: switch.kennel
+
   # Notify when Ansible has done a VM update
   - alias: 'Ansible updates'
     trigger:
