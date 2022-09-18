@@ -1,7 +1,7 @@
 #Random
   - platform: mfi
-    host: 192.168.5.11
-    port: 6443
+    host: https://mfi.bakkoda.com
+    port: 443
     ssl: true
     verify_ssl: false
     username: Bakkoda
