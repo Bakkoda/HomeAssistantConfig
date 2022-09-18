@@ -1,6 +1,6 @@
 #Random
   - platform: mfi
-    host: https://mfi.bakkoda.com
+    host: mfi.bakkoda.com
     port: 443
     ssl: true
     verify_ssl: false
