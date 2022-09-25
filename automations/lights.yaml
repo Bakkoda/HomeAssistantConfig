@@ -65,36 +65,21 @@
       - service: switch.turn_off
         entity_id: switch.outside_garage_switch
 
-  # Turn off outside lights all but Thursday. Jacob gets home late on Thursday
+  # Turn off outside lights all week
   - alias: Turn off outside evening lights
     trigger:
         platform: time
-        at: '21:00:00'
+        at: '22:00:00'
     condition:
       - condition: time
         weekday:
           - mon
           - tue
           - wed
-          #- thu
+          - thu
           - fri
           - sat
           - sun
-    action:
-      - service: switch.turn_off
-        entity_id: switch.front_porch_switch
-      - service: switch.turn_off
-        entity_id: switch.outside_garage_switch
-
-  # Turn off outside lights late on Thursday for Jacob
-  - alias: Turn off outside evening lights later for Jacob
-    trigger:
-        platform: time
-        at: '23:00:00'
-    condition:
-      - condition: time
-        weekday:
-          - thu
     action:
       - service: switch.turn_off
         entity_id: switch.front_porch_switch
