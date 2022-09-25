@@ -21,11 +21,6 @@
             name: Garage Door
             room: Garage
 
-        switch.consoles:
-            expose: true
-            name: Consoles
-            room: Kids Room
-
         switch.greyskull:
             expose: true
             name: Computer
