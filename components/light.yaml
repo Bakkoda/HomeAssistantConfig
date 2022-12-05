@@ -17,3 +17,7 @@
   - platform: switch
     name: Outside Garage Lights
     entity_id: switch.outside_garage_switch
+
+  - platform: switch
+    name: Xmas Lights
+    entity_id: switch.xmas_lights
