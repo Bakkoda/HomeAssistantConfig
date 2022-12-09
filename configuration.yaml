@@ -3,6 +3,8 @@ homeassistant:
     latitude: 42.5881126
     longitude: -74.3309562
     elevation: 230
+    currency: USD
+    country: US
     unit_system: imperial
     time_zone: America/New_York
     customize: !include_dir_merge_named customize/
