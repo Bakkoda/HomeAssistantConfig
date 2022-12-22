@@ -14,7 +14,7 @@
   - name: Jacob
     id: jkwoody
     device_trackers:
-      - device_tracker.jacob_s_phone
+      - device_tracker.pixel_7
 
   - name: Kaleb
     id: kwood
