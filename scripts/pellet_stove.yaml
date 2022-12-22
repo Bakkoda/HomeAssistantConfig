@@ -1,0 +1,39 @@
+    pellet_stove_on:
+        alias: Power On
+        sequence:
+          - service: remote.send_command
+            data:
+              device: Pellet Stove
+              command: Power On
+            target:
+              device_id: 61ffe46607c00fd304e612a5ee5559d2
+
+    pellet_stove_off:
+        alias: Power Off
+        sequence:
+          - service: remote.send_command
+            data:
+              device: Pellet Stove
+              command: Power Off
+            target:
+              device_id: 61ffe46607c00fd304e612a5ee5559d2
+
+    pellet_stove_up:
+        alias: Turn Up
+        sequence:
+          - service: remote.send_command
+            data:
+              device: Pellet Stove
+              command: Turn Up
+            target:
+              device_id: 61ffe46607c00fd304e612a5ee5559d2
+
+    pellet_stove_down:
+        alias: Turn Down
+        sequence:
+          - service: remote.send_command
+            data:
+              device: Pellet Stove
+              command: Turn Down
+            target:
+              device_id: 61ffe46607c00fd304e612a5ee5559d2
