@@ -44,6 +44,8 @@ lovelace:
         type: module
       - url: /local/community/button-card/button-card.js
         type: module
+      - url: /local/community/bar-card/bar-card.js
+        type: module
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
         type: js
 
