@@ -24,6 +24,13 @@
               command: Power Off
             target:
               device_id: 61ffe46607c00fd304e612a5ee5559d2
+          - delay: 5
+          - service: remote.send_command
+            data:
+              device: Pellet Stove
+              command: Power Off
+            target:
+              device_id: 61ffe46607c00fd304e612a5ee5559d2
 
     pellet_stove_up:
         alias: Turn Up
