@@ -12,63 +12,11 @@
     username: !secret qbit_user
     password: !secret qbit_pass
 
-  - platform: apcupsd
-    resources:
-      - apc
-      - date
-      - hostname
-      - version
-      - upsname
-      - cable
-      - driver
-      - upsmode
-      - starttime
-      - model
-      - status
-      - linev
-      - loadpct
-      - bcharge
-      - itemp
-      - timeleft
-      - mbattchg
-      - mintimel
-      - maxtime
-      - outputv
-
   - platform: openhardwaremonitor
     host: 192.168.1.10
 
   - platform: openhardwaremonitor
     host: 192.168.1.9
-
-  - platform: darksky
-    api_key: !secret darksky_apikey
-    forecast:
-      - 0
-    monitored_conditions:
-      - apparent_temperature
-      - precip_probability
-
-#SLR Tracking
-  - platform: rest
-    name: melissas_miles_json
-    resource: !secret melissas_json_url
-    scan_interval:
-        minutes: 10
-    json_attributes:
-      - range
-      - majorDimension
-      - values
-
-  - platform: rest
-    name: wills_miles_json
-    resource: !secret wills_json_url
-    scan_interval:
-        minutes: 10
-    json_attributes:
-      - range
-      - majorDimension
-      - values
 
 #Templates
   - platform: template
@@ -81,18 +29,6 @@
         open_door_count:
             friendly_name: "Open Doors"
             value_template: "{{ states.sensor | selectattr('state','eq','0.0') | selectattr('attributes.unit_of_measurement', 'eq', 'magnetic') | list | count }}"
-
-        melissas_miles:
-            friendly_name: "Melissa's Miles"
-            value_template: >
-                {{ states.sensor.melissas_miles_json.attributes["values"][0][0] }} / {{ states.sensor.melissas_miles_json.attributes["values"][0][1] }}
-            unit_of_measurement: 'miles'
-
-        wills_miles:
-            friendly_name: "Will's Miles"
-            value_template: >
-                {{ states.sensor.wills_miles_json.attributes["values"][0][0] }} / {{ states.sensor.wills_miles_json.attributes["values"][0][1] }}
-            unit_of_measurement: 'miles'
 
         tautulli_count_total:
             friendly_name: 'Total streams'
