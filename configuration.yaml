@@ -26,15 +26,13 @@ frontend:
 lovelace:
     mode: yaml
     resources:
-      - url: /local/custom-lovelace/weather-card/weather-card.js
+      - url: /local/community/mini-media-player/mini-media-player-bundle.js
         type: module
-      - url: /local/custom-lovelace/mini-media-player/mini-media-player-bundle.js?v=1.16.2
+      - url: /local/community/simple-thermostat/simple-thermostat.js
         type: module
-      - url: /local/custom-lovelace/simple-thermostat/simple-thermostat.js
+      - url: /local/community/mini-graph-card/mini-graph-card-bundle.js
         type: module
-      - url: /local/custom-lovelace/mini-graph-card/mini-graph-card-bundle.js?v=0.10.0
-        type: module
-      - url: /local/custom-lovelace/apexcharts-card/apexcharts-card.js?v=1.10.0
+      - url: /local/community/apexcharts-card/apexcharts-card.js
         type: module
       - url: /local/community/lovelace-mushroom/mushroom.js
         type: module
