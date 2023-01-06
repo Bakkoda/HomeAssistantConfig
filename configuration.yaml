@@ -44,7 +44,9 @@ lovelace:
         type: module
       - url: /local/community/bar-card/bar-card.js
         type: module
-      - url: /local/custom-lovelace/text-element/text-element.js?v=0
+      - url: /local/community/weather-radar-card/weather-radar-card.js
+        type: module
+      - url: /local/community/text-element/text-element.js?v=0
         type: js
 
 # HTTP options
