@@ -17,5 +17,5 @@
           #- sat
           #- sun
     action:
-        service: switch.turn_on
+        service: script.turn_on
         entity_id: script.pellet_stove_on
