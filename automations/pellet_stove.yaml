@@ -1,0 +1,21 @@
+######################################################################
+#       Pellet Stove
+######################################################################
+  # 2.5AM Pellet stove turn on
+  - alias: Turn on the pellet stove in the morning
+    trigger:
+        platform: time
+        at: '02:30:00'
+    condition:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          #- fri
+          #- sat
+          #- sun
+    action:
+        service: switch.turn_on
+        entity_id: script.pellet_stove_on
