@@ -26,6 +26,7 @@ frontend:
 lovelace:
     mode: yaml
     resources:
+    #Modules
       - url: /local/community/mini-media-player/mini-media-player-bundle.js
         type: module
       - url: /local/community/simple-thermostat/simple-thermostat.js
@@ -46,7 +47,10 @@ lovelace:
         type: module
       - url: /local/community/weather-radar-card/weather-radar-card.js
         type: module
+    #Javascript
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
+        type: js
+      - url: /local/community/ha-teamtracker-card/ha-teamtracker-card.js
         type: js
 
 # HTTP options
