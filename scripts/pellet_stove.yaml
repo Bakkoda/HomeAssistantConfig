@@ -16,7 +16,7 @@
               device_id: 61ffe46607c00fd304e612a5ee5559d2
           - service: notify.homeassistant
             data_template:
-              message: "***HA*** - Pellet stove has been turned on"
+              message: "***HA*** - Pellet stove has been turned on - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
               target: 992455702163493019
 
     pellet_stove_off:
@@ -37,7 +37,7 @@
               device_id: 61ffe46607c00fd304e612a5ee5559d2
           - service: notify.homeassistant
             data_template:
-              message: "***HA*** - Pellet stove has been turned off"
+              message: "***HA*** - Pellet stove has been turned off - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
               target: 992455702163493019
 
     pellet_stove_up:
