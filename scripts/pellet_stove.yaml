@@ -14,6 +14,10 @@
               command: Power On
             target:
               device_id: 61ffe46607c00fd304e612a5ee5559d2
+          - service: notify.homeassistant
+            data_template:
+              message: "***HA*** - Pellet stove has been turned on"
+              target: 992455702163493019
 
     pellet_stove_off:
         alias: Power Off
@@ -31,6 +35,10 @@
               command: Power Off
             target:
               device_id: 61ffe46607c00fd304e612a5ee5559d2
+          - service: notify.homeassistant
+            data_template:
+              message: "***HA*** - Pellet stove has been turned off"
+              target: 992455702163493019
 
     pellet_stove_up:
         alias: Turn Up
