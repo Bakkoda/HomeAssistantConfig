@@ -122,6 +122,11 @@ logbook:
           - sensor.last_boot
           - sensor.date
 
+logger:
+  default: info
+  logs:
+    custom_components.garmin_connect: debug
+
 #Enables Sun component
 sun:
 
