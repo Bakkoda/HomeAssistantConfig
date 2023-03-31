@@ -49,6 +49,8 @@ lovelace:
         type: module
       - url: /local/community/ha-teamtracker-card/ha-teamtracker-card.js
         type: module
+      - url: /local/community/hourly-weather/hourly-weather.js
+        type: module
     #Javascript
       - url: /local/custom-lovelace/text-element/text-element.js?v=0
         type: js
