@@ -15,6 +15,7 @@
     id: jkwoody
     device_trackers:
       - device_tracker.pixel_7
+      - device_tracker.pixel_7_2
 
   - name: Kaleb
     id: kwood
