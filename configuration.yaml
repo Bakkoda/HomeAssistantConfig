@@ -96,19 +96,6 @@ recorder:
           - sensor.last_boot
           - sensor.date
 
-# Enables support for tracking state changes over time.
-history:
-    include:
-        domains:
-          - sensor
-          - binary_sensor
-          - person
-          - climate
-    exclude:
-        entities:
-          - sensor.last_boot
-          - sensor.date
-
 # View all events in a logbook
 logbook:
     include:
