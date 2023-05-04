@@ -7,11 +7,6 @@
     username: Bakkoda
     password: !secret mfi_password
 
-  - platform: qbittorrent
-    url: "http://192.168.1.10:8112"
-    username: !secret qbit_user
-    password: !secret qbit_pass
-
 #Templates
   - platform: template
     sensors:
