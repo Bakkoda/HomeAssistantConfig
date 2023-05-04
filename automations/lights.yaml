@@ -17,8 +17,10 @@
           #- sat
           #- sun
     action:
-      - service: switch.turn_on
-        entity_id: switch.outside_garage_switch
+      - service: light.turn_on
+        target:
+          entity_id:
+            - light.outside_garage_lights_2
 
   # Turn on outside lights all week
   - alias: Turn on outside evening lights
@@ -36,10 +38,11 @@
           - sat
           - sun
     action:
-      - service: switch.turn_on
-        entity_id: switch.front_porch_switch
-      - service: switch.turn_on
-        entity_id: switch.outside_garage_switch
+      - service: light.turn_on
+        target:
+          entity_id:
+            - light.outside_lights
+            - light.outside_garage_lights_2
 
 ######################################################################
 #       Outside Lights - OFF
@@ -47,8 +50,8 @@
   # Turn off outside lights all week
   - alias: Turn off outside morning lights
     trigger:
-        platform: sun
-        event: sunrise
+        platform: time
+        at: '08:30:00'
     condition:
       - condition: time
         weekday:
@@ -60,10 +63,11 @@
           - sat
           - sun
     action:
-      - service: switch.turn_off
-        entity_id: switch.front_porch_switch
-      - service: switch.turn_off
-        entity_id: switch.outside_garage_switch
+      - service: light.turn_off
+        target:
+          entity_id:
+            - light.outside_lights
+            - light.outside_garage_lights_2
 
   # Turn off outside lights all week
   - alias: Turn off outside evening lights
@@ -81,10 +85,11 @@
           - sat
           - sun
     action:
-      - service: switch.turn_off
-        entity_id: switch.front_porch_switch
-      - service: switch.turn_off
-        entity_id: switch.outside_garage_switch
+      - service: light.turn_off
+        target:
+          entity_id:
+            - light.outside_lights
+            - light.outside_garage_lights_2
  
 ######################################################################
 #       Xmas Lights
