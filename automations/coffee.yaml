@@ -1,48 +1,9 @@
 ######################################################################
 #       Coffee Maker
 ######################################################################
-  # 3AM coffee for Will Mon-Thurs
-  - alias: Coffee in the AM for Will
-    trigger:
-        platform: time
-        at: '02:48:00'
-    condition:
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          #- fri
-          #- sat
-          #- sun
-    action:
-        service: switch.turn_on
-        entity_id: switch.coffee_cord
 
-  # 3AM coffee for will Fri
-  - alias: Overtime coffee
-    trigger:
-        platform: time
-        at: '02:48:00'
-    condition:
-      - condition: time
-        weekday:
-          #- mon
-          #- tue
-          #- wed
-          #- thu
-          - fri
-          #- sat
-          #- sun
-    action:
-      - service: switch.turn_on
-        entity_id: switch.coffee_cord
-      - service: switch.turn_off
-        entity_id: switch.overtime_coffee
-
-  # 5AM coffee for Melissa if 3AM coffee is off for Will
-  - alias: Coffee in the AM for Melissa
+  # 5AM coffee
+  - alias: Coffee in the AM
     trigger:
         platform: time
         at: '04:48:00'
@@ -53,39 +14,12 @@
           - tue
           - wed
           - thu
-          #- fri
-          #- sat
-          #- sun
-      - condition: state
-        entity_id: switch.will_coffee
-        state: 'off'
-    action:
-      - service: switch.turn_on
-        entity_id: switch.coffee_cord
-
-  # 7:30AM for Melissa if overtime coffee is off for Will
-  - alias: Coffee on Friday for Melissa
-    trigger:
-        platform: time
-        at: '07:00:00'
-    condition:
-      - condition: time
-        weekday:
-          #- mon
-          #- tue
-          #- wed
-          #- thu
           - fri
-          #- sat
-          #- sun
-      - condition: state
-        entity_id: switch.overtime_coffee
-        state: 'off'
+          - sat
+          - sun
     action:
       - service: switch.turn_on
         entity_id: switch.coffee_cord
-      - service: switch.turn_on
-        entity_id: switch.will_coffee
 
 ######################################################################
 #       Utility

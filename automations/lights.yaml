@@ -14,8 +14,8 @@
           - wed
           - thu
           - fri
-          #- sat
-          #- sun
+          - sat
+          - sun
     action:
       - service: light.turn_on
         target:
@@ -51,7 +51,7 @@
   - alias: Turn off outside morning lights
     trigger:
         platform: time
-        at: '08:30:00'
+        event: sunrise 
     condition:
       - condition: time
         weekday:
