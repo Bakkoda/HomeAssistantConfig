@@ -50,7 +50,7 @@
   # Turn off outside lights all week
   - alias: Turn off outside morning lights
     trigger:
-        platform: time
+        platform: sun
         event: sunrise 
     condition:
       - condition: time
