@@ -5,7 +5,7 @@
   - alias: Turn on the pellet stove in the morning
     trigger:
         platform: time
-        at: '02:45:00'
+        at: '04:45:00'
     condition:
       - condition: time
         weekday:
@@ -13,9 +13,9 @@
           - tue
           - wed
           - thu
-          #- fri
-          #- sat
-          #- sun
+          - fri
+          - sat
+          - sun
     action:
         service: script.turn_on
         entity_id: script.pellet_stove_on
