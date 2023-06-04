@@ -49,8 +49,8 @@
   # Turn off outside lights all week
   - alias: Turn off outside morning lights
     trigger:
-        platform: sun
-        event: sunrise
+        platform: time
+        at: '08:15:00'
     condition:
       - condition: time
         weekday:
