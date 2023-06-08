@@ -50,7 +50,7 @@
   - alias: Turn off outside morning lights
     trigger:
         platform: time
-        at: '08:15:00'
+        at: '07:30:00'
     condition:
       - condition: time
         weekday:
