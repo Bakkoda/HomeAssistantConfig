@@ -66,6 +66,11 @@
             name: Outside Garage Lights
             room: Outside
 
+        light.swing_lights:
+            expose: true
+            name: Swing Lights
+            room: Swing
+
 #        light.xmas_lights:
 #            expose: true
 #            name: Xmas Lights
