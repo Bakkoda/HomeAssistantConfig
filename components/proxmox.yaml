@@ -1,4 +1,4 @@
-  - host: 192.168.18
+  - host: 192.168.1.8
     username: hass@pve
     password: !secret pve_pass
     verify_ssl: false
