@@ -1,0 +1,20 @@
+  - host: 192.168.18
+    username: hass@pve
+    password: !secret pve_pass
+    verify_ssl: false
+    realm: pve
+    nodes:
+      - node: prox
+        vms:
+          - 200
+          - 201
+          - 202
+          - 203
+          - 204
+          - 205
+          - 206
+          - 207
+        containers:
+          - 100
+          - 101
+          - 102
