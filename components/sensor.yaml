@@ -18,12 +18,3 @@
         open_door_count:
             friendly_name: "Open Doors"
             value_template: "{{ states.sensor | selectattr('state','eq','0.0') | selectattr('attributes.unit_of_measurement', 'eq', 'magnetic') | list | count }}"
-
-#Mealie
-  - platform: rest
-    resource: 'http://docker:9925/api/meal-plans/today'
-    method: GET
-    name: 'Todays Meal'
-    headers:
-      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb25nX3Rva2VuIjp0cnVlLCJpZCI6MSwiZXhwIjoxODQ3OTg5NzA1fQ.-qiZs_5ZGWitG39LTTqf2UeOBN8UL520BqZrv_lrZhM
-    value_template: "{{ value_json.name }}"
