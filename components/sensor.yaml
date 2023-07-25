@@ -25,5 +25,5 @@
     method: GET
     name: Todays Meal 
     headers:
-      Authorization: !sectret mealie_api
+      Authorization: !secret mealie_api
     value_template: "{{ value_json.name }}"
