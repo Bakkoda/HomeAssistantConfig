@@ -21,7 +21,7 @@
 
 #Mealie
   - platform: rest
-    resource: 'http://docker:9925/api/meal-plans/today'
+    resource: 'http://192.168.1.30:9925/api/meal-plans/today'
     method: GET
     name: Todays Meal 
     headers:
