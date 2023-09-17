@@ -3,7 +3,7 @@
     host: mfi.bakkoda.com
     port: 443
     ssl: true
-    verify_ssl: false
+    verify_ssl: true
     username: Bakkoda
     password: !secret mfi_password
 
