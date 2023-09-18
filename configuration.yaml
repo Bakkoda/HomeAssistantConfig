@@ -139,4 +139,3 @@ switch: !include components/switch.yaml
 light: !include components/light.yaml
 input_number: !include components/input_number.yaml
 input_select: !include components/input_select.yaml
-proxmoxve: !include components/proxmox.yaml
