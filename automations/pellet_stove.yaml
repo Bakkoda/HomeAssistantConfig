@@ -5,7 +5,7 @@
   - alias: Turn on the pellet stove in the morning
     trigger:
         platform: time
-        at: '04:45:00'
+        at: '04:15:00'
     condition:
       - condition: time
         weekday:
