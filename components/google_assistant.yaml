@@ -36,7 +36,7 @@
             name: Kids Computer
             room: Kids Room
 
-        light.bedside_lamps_2:
+        light.bedside_lamps:
             expose: true
             name: Bedside Lamps
             room: Bedroom
@@ -51,17 +51,17 @@
             name: Desk Lamp
             room: Living Room
 
-        light.kidsroom_lights_2:
+        light.kidsroom_lights:
             expose: true
             name: Kids Room Lights
             room: Kids Room
 
-        light.front_porch_lights_2:
+        light.front_porch_lights:
             expose: true
             name: Front Porch Lights
             room: Outside
 
-        light.outside_garage_lights_2:
+        light.outside_garage_lights:
             expose: true
             name: Outside Garage Lights
             room: Outside
