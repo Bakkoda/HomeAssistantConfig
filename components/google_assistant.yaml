@@ -71,6 +71,11 @@
             name: Swing Lights
             room: Swing
 
+        light.inside_front_door:
+            expose: true
+            name: Door Light
+            room: Living Room
+
 #        light.xmas_lights:
 #            expose: true
 #            name: Xmas Lights
