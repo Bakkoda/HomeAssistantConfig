@@ -22,8 +22,7 @@
         platform: state
         entity_id: switch.bathroom_fan
         to: 'on'
-        for:
-            minutes: 45
+        for:  '00:45:00'
     action:
         service: switch.turn_off
         entity_id: switch.bathroom_fan
