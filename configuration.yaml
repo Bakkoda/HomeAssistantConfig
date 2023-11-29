@@ -83,38 +83,12 @@ system_health:
 # Set up recorder information
 recorder:
     db_url: !secret database_url
-    include:
-        domains:
-          - sensor
-          - switch
-          - light
-          - binary_sensor
-          - person
-          - climate
-    exclude:
-        entities:
-          - sensor.last_boot
-          - sensor.date
 
 # View all events in a logbook
 logbook:
-    include:
-        domains:
-          - sensor
-          - switch
-          - binary_sensor
-          - device_tracker
-          - person
-          - climate
-    exclude:
-        entities:
-          - sensor.last_boot
-          - sensor.date
 
 logger:
   default: info
-  logs:
-    custom_components.garmin_connect: debug
 
 #Enables Sun component
 sun:
