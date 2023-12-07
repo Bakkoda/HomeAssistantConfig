@@ -76,7 +76,7 @@
             name: Door Light
             room: Living Room
 
-#        light.xmas_lights:
-#            expose: true
-#            name: Xmas Lights
-#            room: Living Room
+        light.xmas_lights:
+            expose: true
+            name: Xmas Lights
+            room: Living Room

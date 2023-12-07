@@ -94,25 +94,15 @@
   - alias: Turn on Xmas lights in the morning
     trigger:
         platform: time
-        at: '05:00:00'
+        at: '04:50:00'
     action:
       - service: switch.turn_on
         entity_id: switch.xmas_lights
 
   - alias: Turn off Xmas lights in the morning
     trigger:
-        platform: sun
-        event: sunrise
-    condition:
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-#          - fri
-#          - sat
-#          - sun
+        platform: time
+        at: '07:00:00'
     action:
       - service: switch.turn_off
         entity_id: switch.xmas_lights
@@ -121,16 +111,6 @@
     trigger:
         platform: sun
         event: sunset
-    condition:
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-#          - fri
-#          - sat
-#          - sun
     action:
       - service: switch.turn_on
         entity_id: switch.xmas_lights
@@ -138,7 +118,7 @@
   - alias: Turn off Xmas lights in the evening
     trigger:
         platform: time
-        at: '22:30:00'
+        at: '22:00:00'
     action:
       - service: switch.turn_off
         entity_id: switch.xmas_lights
