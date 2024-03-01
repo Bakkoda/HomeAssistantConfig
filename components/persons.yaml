@@ -10,6 +10,7 @@
     user_id: faa10ebb01a345de8cb69cd26f005f1a
     device_trackers:
       - device_tracker.will_s_phone
+      - device_tracker.wills_pixel8
 
   - name: Jacob
     id: jkwoody
