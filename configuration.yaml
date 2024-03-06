@@ -91,7 +91,7 @@ script: !include_dir_merge_named scripts/
 shell_command: !include components/shell_command.yaml
 rest_command: !include components/rest_command.yaml
 # Persons
-# person: !include components/persons.yaml
+person: !include components/persons.yaml
 # Components
 binary_sensor: !include components/binary_sensor.yaml
 input_boolean: !include components/input_boolean.yaml
