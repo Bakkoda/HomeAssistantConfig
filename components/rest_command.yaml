@@ -1,3 +1,0 @@
-    post_miles:
-        url: !secret slr_miles_url
-        method: POST

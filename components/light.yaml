@@ -1,8 +1,4 @@
   - platform: switch
-    name: Bedside Lamps
-    entity_id: switch.bedroom_light_switch
-
-  - platform: switch
     name: Desk Lamp
     entity_id: switch.desklamp
 

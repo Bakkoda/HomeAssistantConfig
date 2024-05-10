@@ -1,8 +1,0 @@
-    miles:
-        name: How many miles
-        min: 1.0
-        max: 100.0
-        step: 0.1
-        mode: box
-        unit_of_measurement: miles
-        icon: mdi:ruler
