@@ -36,7 +36,7 @@
             name: Kids Computer
             room: Kids Room
 
-        light.bedside_lamps:
+        light.bedroom_lights:
             expose: true
             name: Bedside Lamps
             room: Bedroom
