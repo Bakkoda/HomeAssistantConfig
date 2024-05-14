@@ -18,12 +18,4 @@
         open_door_count:
             friendly_name: "Open Doors"
             value_template: "{{ states.sensor | selectattr('state','eq','0.0') | selectattr('attributes.unit_of_measurement', 'eq', 'magnetic') | list | count }}"
-
-#Mealie
-  - platform: rest
-    resource: 'http://192.168.1.30:9925/api/meal-plans/today'
-    method: GET
-    name: Todays Meal 
-    headers:
-      Authorization: !secret mealie_api
-    value_template: "{{ value_json.name }}"
+            
