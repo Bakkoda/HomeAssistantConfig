@@ -38,27 +38,3 @@
         data:
             message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."
             title: "Update Available"
-
-  # Notify on sunruse
-  - alias: Send notification when sun rises
-    trigger:
-      - platform: sun
-        event: sunrise
-        offset: '+00:00:00'
-    action:
-      - service: notify.homeassistant
-        data_template:
-            message: "***HA*** - The sun is up - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 992455702163493019
-
-  # Notify on sunset
-  - alias: Send notification when sun sets
-    trigger:
-      - platform: sun
-        event: sunset
-        offset: '+00:00:00'
-    action:
-      - service: notify.homeassistant
-        data_template:
-            message: "***HA*** - The sun has set - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
-            target: 992455702163493019
