@@ -1,7 +1,0 @@
-    clothes_dryer:
-        name: Clothes Dryer state
-        initial: off
-
-    washing_machine:
-        name: Washing Machine state
-        initial: off
