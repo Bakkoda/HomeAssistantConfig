@@ -42,3 +42,21 @@
                   - /config/www/images/camera/gc1_snapshot.jpg
       - delay:
             minutes: 5
+
+  # Detect leaks in kitchen and bathroom
+  - alias: Leaks detected
+    trigger:
+        - platform: state
+          entity_id: binary_sensor.kitchen_leak_sensor_water_leak_detected
+          from: 'off'
+          to: 'on'
+        - platform: state
+          entity_id: binary_sensor.bathroom_leak_sensor_water_leak_detected
+          from: 'off'
+          to: 'on'
+    condition: []
+    action:
+        service: notify.notify
+        data:
+            title: "Leak detected!"
+            message: "{{ trigger.to_state.attributes.friendly_name }} - {{now().strftime('%B %d, %Y at %I:%M%p')}}"
