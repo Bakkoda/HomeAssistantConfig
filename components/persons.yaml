@@ -17,6 +17,8 @@
     device_trackers:
       - device_tracker.pixel_7
       - device_tracker.pixel_7_2
+      - device_tracker.jacob_s_phone
+      - device_tracker.jacob_s_phone_2
 
   - name: Kaleb
     id: kwood
