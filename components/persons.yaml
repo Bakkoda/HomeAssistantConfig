@@ -11,9 +11,11 @@
     device_trackers:
       - device_tracker.will_s_phone
       - device_tracker.wills_pixel8
+      - device_tracker.will
 
   - name: Jacob
     id: jkwoody
+    user_id: d6c406382d8f4cf7aea6f7c1b9062df2
     device_trackers:
       - device_tracker.pixel_7
       - device_tracker.pixel_7_2
