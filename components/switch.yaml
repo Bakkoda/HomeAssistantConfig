@@ -14,9 +14,9 @@
 
   - platform: wake_on_lan
     mac: "D8-CB-8A-50-1A-4E"
-    name: "KidsCorner"
+    name: "JacobsBox"
     broadcast_address: "255.255.255.255"
-    host: "192.168.1.101"
+    host: "192.168.2.101"
 
   - platform: wake_on_lan
     mac: "D0-50-99-06-64-A1"
