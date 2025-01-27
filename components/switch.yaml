@@ -1,5 +1,5 @@
   - platform: mfi
-    host: mfi.bakkoda.com
+    host: !secret mfi_url
     port: 443
     ssl: true
     verify_ssl: true

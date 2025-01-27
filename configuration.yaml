@@ -100,4 +100,3 @@ google_assistant: !include components/google_assistant.yaml
 sensor: !include components/sensor.yaml
 switch: !include components/switch.yaml
 light: !include components/light.yaml
-# notify: !include components/notify.yaml
