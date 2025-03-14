@@ -10,7 +10,7 @@
     mac: "30-5A-3A-06-61-15"
     name: "Greyskull"
     broadcast_address: "255.255.255.255"
-    host: "192.168.1.100"
+    host: "192.168.2.101"
 
   - platform: wake_on_lan
     mac: "D8-CB-8A-50-1A-4E"
