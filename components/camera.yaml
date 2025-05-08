@@ -1,3 +1,2 @@
-  - platform: local_file
-    name: weather_map
+  - name: weather_map
     file_path: /config/www/images/weather/weather_map.gif
