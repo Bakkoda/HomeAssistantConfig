@@ -1,3 +1,0 @@
-  - platform: camera
-    name: weather_map
-    file_path: /config/www/images/weather/weather_map.gif
