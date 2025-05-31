@@ -7,19 +7,19 @@
     password: !secret mfi_password
 
   - platform: wake_on_lan
-    mac: "30-5A-3A-06-61-15"
+    mac: "30:5a:3a:06:61:15"
     name: "Greyskull"
     broadcast_address: "255.255.255.255"
     host: "192.168.2.101"
 
   - platform: wake_on_lan
-    mac: "D8-CB-8A-50-1A-4E"
+    mac: "9c:6b:00:5c:c3:68"
     name: "JacobsBox"
     broadcast_address: "255.255.255.255"
-    host: "192.168.2.101"
+    host: "192.168.2.102"
 
   - platform: wake_on_lan
-    mac: "D0-50-99-06-64-A1"
+    mac: "a8:a1:59:af:c3:9a"
     name: "Kennel"
     broadcast_address: "255.255.255.255"
     host: "192.168.1.10"
