@@ -95,7 +95,6 @@ shell_command: !include components/shell_command.yaml
 person: !include components/persons.yaml
 # Components
 binary_sensor: !include components/binary_sensor.yaml
-camera: !include components/camera.yaml
 google_assistant: !include components/google_assistant.yaml
 sensor: !include components/sensor.yaml
 switch: !include components/switch.yaml
