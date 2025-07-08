@@ -56,17 +56,17 @@
             name: Kids Room Lights
             room: Kids Room
 
-        light.front_porch_lights:
+        light.front_porch_rope:
             expose: true
             name: Front Porch Lights
             room: Outside
 
-        light.outside_garage_lights:
+        light.outside_lights:
             expose: true
-            name: Outside Garage Lights
+            name: Outside Lights
             room: Outside
 
-        light.swing_lights:
+        light.front_porch_swing:
             expose: true
             name: Swing Lights
             room: Swing
