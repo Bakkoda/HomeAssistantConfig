@@ -108,7 +108,7 @@
         platform: time
         at: '23:30:00'
     action:
-      - service: switch.turn_on
+      - service: switch.turn_off
         target:
           entity_id:
             - switch.xmas_lights
